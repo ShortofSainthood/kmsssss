@@ -1,0 +1,80 @@
+name: '🚀 Deploy to FTP'
+description: 'Downloads build artifact and deploys it to FTP server'
+inputs:
+  artifact_name:
+    description: 'Name of the artifact to download'
+    required: false
+    default: '_site'
+  artifact_path:
+    description: 'Path to extract the artifact to'
+    required: false
+    default: '_site'
+  ftp_server:
+    description: 'FTP server hostname'
+    required: true
+  ftp_username:
+    description: 'FTP username'
+    required: true
+  ftp_password:
+    description: 'FTP password'
+    required: true
+  server_dir:
+    description: 'Server directory to deploy to'
+    required: false
+    default: '/'
+  exclude:
+    description: 'Files to exclude from deployment (comma separated)'
+    required: false
+    default: ''
+  github_token:
+    description: 'GitHub token for deployment tracking'
+    required: true
+  environment:
+    description: 'Environment name for deployment'
+    required: true
+  site_url:
+    description: 'Site URL for deployment status'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    # Start a deployment
+    - name: 🟢 Start Deployment
+      id: deployment
+      uses: bobheadxi/deployments@v1
+      with:
+        step: start
+        token: ${{ inputs.github_token }}
+        env: ${{ inputs.environment }}
+
+    # Get the artifact from the build job
+    - name: 📥 Get artifact
+      id: get_artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.artifact_name }}
+        path: ${{ inputs.artifact_path }}
+
+    # Deploy to FTP server
+    - name: 🚀 Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ inputs.ftp_server }}
+        username: ${{ inputs.ftp_username }}
+        password: ${{ inputs.ftp_password }}
+        local-dir: ${{ inputs.artifact_path }}/
+        server-dir: ${{ inputs.server_dir }}
+        exclude: ${{ inputs.exclude }}
+
+
+    # Set the deployment status to success
+    - name: ✅ Finish Deployment
+      uses: bobheadxi/deployments@v1
+      if: always()
+      with:
+        step: finish
+        token: ${{ inputs.github_token }}
+        status: ${{ job.status }}
+        env: ${{ steps.deployment.outputs.env }}
+        env_url: ${{ inputs.site_url }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
