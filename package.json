@@ -18,5 +18,8 @@
     "url": "https://github.com/ShortofSainthood/kmsssss/issues"
   },
   "homepage": "https://github.com/ShortofSainthood/kmsssss#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
 }
