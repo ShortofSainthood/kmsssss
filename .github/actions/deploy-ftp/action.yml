@@ -45,7 +45,10 @@ runs:
       with:
         step: start
         token: ${{ inputs.github_token }}
-        env: ${{ inputs.environment }}
+        env:
+          environment: production
+          build_command: ${{ vars.BUILD_COMMAND || 'npm run build' }}
+          publish_dir: ${{ vars.PUBLISH_DIR || '_site' }}
 
     # Get the artifact from the build job
     - name: 📥 Get artifact
