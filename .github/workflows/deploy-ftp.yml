@@ -65,6 +65,10 @@ jobs:
     # Deploy to the production environment
     environment:
       name: production
+    env:
+      environment: production
+      build_command: ${{ vars.BUILD_COMMAND || 'npm run build' }}
+      publish_dir: ${{ vars.PUBLISH_DIR || '_site' }}
 
     # Deploy the site to FTP server
     runs-on: ubuntu-latest
