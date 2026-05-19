@@ -62,6 +62,9 @@ jobs:
     # Add a dependency to the build job
     needs: build
 
+    permissions: 
+      deployments: write
+
     # Deploy to the production environment
     environment:
       name: production
