@@ -65,10 +65,6 @@ runs:
         local-dir: ${{ inputs.artifact_path }}/
         server-dir: ${{ inputs.server_dir }}
         exclude: ${{ inputs.exclude }}
-        env:
-          environment: production
-          build_command: ${{ vars.BUILD_COMMAND || 'npm run build' }}
-          publish_dir: ${{ vars.PUBLISH_DIR || '_site' }}
 
 
     # Set the deployment status to success
