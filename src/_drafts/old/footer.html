@@ -1,0 +1,20 @@
+<footer>
+    {% block footerbuttons %}{% endblock %}
+    {% if lastUpdated and showLastUpdated %}
+    {% set lastUpdatedExact = lastUpdated + "T15:14:14.578Z" %}
+    <p>
+        Page last updated {{ lastUpdatedExact | niceDate }}.
+    </p>
+    {% endif %}
+    <p>
+        Unless stated otherwise, www.sainthood.xyz is licensed under <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    </p>
+    <nav aria-label="footer links">
+        <ul>
+            <li><a href="/meta/info">Site Info</a></li>
+            <li><a href="/meta/sitemap">Sitemap</a></li>
+            <li><a href="/rss.xml">RSS Feed {% lucide "rss", { "size": "16" } %}</a></li>
+        </ul>
+        <p><a href="#top">Back to Top</a></p>
+    </nav>
+</footer>

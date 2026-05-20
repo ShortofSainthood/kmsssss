@@ -1,0 +1,60 @@
+---
+title: Sainthood.xyz
+layout: home.njk
+eleventyNavigation:
+  key: Home
+hideBreadcrumbs: true
+---
+{% css %}
+    .flexcontainer > div {margin: 10px;}
+    ul.changelog li ul {display: none;}
+    #updates time {color: var(--textaccent); font-weight: bold;}
+    #blog h3 {font-size: 1.5em; border: none;}
+    .postmetadata {
+        font-size: 0.95em;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin: 0.5em 0;
+    }
+    .half { flex: 1 1 calc(50% - 20px); }
+
+    .spin {animation: 2s linear infinite record-spin; vertical-align: -3px;}
+    @keyframes record-spin {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .spin {animation-duration:  0s !important;}
+    }
+{% endcss %}
+
+<h1>Hello and Welcome!</h1>
+
+
+<p> 
+{% for song in songsofthenow | reverse -%}
+{% if loop.index0 < 1 %}
+    {% lucide "disc-3", { "size": "20", "stroke-width": "2", "stroke": "var(--textaccent)", "class":"spin" } %} <b>Currently listening to:</b> <a href="{{ song.link }}"><span style="font-weight: bold;">{{ song.songname | safe }}</span> - {{ song.artist | safe }}</a>
+{% endif %}
+{%- endfor %}
+<br><span style="font-size: 0.9em;">(<a href="/listening">What else have I been listing to?</a>)</span>
+</p>
+
+<div class="flexcontainer">
+    <div id="updates" class="half">
+        <h2>{% lucide "megaphone", { "size": "32", "stroke-width": "2" } %} Latest Site Update</h2>
+        {% include "latestupdate.html" %}
+    </div>
+    <div id="blog" class="half">
+        <h2>{% lucide "newspaper", { "size": "32", "stroke-width": "2" } %} Latest Blog Post</h2>
+        {% include "latestpost.html" %}
+    </div>
+    <div id="contactbox" class="half">
+        <h2 id="contact">{% lucide "contact-round", { "size": "32", "stroke-width": "2" } %} Contact Me</h2>
+        <ul style="list-style: none;">
+            <li>{% lucide "mail", { "stroke": "var(--textaccent)", "size": "20", "stroke-width": "2" } %} <b>Email:</b> contact [at] sainthood [dot] xyz</li>
+            <li>{% lucide "at-sign", { "stroke": "var(--textaccent)", "size": "20", "stroke-width": "2" } %} <b>Mastodon:</b> <a class="external" href="https://indieweb.social/@sainthood">sainthood@indieweb.social</a></li>
+        </ul>
+        <p>Please keep in mind that <strong>I do not get push notifications for either of these!</strong> I try to check them regularly, but I may take a while to respond to messages, please be patient with me.</p>
+    </div>
+</div>

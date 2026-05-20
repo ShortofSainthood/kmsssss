@@ -1,0 +1,37 @@
+---
+title: "Accessible Eleventy Gallery"
+desc: "An adaptation of Kalechip's Static Accessible Gallery Generator for Eleventy."
+date: "2024-12-28"
+lastUpdated: "2025-02-25"
+thumbnails: [/assets/images/thumbnails/eleventy-gallery1.png, /assets/images/thumbnails/eleventy-gallery2.png]
+metaimage: "/assets/images/thumbnails/eleventy-gallery1.png"
+livepreview: true
+download: "/assets/downloads/Accessible_Eleventy_Gallery.zip"
+downloadType: "ZIP"
+---
+<h2>About</h2>
+<p>This project is an adaptation of <a href="https://kalechips.net/projects/code/static-gallery/info">Kalechip's Static Accessible Gallery Generator</a> for Eleventy.</p>
+<p>The internet has no shortage of gallery frameworks, why bother adding another to the list? To be honest, a lot of existing frameworks aren't that great. They're clunky, bloated, and most importantly, <em>inaccessible</em>. For the longest time I felt like I was going insane because no one else seemed to have the same concerns/issues I did, but then I stumbled upon <a href="https://blog.kalechips.net/post/2023-08-21-Image-Gallery">this blog post by Kalechips</a>. My concerns were finally validated, hooray!</p>
+<p>Kale was able to solve the aforementioned issues by creating their own gallery generator. I like it a lot, but when I switched my site over to 11ty, I found it hard to manage two static site generators at once. This project is my attempt to adapt their gallery framework to an 11ty workflow.</p>
+
+<h3>Features</h3>
+<ul>
+    <li>Easy way to add alt text and image descriptions.</li>
+    <li>Can be used as an 11ty starter project or integrated into existing projects.</li>
+    <li>No annoying lightboxes.</li>
+    <li>Easy to customize!</li>
+</ul>
+
+<h2>Usage</h2>
+<p>In short, you organize everything in a JSON file and 11ty generates all your gallery's pages automatically by <a href="https://www.11ty.dev/docs/pages-from-data/">creating pages from data</a>.</p>
+<p>In long:</p>
+<ol>
+    <li>Organize your JSON.</li>
+    <li>Add the layouts to your <code>_includes</code> folder.</li>
+    <li>Add the gallery folder, with its contents, to the desired location. The permalinks and filepaths I used might be different from your setup, so remember to double-check the frontmatter of both files.</li>
+    <li>Start Eleventy!</li>
+</ol>
+<p>You can also have as many different galleries as you want, just as long as they pull data from different JSON files! For example: you can have one gallery use data from dogPhotos.json and another that pulls from catPhotos.json.</p>
+
+<h2>Licensing</h2>
+<p>This project is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3</a>.</p>

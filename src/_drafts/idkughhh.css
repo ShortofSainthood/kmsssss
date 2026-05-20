@@ -1,0 +1,48 @@
+:root {
+    /* dark to light */
+    --thing: 
+    #343062
+    #6E4B74
+    #C27193
+    #EE988E
+    #F9F1F4
+    ;
+
+    --thing:
+    #000000
+    #2D002D
+    #920092
+    #B1009F
+    #FFFFFF
+    url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.OSxnB4JpnEDoNWLiDpnHbgHaLH%26cb%3Diwc2%26pid%3DApi&f=1&ipt=731b0d1c3544126ca66cb17026ad9ee8d820067ef0d6edc2d125979e9d4c0af0&ipo=images")
+    /*(some kind of purple neon fluid bg)*/
+    ;
+
+    --thing:
+    #32302F
+    #4B4441
+    #8D9458
+    #D8A657
+    #D4BE98
+    /*Gruvbox Material Dark Soft
+    Gruvbox Material Dark Soft theme for Firefox.
+    Based on the Gruvbox Material Dark Soft color scheme:
+    https://github.com/sainnhe/gruvbox-material*/
+    ;
+
+    --light {
+        --bg: #D4BE98;
+        --bgaccent: #D8A657;
+        --text: #32302F;
+        --textaccent: #4B4441;
+        --link: #8D9458;
+    }
+
+    --dark {
+        --bg: #32302F;
+        --bgaccent: #4B4441;
+        --text: #D4BE98;
+        --textaccent: #D8A657;
+        --link: #8D9458;
+    }
+}

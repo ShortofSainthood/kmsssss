@@ -1,0 +1,19 @@
+{% for change in changelog.changes | reverse %}
+{% if loop.index0 < 1 %}
+    <time datetime="{{ change.date }}">{{ change.date.toString() | niceDateShort2D }}</time>
+    <ul class="changelog">
+    {% for update in change.updates %}
+        <li>{{ update.text | safe }}
+        {% if update.listItems %}
+        <ul>
+        {% for listItem in update.listItems %}
+            <li>{{listItem.text | safe }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endfor %}
+<p class="speciallink"><a href="/meta/changelog">View Full Changelog</a></p>

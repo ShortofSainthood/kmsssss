@@ -1,0 +1,155 @@
+---
+title: Changelog
+layout: base.njk
+eleventyNavigation:
+  key: Changelog
+  parent: Website Meta
+---
+<style>
+    .changelog li {padding-bottom: 1rem; border-bottom: var(--text) solid 1px;}
+    .changelog li+li {padding-top: 1rem;}
+    .changelog li ul li {padding: unset; border-bottom: none;}
+    .changelog li:last-of-type {border-bottom: none; padding-bottom: 0;}
+    .changelog {padding-left: 1em;}
+    .changelog time {color: var(--textaccent); font-weight: bold;}
+
+    .tabwrap section {display:block;}
+
+    .tabwrap section:has(~ section:target), .tabwrap section:target ~ section {display:none;}
+
+    /*.tabwrap section.default {display: block;}
+    .tabwrap section {display: none;}
+    .tabwrap section:target {display:block;}
+    .tabwrap section:target ~ section.default {display:none;}*/
+
+    :target {background: var(--bgaccent);}
+</style>
+
+<p style="text-align:center; font-weight: bold;">Filter by Year:</p>
+
+
+<p class="speciallink">
+    <a href="#">View All</a>
+{% for item in changelog | reverse %}
+    <a href="#{{ item.year }}">{{ item.year }}</a>
+{% endfor %}
+</p>
+
+<div class="tabwrap">
+
+    {% set a = 0 %}
+
+    {% for item in changelog %}
+    {% if loop.last %}<section id="{{ item.year }}">{% else %}<section id="{{ item.year }}">{% endif %}
+        <h2>{{ item.year }}</h2>
+
+        <ul class="changelog">
+            {% set b = 0 %}
+            {% for update in item.changes %}
+            <li><time datetime="{{ item.changes }}">{{ item.changes[a].date }} <!--{{ a }}--></time> - {{ item.changes[a].updates[b] | safe }} <!--{{ b }}--></li>
+            
+            {% set b = b + 1 %}
+            {% endfor %}
+        </ul>
+
+        <!--<ul class="changelog">
+            {% for update in item.changes %}
+            <li><time datetime="{{ item.changes }}">{{ item.changes }}</time> - 
+                <ul>
+                    <li>{{ item.changes | safe }}</li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>-->
+
+    </section>
+    {% set a = a + 1 %}
+    {% endfor %}
+
+    {% set items = [
+        { name: 'james', type: '2024' },
+        { name: 'john', type: '2025' },
+        { name: 'jim', type: '2023' },
+        { name: 'jessie', type: '2024' }
+    ]
+%}
+
+{% for type, items in items | groupby("type") %}
+    <h2>{{ type }}</h2>
+    <ul>
+    {% for item in items %}
+        <li>{{ item.name }}</li>
+    {% endfor %}<br>
+    </ul>
+{% endfor %}
+
+
+    {% set years = [
+        { year: '2024-06-02' },
+        { year: '2025-12-08' },
+        { year: '2023-04-22' },
+        { year: '2024-05-30' }
+        ]
+    %}
+
+    <ul>
+    {% for item in years | sort() %}
+        {% if (item.year == "2023-04-22") %}
+        <li>{{ item.year }} AHHHH</li>
+        {% else %}
+        <li>{{ item.year }}</li>
+        {% endif %}
+    {% endfor %}<br>
+    </ul>
+
+    {% set names = ["100-01", "100-00", "101", "Jane", "John", "Zelda", "Alice", "Bob"] %}
+
+{{ names | sort | join(", ") }}
+
+<ul>
+    {% for name in names | sort() %}
+        {% if (name == "Bob") %}
+        <li>{{ name }} KLASDJFLSKDJF'</li>
+        {% else %}
+        <li>{{ name }}</li>
+        {% endif %}
+    {% endfor %}<br>
+    </ul>
+
+
+    {% set posts = [
+      {
+        date: {
+          year: 2019
+        },
+        title: 'Post 1'
+      },
+      {
+        date: {
+          year: 2018
+        },
+        title: 'Post 2'
+      },
+      {
+        date: {
+          year: 2019
+        },
+        title: 'Post 3'
+      }
+    ]
+%}
+
+{% for year, posts in posts | groupby("date.year") %}
+    :{{ year }}:
+    {% for post in posts %}
+        {{ post.title }}
+    {% endfor %}
+{% endfor %}
+
+</div>
+
+
+
+<p class="speciallink">
+    <a href="/">Back to Index</a>
+</p>

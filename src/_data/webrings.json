@@ -1,0 +1,1606 @@
+[
+    {
+        "title": "Fediring",
+        "link": "https://fediring.net/",
+        "theme": "<a href=\"https://en.wikipedia.org/wiki/Fediverse\">Fediverse</a> users",
+        "status": "active"
+    },
+    {
+        "title": "Responsive Web Directory",
+        "link": "https://kalechips.net/responsive/index",
+        "theme": "Responsive websites",
+        "status": "active"
+    },
+    {
+        "title": "*nixRing",
+        "link": "https://teethinvitro.neocities.org/webring/linuxring/",
+        "theme": "Users of Linux and Unix-like operating systems",
+        "notes": "Must include at least <em>some</em> content about Linux or tech (hardware, programming, etc.)",
+        "status": "active"
+    },
+    {
+        "title": "NeoSSG",
+        "link": "https://neossg.neocities.org/",
+        "theme": "Websites made with Static Site Generators",
+        "notes": "Must be hosted on <a href=\"https://neocities.org/\">Neocities</a>",
+        "status": "active"
+    },
+    {
+        "title": "CornRing",
+        "link": "https://cornring.netlify.app/",
+        "theme": "People who live in the Midwestern USA",
+        "status": "active"
+    },
+    {
+        "title": "250KB Club",
+        "link": "https://250kb.club/ ",
+        "theme": "Websites under 250 kilobytes",
+        "status": "active"
+    },
+    {
+        "title": "1MB Club",
+        "link": "https://1mb.club/",
+        "theme": "Websites under 1 megabyte",
+        "status": "active"
+    },
+    {
+        "title": "512KB Club",
+        "link": "https://512kb.club/",
+        "theme": "Websites under 512 kilobytes",
+        "status": "active"
+    },
+    {
+        "title": "Text-only Websites",
+        "link": "https://textonly.website/",
+        "theme": "Text-only websites",
+        "status": "active"
+    },
+    {
+        "title": "Focus First Webring",
+        "link": "https://www.beepbird.net/webring/",
+        "theme": "Websites that minimize distractions",
+        "status": "active"
+    },
+    {
+        "title": "Endless Orbit Webring",
+        "link": "https://linkyblog.neocities.org/webring",
+        "theme": "\"Old web\"-style websites",
+        "status": "inactive"
+    },
+    {
+        "title": "Bucket Webring",
+        "link": "https://webring.bucketfish.me",
+        "theme": "Hand-coded websites",
+        "status": "active"
+    },
+    {
+        "title": "Sike Pona",
+        "link": "https://sike.pona.la/",
+        "theme": "toki pona speakers",
+        "status": "active"
+    },
+    {
+        "title": "Null Webring",
+        "link": "https://nuthead.neocities.org/ring/",
+        "theme": "Websites hosted on <a href=\"https://neocities.org/\">Neocities</a>",
+        "status": "active"
+    },
+    {
+        "title": "Accessible Net Directory",
+        "link": "https://pinkvampyr.leprd.space/accessiblenet/",
+        "theme": "Accessible websites",
+        "status": "inactive"
+    },
+    {
+        "title": "No CSS Club",
+        "link": "https://nocss.club/",
+        "theme": "Websites without CSS or JavaScript",
+        "status": "active"
+    },
+    {
+        "title": "No HTML Club",
+        "link": "https://no-html.club/index.txt",
+        "theme": "Websites without HTML",
+        "status": "active"
+    },
+    {
+        "title": "Darktheme Club",
+        "link": "https://darktheme.club/",
+        "theme": "Websites with dark layouts",
+        "status": "active"
+    },
+    {
+        "title": "No-JS Club",
+        "link": "https://no-js.club/",
+        "theme": "Websites without JavaScript",
+        "status": "active"
+    },
+    {
+        "title": "WiiRing",
+        "link": "https://jeith.com/wii-ring",
+        "theme": "Wii/Wii U fans",
+        "status": "inactive"
+    },
+    {
+        "title": "Galleryring",
+        "link": "https://zorrpu.com/Webring/GalleryRing",
+        "theme": "Websites with art galleries",
+        "status": "inactive"
+    },
+    {
+        "title": "Bukmark.Club",
+        "link": "https://bukmark.club/",
+        "theme": "Websites with links directories",
+        "status": "active"
+    },
+    {
+        "title": "A11y-Webring.Club",
+        "link": "https://a11y-webring.club/",
+        "theme": "Practitioners of digital accessibility",
+        "status": "active"
+    },
+    {
+        "title": "🕸💍 (An IndieWeb Webring)",
+        "link": "https://xn--sr8hvo.ws/",
+        "theme": "<a href=\"https://indieweb.org/\">IndieWeb</a> websites",
+        "status": "active"
+    },
+    {
+        "title": "Envs Webring",
+        "link": "https://envs.net/ring/",
+        "theme": "<a href=\"https://envs.net/\">Envs.net</a> users",
+        "status": "active"
+    },
+    {
+        "title": "Meta Ring",
+        "link": "https://meta-ring.hedy.dev/",
+        "theme": "Websites with dedicated /meta or /colophon pages",
+        "status": "active"
+    },
+    {
+        "title": "Geekring",
+        "link": "https://geekring.net/",
+        "theme": "Self-identified geeks",
+        "status": "active"
+    },
+    {
+        "title": "Retronaut Webring",
+        "link": "https://webring.dinhe.net/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "No AI Webring",
+        "link": "https://baccyflap.com/noai/",
+        "theme": "People against generative AI/LLMs",
+        "status": "active"
+    },
+    {
+        "title": "Self-Insert Webring",
+        "link": "https://webring.koinuko.pink/index.php",
+        "theme": "Self-shippers with self-inserts",
+        "status": "inactive"
+    },
+    {
+        "title": "MelonLand Surf Club",
+        "link": "https://melonland.net/surf-club",
+        "theme": "<a href=\"https://forum.melonland.net/\">MelonLand Forum</a> users",
+        "status": "active"
+    },
+    {
+        "title": "Hotline Webring",
+        "link": "https://hotlinewebring.club/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Netloop",
+        "link": "https://netloop.netlify.app/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Vocaloid Webring",
+        "link": "https://electric-tenshi.nekoweb.org/vocaring/home",
+        "theme": "Vocaloids fans",
+        "status": "active"
+    },
+    {
+        "title": "TouHou Webring",
+        "link": "https://glassplanet.neocities.org/webring/touhou/",
+        "theme": "TouHou fans",
+        "status": "active"
+    },
+    {
+        "title": "Furryring",
+        "link": "https://furryring.neocities.org/",
+        "theme": "Members of the furry fandom",
+        "status": "active"
+    },
+    {
+        "title": "Catfolk Webring",
+        "link": "https://snewdraws.net/catfolkwebring",
+        "theme": "Feline furries, therians, etc.",
+        "status": "active"
+    },
+    {
+        "title": "Bonki Webring",
+        "link": "https://bonkiscoolsite.neocities.org/webring",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Epic WebRing",
+        "link": "https://epic1.neocities.org/webring",
+        "theme": "Static websites",
+        "status": "active"
+    },
+    {
+        "title": "Lambda Webring",
+        "link": "https://lamorte.neocities.org/lambdaring/",
+        "theme": "Half-Life fans",
+        "status": "active"
+    },
+    {
+        "title": "Misc-Webring",
+        "link": "https://iceconey14.github.io/misc-webring/",
+        "theme": "General",
+        "status": "inactive"
+    },
+    {
+        "title": "TheOldNet WebRing",
+        "link": "https://webring.theoldnet.com/",
+        "theme": "General, emphasizes sites that work on older browsers",
+        "status": "active"
+    },
+    {
+        "title": "Loop Ring",
+        "link": "https://github.com/Graycot/loop-ring",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "GFDKWTFAW Webring",
+        "link": "https://fabstarotcorner.neocities.org/webring/",
+        "theme": "\"GOD FUCKING damnit KRIS where the FUCK are we!?\"",
+        "notes": "New member applications are on hold",
+        "status": "active"
+    },
+    {
+        "title": "Transmasculine Webring",
+        "link": "https://goooby.neocities.org/webring_index",
+        "theme": "Transmasculine people",
+        "notes": "New member applications are on hold",
+        "status": "active"
+    },
+    {
+        "title": "Transmasculine Pride Ring",
+        "link": "https://transmascring.netlify.app/",
+        "theme": "Trans men, FTMs, and transmasculine people",
+        "status": "active"
+    },
+    {
+        "title": "Xenics of the Net",
+        "link": "https://xenics.neocities.org/",
+        "theme": "Xenogender/xenic people",
+        "status": "active"
+    },
+    {
+        "title": "Yumering",
+        "link": "https://electric-tenshi.nekoweb.org/yumering/home",
+        "theme": "Yume Nikki fans",
+        "notes": "New member applications are on hold",
+        "status": "hiatus"
+    },
+    {
+        "title": "Transing the Internet",
+        "link": "https://transring.neocities.org/",
+        "theme": "Transgender people",
+        "status": "active"
+    },
+    {
+        "title": "CYBER WORLD",
+        "link": "https://cyberworld.cartoon-aa.xyz/",
+        "theme": "Deltarune/Undertale fans",
+        "status": "active"
+    },
+    {
+        "title": "Fansites Webring",
+        "link": "https://fandango.neocities.org/webring/",
+        "theme": "Fansites",
+        "status": "active"
+    },
+    {
+        "title": "Neocreatives Webring",
+        "link": "https://neocreatives.byethost5.com/",
+        "theme": "Visual artists",
+        "notes": "No longer a webring, just a directory",
+        "status": "active"
+    },
+    {
+        "title": "Mental Heal Circle",
+        "link": "https://softheartclinic.neocities.org/mentalhealcircle",
+        "theme": "Websites that discuss coping with mental health issues",
+        "status": "active"
+    },
+    {
+        "title": "Verdantville",
+        "link": "https://starry-knight.neocities.org/webring/verdant-webring",
+        "theme": "Websites with green layouts",
+        "status": "active"
+    },
+    {
+        "title": "NewWeb Webring",
+        "link": "https://therealman.neocities.org/newweb",
+        "theme": "General",
+        "status": "inactive"
+    },
+    {
+        "title": "Our Space",
+        "link": "https://ourspace.neocities.org/",
+        "theme": "General",
+        "status": "inactive"
+    },
+    {
+        "title": "Queer Coded Webring",
+        "link": "https://neptune.monster/webring/",
+        "theme": "LGBT+ people",
+        "status": "active"
+    },
+    {
+        "title": "PokéRing",
+        "link": "https://dokode.moe/pokering/",
+        "theme": "Pokémon fans",
+        "status": "inactive"
+    },
+    {
+        "title": "Wizring",
+        "link": "https://scrungle.online/wizring/",
+        "theme": "Fans of wizards and general fantasy media",
+        "status": "active"
+    },
+    {
+        "title": "OpenBooks WebRing",
+        "link": "https://openbooks.neocities.org/webring",
+        "theme": "Static websites",
+        "status": "inactive"
+    },
+    {
+        "title": "Funky Webring",
+        "link": "https://rocktype.neocities.org/funky-webring/",
+        "theme": "Heavily styled websites",
+        "status": "active"
+    },
+    {
+        "title": "CoolAndGood",
+        "link": "https://coolandgood.neocities.org/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Vtubers on Neocities",
+        "link": "https://vtubers.neocities.org/",
+        "theme": "Content creators who use an avatar",
+        "status": "active"
+    },
+    {
+        "title": "SaturnScape",
+        "link": "https://saturnscape.neocities.org/",
+        "theme": "\"Old web\"-style websites",
+        "status": "active"
+    },
+    {
+        "title": "Yu-Gi-Oh! Webring",
+        "link": "https://whimwitch.neocities.org/ygoring/",
+        "theme": "Yu-Gi-Oh! fans",
+        "status": "active"
+    },
+    {
+        "title": "RPG Maker webring",
+        "link": "https://ophanimkei.com/you/RPGmaker",
+        "theme": "RPG Maker fans and developers",
+        "status": "active"
+    },
+    {
+        "title": "WEB/COMIC/RING",
+        "link": "https://webcomicring.org/",
+        "theme": "Webcomics",
+        "status": "active"
+    },
+    {
+        "title": "Acing The Internet",
+        "link": "https://acingtheinternet.netlify.app/",
+        "theme": "Asexuals",
+        "status": "active"
+    },
+    {
+        "title": "ADHMe",
+        "link": "https://skyhold.org/adhd/",
+        "theme": "People with ADHD",
+        "status": "active"
+    },
+    {
+        "title": "VRRing",
+        "link": "https://july.lol/vrring/home",
+        "theme": "Virtual reality enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Low Tech Webring Directory",
+        "link": "https://emreed.net/LowTech_Directory",
+        "theme": "Low tech enthusiasts",
+        "status": "inactive"
+    },
+    {
+        "title": "Generation Lissa Webring",
+        "link": "https://genlissa.baccyflap.com/",
+        "theme": "People who learned HTML/CSS between 1996-2005",
+        "status": "active"
+    },
+    {
+        "title": "CSS JOY Webring",
+        "link": "https://cs.sjoy.lol/",
+        "theme": "People who like messing around with CSS",
+        "status": "active"
+    },
+    {
+        "title": "Safonts Webring",
+        "link": "https://xandra.cc/safonts/",
+        "theme": "Font savants",
+        "status": "active"
+    },
+    {
+        "title": "Leaky Homepage Ring",
+        "link": "https://melonking.net/melon?z=/free/software/flood",
+        "theme": "Websites that have sprung a leak",
+        "status": "active"
+    },
+    {
+        "title": "PixScape",
+        "link": "https://pixscape.neocities.org/",
+        "theme": "Pixel artists",
+        "status": "active"
+    },
+    {
+        "title": "Wayward Webring",
+        "link": "https://waywardweb.org/",
+        "theme": "Websites with a curated collection of links or other info",
+        "status": "active"
+    },
+    {
+        "title": "XXIIVV Webring",
+        "link": "https://webring.xxiivv.com/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Ad-Lib Club",
+        "link": "https://theadlibclub.neocities.org/",
+        "theme": "Fans of the 1960s.",
+        "status": "active"
+    },
+    {
+        "title": "Animatronics Fans Webring",
+        "link": "https://animatronicring.neocities.org/",
+        "theme": "Animatronic enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "WEB RING ZONE",
+        "link": "https://webringzone.neocities.org/",
+        "theme": "Sonic the Hedgehog fans",
+        "status": "active"
+    },
+    {
+        "title": "Moonlight Promise",
+        "link": "https://moonlightpromise.neocities.org/webring",
+        "theme": "Anime fansites",
+        "status": "active"
+    },
+    {
+        "title": "Bisexualism Webring",
+        "link": "https://bisexualism.emeowly.gay/",
+        "theme": "Bisexuals",
+        "status": "active"
+    },
+    {
+        "title": "Bill's PC",
+        "link": "https://bills-pc.neocities.org/",
+        "theme": "Pokémon fans",
+        "status": "active"
+    },
+    {
+        "title": "Brasileiros no Neocities",
+        "link": "https://cadernodamanjericao.neocities.org/subpaginas/webring",
+        "theme": "Brazilians on <a href=\"https://neocities.org/\">Neocities</a>",
+        "status": "active"
+    },
+    {
+        "title": "Car Seat Headrest Webring",
+        "link": "https://dogmotif.neocities.org/CSH-webring",
+        "theme": "Car Seat Headrest fans",
+        "status": "active"
+    },
+    {
+        "title": "Citizens of Verdite",
+        "link": "https://taptroupe.neocities.org/citizensofverdite",
+        "theme": "Fromsoftware fans",
+        "status": "active"
+    },
+    {
+        "title": "Fanfiction Webring",
+        "link": "https://ficring.neocities.org/",
+        "theme": "Fanfiction writers",
+        "status": "active"
+    },
+    {
+        "title": "FlipnoteRing Webring",
+        "link": "https://flipnotering.neocities.org/",
+        "theme": "Flipnote Hatena/Sudomemo users",
+        "status": "active"
+    },
+    {
+        "title": "Free Country USA",
+        "link": "https://worldsaddress.neocities.org/webring/",
+        "theme": "Homestar Runner fans",
+        "status": "active"
+    },
+    {
+        "title": "AutisTBH",
+        "link": "https://autistbh.neocities.org/",
+        "theme": "People with autism",
+        "status": "active"
+    },
+    {
+        "title": "Furry Dev Webring",
+        "link": "https://games-of.neocities.org/",
+        "theme": "Furries who are also game developers",
+        "status": "active"
+    },
+    {
+        "title": "Hyperfixated Webring",
+        "link": "https://y2kstardust.neocities.org/webring/",
+        "theme": "Neurodivergent people with hyperfixations",
+        "status": "active"
+    },
+    {
+        "title": "JournalRing",
+        "link": "https://nenrikido.neocities.org/webrings/journalring/",
+        "theme": "People who like to journal",
+        "status": "active"
+    },
+    {
+        "title": "KNIFEBEETLE",
+        "link": "https://knifebeetle.neocities.org/more",
+        "theme": "long-form, narrative-driven webcomics",
+        "status": "active"
+    },
+    {
+        "title": "Ladies of the Links",
+        "link": "https://ladiesofthe.link/",
+        "theme": "Women",
+        "notes": "Hasn't been updated in over a year, unsure if active or not",
+        "status": "unknown"
+    },
+    {
+        "title": "DeltaRing",
+        "link": "https://ne0nbandit.art/cable/deltaring/about",
+        "theme": "Deltarune/Undertale fans",
+        "status": "active"
+    },
+    {
+        "title": "LesbieRing",
+        "link": "https://fandango.neocities.org/lesbiering/",
+        "theme": "Lesbians",
+        "status": "active"
+    },
+    {
+        "title": "Metal Webring",
+        "link": "https://kvlt.neocities.org/",
+        "theme": "Metalheads",
+        "status": "active"
+    },
+    {
+        "title": "Magicalhearted Webring",
+        "link": "https://mizuki.world/magicalhearted/index.html",
+        "theme": "Fans of magical girl media",
+        "status": "inactive"
+    },
+    {
+        "title": "Magic Ring",
+        "link": "https://magicring.neocities.org/",
+        "theme": "Fiber artists (people who knit/crochet/etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Linux Webring",
+        "link": "https://dotcomboom.neocities.org/linux/ring",
+        "theme": "Linux users",
+        "status": "active"
+    },
+    {
+        "title": "The Magical Ring",
+        "link": "https://magical-ring.neocities.org/",
+        "theme": "Pagans, polytheists and occultists",
+        "status": "active"
+    },
+    {
+        "title": "FemRing",
+        "link": "https://femring.neocities.org/",
+        "theme": "Feminine/<abbr title=\"Gender Non-Conforming\">GNC</abbr> men",
+        "status": "active"
+    },
+    {
+        "title": "Nora Webring",
+        "link": "https://nora-webring.neocities.org/",
+        "theme": "People named Nora, Eleonora, Leonora, etc.",
+        "status": "active"
+    },
+    {
+        "title": "Nuclear Nerd Nexus",
+        "link": "https://n3.neocities.org/",
+        "theme": "Nerds with niche interests",
+        "status": "active"
+    },
+    {
+        "title": "Peach Ring",
+        "link": "https://riimo-cmd.github.io/peach-ring/",
+        "theme": "Websites with food-related content",
+        "status": "active"
+    },
+    {
+        "title": "PikRing",
+        "link": "https://nickolox.com/pikring/",
+        "theme": "Pikmin fans",
+        "status": "active"
+    },
+    {
+        "title": "Ghostring",
+        "link": "https://ghostring.neocities.org/",
+        "theme": "Horror/witchy themed sites",
+        "status": "active"
+    },
+    {
+        "title": "Apartment Webring",
+        "link": "https://midifreak.online/tomodachi",
+        "theme": "Tomodachi Life fans",
+        "status": "inactive"
+    },
+    {
+        "title": "Animal Crossing Webring",
+        "link": "https://housepen.nekoweb.org/acwebring",
+        "theme": "Animal Crossing fans",
+        "status": "inactive"
+    },
+    {
+        "title": "NekoWebRing",
+        "link": "https://webring.nekoweb.org/",
+        "theme": "Websites hosted on <a href=\"https://nekoweb.org/\">Nekoweb</a>",
+        "status": "active"
+    },
+    {
+        "title": "Cutie Club",
+        "link": "https://ita.toys/cutie-club/",
+        "theme": "J-fashion enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Eggring",
+        "link": "https://eggring.neocities.org/",
+        "theme": "Egg enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Chatbots Webring",
+        "link": "https://chatbots.neocities.org/",
+        "theme": "AI character card creators",
+        "status": "active"
+    },
+    {
+        "title": "Café Rosé",
+        "link": "https://allyratworld.com/cafe/rose",
+        "theme": "Cute/kawaii websites run by adults",
+        "status": "active"
+    },
+    {
+        "title": "Alterhuman Terrace",
+        "link": "https://nowa.garden/terrace/",
+        "theme": "Alterhumans (otherkins, therians, etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Cute Gallery",
+        "link": "https://cutegallery.neocities.org/main",
+        "theme": "Artists who draw cute stuff",
+        "status": "inactive"
+    },
+    {
+        "title": "Nekoweb Districts",
+        "link": "https://districts.nekoweb.org/",
+        "theme": "Websites hosted on <a href=\"https://nekoweb.org/\">Nekoweb</a>",
+        "status": "active"
+    },
+    {
+        "title": "Slenderwoods Webring",
+        "link": "https://fieldofhate.neocities.org/fields/Slenderwoods/slenderwoods-webring-index",
+        "theme": "Slenderman fans",
+        "status": "active"
+    },
+    {
+        "title": "Schrecknet",
+        "link": "https://vonfriedhof.neocities.org/schrecknet/",
+        "theme": "Vampire: the Masquerade fans",
+        "status": "active"
+    },
+    {
+        "title": "Re:source Ring",
+        "link": "https://pixelsafari.neocities.org/webring/",
+        "theme": "People who provide resources (graphics, tutorials, etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Yume-Ring",
+        "link": "https://yume-ring.neocities.org/",
+        "theme": "Yumejoshis, otomes, and self-shippers",
+        "status": "active"
+    },
+    {
+        "title": "Sprinkle Squad",
+        "link": "https://andou.gay/webring",
+        "theme": "Members of Vtuber Andou's stream community",
+        "status": "active"
+    },
+    {
+        "title": "Book Ring",
+        "link": "https://library.thecozy.cat/",
+        "theme": "Websites related to books and writting",
+        "status": "active"
+    },
+    {
+        "title": "Papernet",
+        "link": "https://papernet.neocities.org/",
+        "theme": "Zinesters",
+        "status": "active"
+    },
+    {
+        "title": "Tube Sun Ring",
+        "link": "https://bananaboots.neocities.org/webring/",
+        "theme": "The Mechanisms fans",
+        "status": "active"
+    },
+    {
+        "title": "Vampire Hunters Union",
+        "link": "https://wygolvillage.neocities.org/misc/vampirehuntersunion",
+        "theme": "Castlevania fans",
+        "status": "active"
+    },
+    {
+        "title": "Vampire Club",
+        "link": "https://vampire-club.neocities.org/",
+        "theme": "Vampire enthusiasts",
+        "status": "inactive"
+    },
+    {
+        "title": "Starburst Webring",
+        "link": "https://alien.hospital/starburst/join",
+        "theme": "Science fiction fans",
+        "status": "active"
+    },
+    {
+        "title": "Warriors of Light Webring",
+        "link": "https://wolwebring.neocities.org/",
+        "theme": "Final Fantasy fans",
+        "status": "active"
+    },
+    {
+        "title": "Fandom Ring",
+        "link": "https://fandomr.ing/",
+        "theme": "Anyone in fandom",
+        "status": "active"
+    },
+    {
+        "title": "Melanated",
+        "link": "https://melanated.neocities.org/",
+        "theme": "People of Color",
+        "notes": "New member applications are on hold",
+        "status": "hiatus"
+    },
+    {
+        "title": "ShouJosei Café",
+        "link": "https://angeleyesprings.neocities.org/webring/shoujosei",
+        "theme": "Fans of female-oriented Japanese media",
+        "status": "active"
+    },
+    {
+        "title": "FujoRing Out",
+        "link": "https://fujoringout.nekoweb.org/",
+        "theme": "Fans of Yuri and/or Yaoi",
+        "status": "active"
+    },
+    {
+        "title": "CookieRun Webring",
+        "link": "https://evehibi.nekoweb.org/ckwr/",
+        "theme": "Cookie Run fans",
+        "status": "active"
+    },
+    {
+        "title": "Galactic Webring",
+        "link": "https://darkosparko.nekoweb.org/webrings%2Fgalactic-webring/index.html",
+        "theme": "Space enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Usagiring",
+        "link": "https://demgoze.nekoweb.org/kawaii/usagiring/home",
+        "theme": "Bunny people and bunny enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Silyring",
+        "link": "https://silly.possiblyaxolotl.com/",
+        "theme": "Silly people",
+        "status": "active"
+    },
+    {
+        "title": "NYAN Webring",
+        "link": "https://epiccity.nekoweb.org/ring/ring",
+        "theme": "Nyan Cat fans",
+        "status": "active"
+    },
+    {
+        "title": "Aliens Online",
+        "link": "https://aliensonline.neocities.org/",
+        "theme": "People who identify as/with aliens",
+        "status": "active"
+    },
+    {
+        "title": "ASCIIring",
+        "link": "https://rubybulbs.net/webring/index.html",
+        "theme": "ASCII art fans",
+        "status": "active"
+    },
+    {
+        "title": "Aperture Webring",
+        "link": "https://jack-dawlia.neocities.org/page/shrines/portal/aperturewebring",
+        "theme": "Portal fans",
+        "status": "active"
+    },
+    {
+        "title": "Burger Ring",
+        "link": "https://darkosparko.nekoweb.org/webrings/burger-ring/",
+        "theme": "Fast food lovers (with art/<abbr title=\"Roleplaying\">RP</abbr> elements)",
+        "status": "active"
+    },
+    {
+        "title": "Doodlering",
+        "link": "https://evehibi.nekoweb.org/doodlering/",
+        "theme": "People who like to doodle",
+        "status": "active"
+    },
+    {
+        "title": "Fan Editors Webring",
+        "link": "https://fan-editor-junction.neocities.org/webring/members",
+        "theme": "People who make fan edits",
+        "status": "active"
+    },
+    {
+        "title": "Yuri & Yaoi Webring",
+        "link": "https://www.virtuagirl.net/yuriwebring",
+        "theme": "Fans of Yuri and/or Yaoi",
+        "status": "active"
+    },
+    {
+        "title": "Francophonering",
+        "link": "https://francophonering.neocities.org/",
+        "theme": "French speakers",
+        "status": "active"
+    },
+    {
+        "title": "From Country, With Love",
+        "link": "https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/FCWL-webring-about.html",
+        "theme": "People of differant nationalities",
+        "status": "hiatus"
+    },
+    {
+        "title": "Glitter Webring",
+        "link": "http://neptunex3.neocities.org/webring",
+        "theme": "Websites with colorful layouts",
+        "status": "active"
+    },
+    {
+        "title": "Goth Music Ring",
+        "link": "https://eggmothsoup.neocities.org/gothmusic.html",
+        "theme": "Fans of goth music",
+        "status": "active"
+    },
+    {
+        "title": "Homestuckies",
+        "link": "https://blinkie-net.neocities.org/homestuckies",
+        "theme": "Homestuck fans",
+        "status": "active"
+    },
+    {
+        "title": "Kemono Ring",
+        "link": "https://cynderthekitsune.nekoweb.org/kemono%20webring/",
+        "theme": "Kemonomimi",
+        "status": "active"
+    },
+    {
+        "title": "Little Planet Webring",
+        "link": "https://huroncelestial.neocities.org/littleplanet",
+        "theme": "Sonic the Hedgehog fans",
+        "status": "active"
+    },
+    {
+        "title": "Monster Prom Webring",
+        "link": "https://miracleos.neocities.org/mpwr/mpwr",
+        "theme": "Monster Prom fans",
+        "status": "active"
+    },
+    {
+        "title": "Neo-Nihongo Webring",
+        "link": "https://cerealandchoccymilk.neocities.org/webrings/neo-nihongo",
+        "theme": "Japanese speakers and learners",
+        "status": "active"
+    },
+    {
+        "title": "PersonaRing",
+        "link": "https://silly-beanz.neocities.org/personaring/home",
+        "theme": "People with personas, avatars, etc.",
+        "status": "active"
+    },
+    {
+        "title": "Ranfren Webring",
+        "link": "https://cuchuflinsi.top/ranring/",
+        "theme": "Ranfren fans",
+        "status": "active"
+    },
+    {
+        "title": "ROCK webring",
+        "link": "https://rock-webring.neocities.org/",
+        "theme": "Fans of rock music",
+        "status": "active"
+    },
+    {
+        "title": "Rayman Ring",
+        "link": "https://edgyrabbid.neocities.org/Raymanring.HTML",
+        "theme": "Rayman fans",
+        "status": "active"
+    },
+    {
+        "title": "OCverse",
+        "link": "https://zoranadragon.neocities.org/more/oc-webring",
+        "theme": "People with original characters or self-inserts",
+        "status": "active"
+    },
+    {
+        "title": "Cuddler Webring",
+        "link": "https://cuddler-webring.netlify.app/",
+        "theme": "People who love cuddling",
+        "status": "inactive"
+    },
+    {
+        "title": "Tropical Rice Bowl Webring",
+        "link": "https://astracelestine.nekoweb.org/webring/tropical-rice-bowl",
+        "theme": "South-east Asians",
+        "status": "active"
+    },
+    {
+        "title": "Artists Making the Internet Gay Again",
+        "link": "https://nicois.gay/amiga/amiga-webring",
+        "theme": "LGBT+ artists",
+        "status": "active"
+    },
+    {
+        "title": "LPS Webring",
+        "link": "https://tohellwithit.nekoweb.org/lpsring/",
+        "theme": "Littlest Pet Shop fans",
+        "status": "active"
+    },
+    {
+        "title": "Webmaster Webring",
+        "link": "https://webmasterwebring.netlify.app/",
+        "theme": "Any and all websties, <em>including</em> carrd, strawpage, etc.",
+        "status": "active"
+    },
+    {
+        "title": "Website Buddy Webring",
+        "link": "https://darkosparko.nekoweb.org/webrings/websitebuddy-webring/websitebuddy-webring.html",
+        "theme": "A friend that's also a webring",
+        "status": "active"
+    },
+    {
+        "title": "Monitor Ring",
+        "link": "https://ddnikki.nekoweb.org/monitoring/",
+        "theme": "Vocaloids fans",
+        "status": "active"
+    },
+    {
+        "title": "OC Webring",
+        "link": "https://oc-webring.neocities.org/",
+        "theme": "People with original characters (avalible in both English and Chinese)",
+        "status": "active"
+    },
+    {
+        "title": "FURzine WEBring",
+        "link": "https://obliviousally.neocities.org/webrings/furzine/",
+        "theme": "Furry zinesters",
+        "status": "active"
+    },
+    {
+        "title": "FINAL GIRLS WEBRING",
+        "link": "https://obliviousally.neocities.org/webrings/finalgirls/",
+        "theme": "Final Girls and fans of Final Girls",
+        "status": "active"
+    },
+    {
+        "title": "Collectors Webring",
+        "link": "https://gutz-nd-teeth.neocities.org/webring",
+        "theme": "People who collect things",
+        "status": "active"
+    },
+    {
+        "title": "Autists Online",
+        "link": "https://juuyondaime.net/webring/",
+        "theme": "Indie websites with autistic webmasters",
+        "status": "hiatus"
+    },
+    {
+        "title": "The 30+ Club",
+        "link": "https://moonpr1sm.com/random/30plusclub",
+        "theme": "Webmasters who're over 30 years old",
+        "status": "active"
+    },
+    {
+        "title": "Misc-Ring",
+        "link": "https://miscri.netlify.app/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Writer Webring",
+        "link": "https://mortaki.neocities.org/writers/main",
+        "theme": "Writers",
+        "status": "active"
+    },
+    {
+        "title": "Bolognese Ring",
+        "link": "https://spaghetti.nekoweb.org/webring",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Webring Webring",
+        "link": "https://skylerzap.com/webring-webring/",
+        "theme": "Webring hosts",
+        "status": "active"
+    },
+    {
+        "title": "Star Wars Webring",
+        "link": "https://zacharykai.net/lists/starwars",
+        "theme": "Star Wars fan sites",
+        "status": "active"
+    },
+    {
+        "title": "RSS Webring",
+        "link": "https://mxbo.neocities.org/rss/ring",
+        "theme": "Websites with RSS feeds",
+        "status": "active"
+    },
+    {
+        "title": "QTPOC Webring",
+        "link": "https://qtpoc-ring.netlify.app/",
+        "theme": "Queer and Trans People of Color",
+        "status": "active"
+    },
+    {
+        "title": "Alterhuman Assembly",
+        "link": "https://zpires.com/website/alterhuman-assembly/",
+        "theme": "Alterhumans (otherkins, therians, etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Astronomy Webring",
+        "link": "https://astroring.auroradynia.com/",
+        "theme": "People interested in astronomy/astrophysics/etc.",
+        "status": "active"
+    },
+    {
+        "title": "Wubring",
+        "link": "https://wubring.nekoweb.org/",
+        "theme": "Fans of Roblox sandbox games",
+        "status": "active"
+    },
+    {
+        "title": "Seabunny Webring",
+        "link": "https://yammers1.neocities.org/seabunnyring",
+        "theme": "Fans of seabunnnies",
+        "status": "active"
+    },
+    {
+        "title": "Homering",
+        "link": "https://yammers1.neocities.org/homering",
+        "theme": "Homepages",
+        "status": "active"
+    },
+    {
+        "title": "ULTRARING",
+        "link": "https://jack-dawlia.neocities.org/page/shrines/ultrakill/ULTRARING",
+        "theme": "ULTRAKILL fans",
+        "status": "active"
+    },
+    {
+        "title": "Femtanyl Webring",
+        "link": "https://femtanyl03.neocities.org/token/webrings/femtanylwebring",
+        "theme": "Femtanyl fans",
+        "status": "active"
+    },
+    {
+        "title": "SSGRing",
+        "link": "https://jbc.lol/webrings/ssgring/",
+        "theme": "Websites made with Static Site Generators",
+        "status": "active"
+    },
+    {
+        "title": "Dead Man's Webring",
+        "link": "https://acidicalchemist.nekoweb.org/boingoring",
+        "theme": "Oingo Boingo fans",
+        "status": "active"
+    },
+    {
+        "title": "Dr. Pepper Ring",
+        "link": "https://oerrorpage.neocities.org/ddrpepper/",
+        "theme": "Dr. Pepper fans",
+        "status": "active"
+    },
+    {
+        "title": "LibreRing User Ring",
+        "link": "https://libre.town/creative/development/librering.xhtml",
+        "theme": "People who use LibreRing",
+        "status": "active"
+    },
+    {
+        "title": "Responeko Webring",
+        "link": "https://jbc.lol/webrings/responeko/",
+        "theme": "Responsive websites hosted on <a href=\"https://nekoweb.org/\">Nekoweb</a>",
+        "status": "active"
+    },
+    {
+        "title": "Euroring",
+        "link": "https://euroring.neocities.org/",
+        "theme": "Citizens of EU countries",
+        "status": "active"
+    },
+    {
+        "title": "The PCBRing",
+        "link": "https://randompcb.nekoweb.org/rinnnnng/thering.html/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Monster Hunter Webring",
+        "link": "https://tesseractcube.neocities.org/rehaul/webring/webring",
+        "theme": "Monster Hunter fans",
+        "status": "active"
+    },
+    {
+        "title": "Green Day Webring",
+        "link": "https://twentyphanday.nekoweb.org/webrings/gdring/",
+        "theme": "Green Day fans",
+        "status": "active"
+    },
+    {
+        "title": "//web",
+        "link": "https://yoyle.city/webring/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Dragonverse",
+        "link": "https://dragonversering.nekoweb.org/",
+        "theme": "Dragon enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Deftring",
+        "link": "https://jugproductions.neocities.org/deftring/deftring",
+        "theme": "Deftones fans",
+        "status": "active"
+    },
+    {
+        "title": "Gamer Ring",
+        "link": "https://gamerring.howsoonisnow.org/",
+        "theme": "Gamers and fans of video games",
+        "status": "active"
+    },
+    {
+        "title": "PJSK Ring",
+        "link": "https://dazaisfunpalace.nekoweb.org/webring",
+        "theme": "Project Sekai fans",
+        "status": "active"
+    },
+    {
+        "title": "OtakuRing",
+        "link": "https://bishoujopalace.neocities.org/WebRing/",
+        "theme": "Self-identified otakus",
+        "status": "active"
+    },
+    {
+        "title": "The Glaggle",
+        "link": "https://purplyworld.nekoweb.org/awesomering/glagglering",
+        "theme": "Glaggleland fans",
+        "status": "active"
+    },
+    {
+        "title": "Netizen Club Webring",
+        "link": "https://netizen.club/webring.php",
+        "theme": "Websites that are viewable on older computers",
+        "status": "active"
+    },
+    {
+        "title": "Gummyring",
+        "link": "https://webri.ng/webring/gummyring",
+        "theme": "Candy enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Soweli Ring",
+        "link": "https://thedressedmolerat.github.io/webring/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "CDRing",
+        "link": "https://cdring.neocities.org/",
+        "theme": "Music enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Rhythm Games Webring",
+        "link": "https://julieyess.neocities.org/rhythmwebring/rhythmgamewebring",
+        "theme": "Rhythm game enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Rhythm Ring",
+        "link": "https://maddycha.com/rhythm-ring/",
+        "theme": "Rhythm Heaven fans",
+        "status": "active"
+    },
+    {
+        "title": "CODEC RING",
+        "link": "https://arillscorner.nekoweb.org/codec-ring/about",
+        "theme": "Metal Gear fans",
+        "status": "active"
+    },
+    {
+        "title": "Foodring",
+        "link": "https://kierio.nekoweb.org/Webring",
+        "theme": "Food-themed websites",
+        "status": "active"
+    },
+    {
+        "title": "Musicians Webring",
+        "link": "https://lydels.neocities.org/musicianswebring/webring",
+        "theme": "Webmasters who make music of any kind",
+        "status": "active"
+    },
+    {
+        "title": "Fancy Fursona Webring",
+        "link": "https://suricrasia.online/webring/",
+        "theme": "Furries(?)",
+        "status": "active"
+    },
+    {
+        "title": "Glass Beach Webring",
+        "link": "https://jugproductions.neocities.org/glass-beach-webring",
+        "theme": "Glass Beach fans",
+        "status": "active"
+    },
+    {
+        "title": "Hollow Ring",
+        "link": "https://samsolarsystem.neocities.org/Hallownestbugs",
+        "theme": "Hollow Knight/Silksong fans",
+        "status": "active"
+    },
+    {
+        "title": "Apartment Webring",
+        "link": "https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-main.html",
+        "theme": "General, with an art and Tomodachi Life theme",
+        "status": "active"
+    },
+    {
+        "title": "Omoring",
+        "link": "https://omoring.aviatorlaw.eu/",
+        "theme": "General(?), with an Omari theme",
+        "status": "active"
+    },
+    {
+        "title": "RadioRing",
+        "link": "https://willascool.neocities.org/radioring",
+        "theme": "Radiohead fans",
+        "status": "active"
+    },
+    {
+        "title": "AKIRA Club",
+        "link": "https://bokuwatetsuo.net/webring/akiraclub",
+        "theme": "Akira fans",
+        "status": "active"
+    },
+    {
+        "title": "Persona Webring",
+        "link": "https://flonkie.nekoweb.org/other/persona",
+        "theme": "Persona fans",
+        "status": "active"
+    },
+    {
+        "title": "SapphicRing",
+        "link": "https://sunnishinez.neocities.org/webring/sapphicring",
+        "theme": "Sapphics (lesbians/bisexual women/etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Star Trek Fans Webring",
+        "link": "https://serenitysrest.neocities.org/webring/star-trek-fans-webring/about",
+        "theme": "Star Trek fans",
+        "status": "active"
+    },
+    {
+        "title": "Microsoft Agent Frontier Ring",
+        "link": "https://tmafering.nekoweb.org/",
+        "theme": "Websites with Microsoft Agent technologies",
+        "status": "active"
+    },
+    {
+        "title": "TV Time Webring",
+        "link": "https://thegreenroom.neocities.org/webrings/tvtimewebring",
+        "theme": "Fans of Tenna from Deltarune",
+        "status": "active"
+    },
+    {
+        "title": "CYBERTRON WEBRING",
+        "link": "https://cybertronwebring.neocities.org/",
+        "theme": "Transformers fans",
+        "status": "active"
+    },
+    {
+        "title": "Frutiger Aero Webring",
+        "link": "https://maniksharma.xyz/webring",
+        "theme": "Fans of the frutiger aero aesthetic",
+        "status": "active"
+    },
+    {
+        "title": "Tokusatsu Webring",
+        "link": "https://gattonero.moe/tokuring/home",
+        "theme": "Tokusatsu media enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Visual Novel Webring",
+        "link": "https://hananezumi.neocities.org/vnwebring",
+        "theme": "Visual novel enthusiasts",
+        "status": "active"
+    },
+    {
+        "title": "Homestuck Webring",
+        "link": "https://yoylecake420.neocities.org/hswebring",
+        "theme": "Homestuck fans",
+        "status": "active"
+    },
+    {
+        "title": "WE_bring",
+        "link": "https://brooklynights.nekoweb.org/we_bring/",
+        "theme": "Windows OS fans",
+        "status": "active"
+    },
+    {
+        "title": "AberWebRing",
+        "link": "https://aberwebr.ing/",
+        "theme": "Students and alumni of Aberystwyth University",
+        "status": "active"
+    },
+    {
+        "title": "Hack Club Webring",
+        "link": "https://webring.hackclub.com/index.html",
+        "theme": "<a href=\"https://hackclub.com/\">Hack Club</a> members",
+        "status": "active"
+    },
+    {
+        "title": "Catppuccin Webring",
+        "link": "https://ctp-webr.ing/",
+        "theme": "Sites that use the <a href=\"https://catppuccin.com/\">Catppuccin color scheme</a>",
+        "status": "active"
+    },
+    {
+        "title": "Hazbin Webring",
+        "link": "https://arackniss.neocities.org/webring",
+        "theme": "Hazbin Hotel fansites and shrines",
+        "status": "active"
+    },
+    {
+        "title": "Sites for a Free Palestine",
+        "link": "https://sitesforpalestine.neocities.org/",
+        "theme": "Pro-Palestine Websites",
+        "status": "active"
+    },
+    {
+        "title": "Beepbox Webring",
+        "link": "https://juneish.neocities.org/ring/beepbox/",
+        "theme": "Webmasters who make music with beepbox",
+        "status": "active"
+    },
+    {
+        "title": "Web in the Round",
+        "link": "https://pixelbill.neocities.org/WebInTheRound/",
+        "theme": "Theater fans and artists",
+        "status": "active"
+    },
+    {
+        "title": "Deepsea Metro",
+        "link": "https://controlcoreangel.neocities.org/webrings/deepseametro/metro",
+        "theme": "Splatoon alterhumans (fictionkin, etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Care Bears Webring",
+        "link": "https://controlcoreangel.neocities.org/webrings/carebears/cb",
+        "theme": "Care Bears fans",
+        "status": "active"
+    },
+    {
+        "title": "Bulltown.Sidecar",
+        "link": "https://sidecar.neocities.org/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Polyring",
+        "link": "https://polyring.club/",
+        "theme": "Polymaths",
+        "status": "active"
+    },
+    {
+        "title": "Our Favorite Void",
+        "link": "https://ourfavoritevoid.club/",
+        "theme": "General",
+        "status": "active"
+    },
+    {
+        "title": "Off-Platform Webring",
+        "link": "https://sakk.ie/off-platform/",
+        "theme": "Sites run by adults that aren't hosted by the main webhosting platforms (Neocities/Nekoweb/etc.)",
+        "status": "active"
+    },
+    {
+        "title": "Claw Webring",
+        "link": "https://github.com/whitep4nth3r/the-claw-webring",
+        "theme": "General(?)",
+        "status": "active"
+    },
+    {
+        "title": "Homebrew Webring",
+        "link": "https://homebrew.cresentri.com/",
+        "theme": "People who enjoy homebrewing/modding their devices",
+        "status": "active"
+    },
+    {
+        "title": "HTML Energy Webring",
+        "link": "https://www.gabriel-export.earth/html-energy-webring/",
+        "theme": "General(?)",
+        "status": "active"
+    },
+    {
+        "title": "HTML Hobbyist Webring",
+        "link": "https://webring.htmlhobbyist.com/",
+        "theme": "People who make and teach others how to make hand-coded, HTML websites",
+        "status": "active"
+    },
+    {
+        "title": "Wafring",
+        "link": "https://wafring.jbc.lol/",
+        "theme": "Wafrn users",
+        "status": "active"
+    },
+    {
+        "title": "Static.Quest",
+        "link": "https://static.quest/",
+        "theme": "Static websites",
+        "status": "active"
+    },
+    {
+        "title": "Game Devs Together",
+        "link": "https://gdt.fireye.coffee/",
+        "theme": "Game developers (video games <em>and</em> tabletop!)",
+        "status": "active"
+    },
+    {
+        "title": "WarioRing",
+        "link": "https://crygorcrisis.neocities.org/retro/onionring/",
+        "theme": "WarioWare fans",
+        "status": "active"
+    },
+    {
+        "title": "Online Webring",
+        "link": "https://webring.ghostk.id/online/",
+        "theme": "Active sites that update at least once a month",
+        "status": "active"
+    },
+    {
+        "title": "Webring.Fun",
+        "link": "https://webring.fun/",
+        "theme": "Personal websites",
+        "status": "active"
+    },
+    {
+        "title": "Code Collective",
+        "link": "https://petrapixel.neocities.org/webring",
+        "theme": "Indie websites that offer coding resources/help/tips/tutorials",
+        "status": "active"
+    },
+    {
+        "title": "Enclave Webring",
+        "link": "https://zatzhing.me/webring",
+        "theme": "General(?)",
+        "status": "active"
+    },
+    {
+        "title": "Pillowfort Webring",
+        "link": "https://pfwebring.neocities.org/",
+        "theme": "Pillowfort users",
+        "status": "active"
+    },
+    {
+        "title": "Artists Online",
+        "link": "https://qtbeans.neocities.org/artistsonline",
+        "theme": "Visual artists of all kinds",
+        "status": "active"
+    },
+    {
+        "title": "K-Pop Webring",
+        "link": "https://purplehello98.neocities.org/kpopring/",
+        "theme": "K-pop fans",
+        "status": "active"
+    },
+    {
+        "title": "TRRing",
+        "link": "https://strawberrynose.neocities.org/webring/TRRing",
+        "theme": "Team Rocket fans",
+        "status": "active"
+    },
+    {
+        "title": "Furnix Webring",
+        "link": "https://tapeykatt.neocities.org/furnix/",
+        "theme": "Furries who use Linux/UNIX",
+        "status": "active"
+    },
+    {
+        "title": "Therian Webring",
+        "link": "https://roselilyqueen.nekoweb.org/pages/therianthropy",
+        "theme": "Therianthropes",
+        "status": "active"
+    },
+    {
+        "title": "LiminalRing",
+        "link": "https://liminalring.neocities.org/",
+        "theme": "fans of liminal spaces",
+        "status": "active"
+    },
+    {
+        "title": "Void.Shrooms",
+        "link": "https://void.shroom.ink/",
+        "theme": "creatives who enjoy dark/gothic aesthetics",
+        "status": "active"
+    },
+    {
+        "title": "EvRing",
+        "link": "https://evanescencering.nekoweb.org/",
+        "theme": "Evanescence fans",
+        "status": "active"
+    },
+    {
+        "title": "Little Planet Webring",
+        "link": "https://huroncelestial.neocities.org/littleplanet",
+        "theme": "Sonic the Hedgehog fans",
+        "status": "active"
+    }
+]

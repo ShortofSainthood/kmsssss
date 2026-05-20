@@ -1,0 +1,46 @@
+{
+  "changes": [
+    {
+      "date": "2025-03-05",
+      "year": "2025",
+      "updates": [
+        { "text": "Optimized CSS for <em>really</em> small screens." },
+        {"text": "Added a new section to the homepage." },
+        { "text": "Updated the footer with new links.",
+          "listItems": [
+            { "text": "Added a link to the new blog."},
+            { "text": "Updated the contact information." }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2019-02-20",
+      "year": "2019",
+      "updates": [
+        { "text": "Improved performance on mobile devices.",
+          "listItems": [
+            { "text": "Reduced image sizes." },
+            { "text": "Minified JavaScript files." }
+          ]
+        },
+        { "text": "Fixed a bug in the user profile section.",
+          "listItems": [
+            { "text": "Resolved an issue with profile picture uploads." },
+            { "text": "Corrected the display of user bios." }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2019-01-15",
+      "year": "2019",
+      "updates": [
+        { "text": "Added support for dark mode."
+        },
+        {"text": "Updated the navigation menu."
+        }
+      ]
+    }
+  ]
+}

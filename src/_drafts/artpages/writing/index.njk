@@ -1,0 +1,54 @@
+---
+title: Writing
+desc: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium praesentium harum ratione non nulla totam sed doloribus!.
+layout: base.njk
+---
+<style>
+.killmepls {
+    font-style: italic;
+    color: var(--textaccent);
+}
+
+time {
+    color: var(--textaccent);
+}
+
+h2 {
+    border-bottom: none;
+    margin: unset;
+}
+
+.writingmetadata {
+    border-bottom: var(--textaccent) 1px solid;
+    margin: 0.5em 0 0.25em 0;
+}
+
+.writingmetadata p {
+    font-size: 0.9em;
+    margin-top: 0;
+}
+
+.writingitem {
+    border: solid 1px var(--text);
+    padding: 7px 15px;
+    margin: 1em auto;
+    /*box-shadow: var(--textaccent) -3px 5px 0;*/
+}
+</style>
+
+<p>{{ collections.writings.length }} {{ desc }}</p>
+
+
+{% for writing in collections.writings %}
+<div class="writingitem">
+    <div class="writingmetadata">
+        <h2><a href="{{ writing.url }}">{{ writing.data.title }}</a></h2>
+        <p><time datetime="{{ writing.data.date }}">{{ writing.data.date | niceDateShort }}</time> • <span class="killmepls">{{ writing.data.type }}</span></p>
+    </div>
+    <p>
+        {{ writing.data.desc }}
+    </p>
+</div>
+{% endfor %}
+
+<p class="speciallink"><a href="/art/">Back to Art Index</a></p>

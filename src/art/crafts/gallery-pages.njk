@@ -1,0 +1,75 @@
+---
+layout: gallery-page.njk
+pagination:
+  data: craftGallery
+  size: 1
+  reverse: true
+  alias: image
+permalink: "/art/crafts/images/{% if image.title %}{{ image.title | slugify }}{% else %}{{ pagination.pageNumber + 1 }}{% endif %}.html"
+eleventyComputed:
+  title: "{% if image.title %}{{ image.title }}{% else %}Gallery image{% endif %}"
+  eleventyNavigation:
+    key: {{img.title}}
+    parent: Crafts Gallery
+---
+<!-- Whatever you have your pagination size set to in index.njk is what you need to set the gallerySize variable below to.
+Sorry, it's the only way I could get the "Back to gallery" link to work the why it does in the original -->
+{% set gallerySize = 12 %}
+
+
+{% if image.warning %}
+<div class="box callout warning">
+    {% lucide "triangle-alert", { "size": "32" } %}
+      <p><strong>Warning:</strong> This piece contains {{ image.warning }}.</p>
+</div>
+
+
+<details class="warningdetails">
+  <summary>Show/Hide Image</summary>
+{% endif %}
+
+
+<div class="image">
+  <div class="imgproper"><img src="/assets/images/art/{{ image.img }}" alt=""/></div>
+  <div class="imgid"><p>Image description: {{ image.desc | safe }} End ID.</p></div>
+  {% if image.comment %}<p>Comment: {{ image.comment | safe }}</p>{% endif %}
+</div>
+
+{% if image.warning %}</details>{% endif %}
+
+<!--<nav class="controls">
+<p>{% if pagination.href.previous %}<a class="button" href="{{ pagination.href.previous }}">Previous</a>{% endif %}
+{% if pagination.href.next %}<a class="button" href="{{ pagination.href.next }}">Next</a>{% endif %}<br/>
+{% if ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") == 1 %}
+    <a class="button" href="../index.html#{{ pagination.pageNumber + 1 }}">Back to gallery</a>
+{% else %}
+    <a class="button" href="../{{ ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") }}.html#{{ pagination.pageNumber + 1 }}">Back to gallery</a>
+{% endif %}</p>
+</nav>-->
+
+<nav class="nextprev">
+  <div class="prev">
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{% lucide "move-left", { "size": "16", "stroke-width": "3" } %} Previous Image<br>{{ pagination.title.previous }}</a>{% endif %}
+  </div>
+  <div class="next">
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next Image {% lucide "move-right", { "size": "16", "stroke-width": "3" } %}<br>{{ pagination.title.next }}</a>{% endif %}
+  </div>
+  <div style="flex: 1 1 100%;" class="speciallink">
+
+    
+    {% if image.title %}
+      {% if ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") == 1 %}
+      <a class="button" href="../index.html#{{ image.title | slugify}}">Back to gallery</a>
+      {% else %}
+      <a class="button" href="../{{ ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") }}.html#{{ image.title | slugify}}">Back to gallery</a>
+      {% endif %}
+    {% else %}
+      {% if ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") == 1 %}
+      <a class="button" href="../index.html#{{ pagination.pageNumber + 1 }}">Back to gallery</a>
+      {% else %}
+      <a class="button" href="../{{ ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") }}.html#{{ pagination.pageNumber + 1 }}">Back to gallery</a>
+      {% endif %}
+    {% endif %}
+
+  </div>
+</nav>

@@ -1,0 +1,76 @@
+[
+	{
+	  "date": "2024-05-15",
+    "dateExact": "2024-05-15T15:14:14.578Z",
+	  "update": "Officially Launched the site!"
+	},
+    {
+      "date": "2024-05-23",
+      "dateExact": "2024-05-23T15:14:14.578Z",
+      "update": "Changed HTML files to PHP."
+    },
+	{
+	  "date": "2024-09-14",
+    "dateExact": "2024-09-14T15:14:14.578Z",
+	  "updates": [
+            "Switched webhosts from <a class=\"external\" href=\"https://webhostmost.com/\">Webhostmost</a> to <a class=\"external\" href=\"https://leprd.space/\">Leprd</a>!",
+            "Updated this changelog to use the <a class=\"external\" href=\"https://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 format</a> (year-month-day) instead of the month/day/year format.",
+            "Made it so on-site links shouldn't have file extensions on them. \".php\" and \".html\" should not be showing up at the end of URLs anymore.",
+            "Fiddled around with the CSS a bit to make it more compatible with older browsers."
+        ]
+	},
+	{
+	  "date": "2024-09-24",
+    "dateExact": "2024-09-24T15:14:14.578Z",
+	  "update": "Added a \"song of the now\" section to the front page."
+	},
+	{
+	  "date": "2024-09-29",
+    "dateExact": "2024-09-29T15:14:14.578Z",
+	  "updates": [
+            "Added a <a href=\"/playlists\">playlists page</a>.",
+            "Added a new song-of-the-now and <a href=\"/songsofthethen\">a page to archive old ones</a>.",
+            "Added a \"back to top\" link to the footer.",
+            "Put the changelog in a scrolling div so that it doesn't take up half the page anymore."
+        ]
+	},
+    {
+      "date": "2024-10-08",
+      "dateExact": "2024-10-08T15:14:14.578Z",
+      "update": "Added a <a href=\"http://sainthood.xyz/contact\">contact page</a> with my email and Fediverse info."
+    },
+    {
+      "date": "2024-11-13",
+      "dateExact": "2024-11-13T15:14:14.578Z",
+      "updates": [
+            "Revamped my whole site!",
+            "Changed the CSS to <a class=\"external\" href=\"https://lissomware.github.io/css/\">Lissom.CSS</a>.",
+            "Published my first blog post: <a href=\"/blog/posts/2024-11-13-who-invited-this-guy\">Who Invited This Guy?</a>",
+            "Moved my contact info to the homepage.",
+            "Added a page for <a href=\"/uses\">stuff I use</a>, <a href=\"/wips\">stuff I'm working on</a>, and <a href=\"/credits\">credits</a>.",
+            "Added an <a href=\"/rss.xml\">RSS feed</a>.",
+            "Added a <a href=\"/404\">custom 404 page</a>.",
+            "Temporarily removed my link directory and playlists page while I reorganize them.",
+            "Switched back from PHP to static HTML."
+        ]
+    },
+    {
+      "date": "2024-12-11",
+      "dateExact": "2024-12-11T15:14:14.578Z",
+      "updates": [
+            "Added a <a href=\"/layouts/\">layouts page</a>.",
+            "Fixed some spelling errors.",
+            "Made some small tweaks to the CSS."
+        ]
+    },
+    {
+      "date": "2024-12-28",
+      "dateExact": "2024-12-28T15:14:14.578Z",
+      "updates": [
+            "Changed my layouts page to a <a href=\"/projects/\">projects page</a>, since that's more reflective of the actual content.",
+            "Added a new project: <a href=\"/projects/#11ty-gallery\">Accessible Eleventy Gallery</a>.",
+            "Added a <a href=\"/snippets/\">code snippets page</a> with three snippets.<ul><li><a href=\"/snippets/imagedividers\">Image Dividers</a></li> <li><a href=\"/snippets/inlinelists\">Inline Lists with Item Separators</a></li> <li><a href=\"/snippets/linkbefore\">Link <code>::before</code> Effects</a></li></ul>",
+            "Made more tweaks to the CSS<ul><li>Fixed the external link symbol being underlined (that had been annoying me for a while, lol)</li> <li>Added extra spacing and border styling to my <a href=\"/changelog\">changelog</a> and <a href=\"/projects/\">projects</a> pages to make them easier to read.</li></ul>"
+        ]
+    }
+]

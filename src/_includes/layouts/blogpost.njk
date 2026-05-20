@@ -1,0 +1,105 @@
+---
+layout: blog.njk
+---
+<article class="clearfix">
+    <h1>{{ title }}</h1>
+    <div class="postmetadata">
+        {% lucide "calendar", { "size": "20", "stroke-width": "2", "style": "vertical-align: -0.1em;" } %} Posted <time datetime="{{ date }}">{{ date.toString() | niceDateShort }}</time>
+        {% if lastUpdated %}
+            &nbsp;{% lucide "square-pen", { "size": "20", "stroke-width": "2" } %} Last Updated <time datetime="{{ lastUpdated }}">{{ lastUpdated.toString() | niceDateShort }}</time>
+        {% endif %}
+        {% if categories %}
+        <br>
+        {% lucide "tags", { "size": "20", "stroke-width": "2" } %} Tagged:
+        <ul class="blogtags posttags">
+            {%- for category in categories -%}
+            <li><a href="/blog/tagged/{{ category | slugify}}.html">#{{ category }}</a></li>
+            {%- endfor -%}
+        </ul>
+        {% endif %}
+    </div>
+    {% if warning %}
+    <div class="box callout warning">
+        {% lucide "triangle-alert", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+        <p><strong>Warning:</strong> This post contains {{ warning | safe }}.</p>
+    </div>
+    {% endif %}
+    {% if info %}
+    <div class="box callout info">
+        {% lucide "info", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+        <p>{{ info | safe }}</p>
+    </div>
+    {% endif %}
+
+    {% if feedOnly %}
+    <aside class="notice">
+        <a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.
+    </aside>
+    {% endif %}
+
+    {% if TOC %}
+    <details>
+        <summary>Table of Contents</summary>
+        {{ content | toc | safe }}
+    </details>
+    {% endif %}
+    {{ content | safe }}
+</article>
+{%- if status %}
+<aside class="box" aria-labelledby="status" style="margin-top: 0;">
+    <h2 class="visually-hidden" id="status">Status</h2>
+    <ul class="status">
+    {%- if status.mood %}
+        <li>{% lucide "heart", { "size": "16", "stroke-width": "2" } %} <b>Mood:</b> {{ status.mood }}</li>
+    {%- endif %}
+    {%- if status.listening %}
+        <li>{% lucide "music", { "size": "16", "stroke-width": "2" } %} <b>Listening to:</b> 
+        {%- if status.listening.link %}
+            <a href="{{ status.listening.link }}">{{ status.listening.song }}</a>
+        {%- else %}
+            {{ status.listening.song }}
+        {%- endif %}
+        </li>
+    {%- endif %}
+    {%- if status.reading %}
+        <li>{% lucide "book-text", { "size": "16", "stroke-width": "2" } %} <b>Reading:</b> {{ status.reading }}</li>
+    {%- endif %}
+    {% if status.watching %}
+        <li>{% lucide "eye", { "size": "16", "stroke-width": "2" } %} <b>Watching:</b> {{ status.watching }}</li>
+    {% endif %}
+    {% if status.playing %}
+        <li>{% lucide "dices", { "size": "16", "stroke-width": "2" } %} <b>Playing:</b> {{ status.playing }}</li>
+    {% endif %}
+    {% if status.eating %}
+        <li>{% lucide "utensils", { "size": "16", "stroke-width": "2" } %} <b>Eating:</b> {{ status.eating }}</li>
+    {% endif %}
+    {% if status.drinking %}
+        <li>{% lucide "glass-water", { "size": "16", "stroke-width": "2" } %} <b>Drinking:</b> {{ status.drinking }}</li>
+    {% endif %}
+    </ul>
+</aside>
+{%- endif %}
+<aside aria-labelledby="contact" style="border-top: var(--text) 1px solid;">
+    <h2 class="visually-hidden" id="contact">Contact</h2>
+    <p style="font-size: 0.9em; color: var(--textaccent); text-align: center;">
+        This blog doesn't support comments (yet), but you can still reach me via <a href="https://indieweb.social/@sainthood">Mastodon</a> or <a href="mailto:contact@sainthood.xyz">Email</a>.
+    </p>
+</aside>
+<nav aria-labelledby="postnav">
+    <h2 class="visually-hidden" id="postnav">Post Navigation</h2>
+    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+    <div class="nextprev">
+        <div class="prev">
+        {% if previousPost %}
+            <a href="{{ previousPost.url }}">{% lucide "move-left", { "size": "16", "stroke-width": "3" } %} Previous Post<br>{{ previousPost.data.title }}</a>
+        {% endif %}
+        </div>
+        <div class="next">
+        {% if nextPost %}
+            <a href="{{ nextPost.url }}">Next Post {% lucide "move-right", { "size": "16", "stroke-width": "3" } %}<br>{{ nextPost.data.title }}</a>
+        {% endif %}
+        </div>
+    </div>
+    <div class="speciallink"><a href="/blog/">Back to Blog Index</a></div>
+</nav>

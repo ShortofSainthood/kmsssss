@@ -1,0 +1,80 @@
+---
+title: "Web Directory \"Masterlist\""
+layout: base.njk
+eleventyNavigation:
+  parent: Webmastery Links
+  key: Web Directory "Masterlist"
+TOC: true
+TOCsidebar: true
+lastUpdated: "2025-07-12"
+showLastUpdated: true
+---
+{% css %}
+    table {width: 100%;}
+{% endcss %}
+
+<div class="box callout danger">
+    {% lucide "octagon-x", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+    <p><strong>Please do not use this as a comprehensive list!</strong> If you want a complete, comprehensive list of all active webrings/directories, please use <a href="https://brisray.com/web/webring-list.htm">brisray.com's Webring List</a> and <a href="https://brisray.com/web/indiedirs.htm">Indie Web Directories</a>, respectively. Those lists are also updated frequently and give more details than this one.</p>
+</div>
+
+<p>This is my attempt to catalogue as many <a href="https://en.wikipedia.org/wiki/Webring">webrings</a> and <a href="https://en.wikipedia.org/wiki/Web_directory">web directories</a> as I can. There are other lists out there, but most of them were non-comprehensive, out of date, etc. I hope this page can be a helpful resource for finding cool sites and communities!</p>
+
+<p>This page currently lists <strong>{{ webrings.length }}</strong> different directories!</p>
+
+<h2 id="disclaimers">Clarification and Disclaimers</h2>
+    <ul>
+        <li>
+            <p>All of the directories listed here focus on small, personal, and/or independent sites/blogs. No corporate sites, no site builders (squarespace, carrd, etc), and no social media accounts.</p>
+        </li>
+        <li>
+            <p>I've excluded directories that are centered around bigotry, illegal content, blatant misinformation, etc. I've also decided not to link to directories focused on explicit content since my site is SFW. If any of the sites mentioned fall under that and it just went over my head, please let me know so I can remove them.</p>
+        </li>
+        <li>
+            <p>That being said, <strong>I do not like or agree with every directory linked here</strong>. This page is supposed to be a <em>comprehensive</em> list, not a list of my favorites.</p>
+        </li>
+        <li>
+            <p>Keep in mind that some of these directories are more actively maintained than others. Maintaining a directory may include stuff like accepting new members, removing dead/broken sites, fixing technical problems, and enforcing any rules they have set up.</p>
+        </li>
+        <li>
+            <p>Directories marked as "general" are directories without any specific theme. They are/were open to any and all personal websites.</p>
+        </li>
+    </ul>
+
+{% for status, webrings in webrings | groupby("status") %}
+{%- if status == "active" %}
+<h2 id="active">Active Directories</h2>
+<p>Webrings/directories/etc that are <em>currently</em> accepting new members and are being actively maintained by their ringmasters.</p>
+{%- endif %}
+{%- if status == "inactive" %}
+<h2 id="inactive">Inactive Directories</h2>
+<p>Webrings/directories/etc that are no longer accepting new members and receive no/limited maintenance, or webrings/directories/etc haven't been updated in a long time and are seemingly abandoned. However, the member lists are still up and those sites may still be active.</p>
+{%- endif %}
+{%- if status == "hiatus" %}
+<h2 id="hiatus">Directories on Hiatus</h2>
+<p>Webrings/directories/etc that are reportedly on hiatus, but not abandoned. These directories are still being actively maintained, have been updated recently, or have a set end date for their hiatus.</p>
+{%- endif %}
+{%- if status == "unknown" %}
+<h2 id="unknown">Directories of Unknown Status</h2>
+<p>Webrings/directories/etc where it's not clear if they're still active or not.</p>
+{%- endif %}
+<table class="zebra-odd">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Theme</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in webrings | sort(false, false, 'title') %}
+        <tr>
+            <td><a href="{{ item.link }}">{{ item.title | safe }}</a></td>
+            <td>{{ item.theme | safe }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+<p class="speciallink">
+    <a href="/links/webmastery/">Back to Webmastery Links Index</a>
+</p>

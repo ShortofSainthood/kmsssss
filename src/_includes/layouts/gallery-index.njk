@@ -1,0 +1,52 @@
+{% extends "layouts/base.njk" %}
+{% block extrahead %}
+<style>
+  .gallery {
+    display: flex;
+    max-width: 700px;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+
+  .galleryimg {
+    flex: 0 1 32%;
+    aspect-ratio: 1 / 1;
+    /*overflow: hidden;*/
+    border-radius: 3%;
+    border: var(--bgaccent) 1px solid;
+  }
+  .galleryimg img {
+    text-align: center;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    width: 100%;
+    border-radius: 3%;
+    aspect-ratio: 1 / 1;
+  }
+  .galleryimg:hover, .galleryimg:has(a:focus) {
+    border: var(--textaccent) 1px solid;
+    transform: scale(1.05);
+    transition: 0.15s;
+    box-shadow: 5px 5px 15px #00000059;
+    z-index: 2;
+  }
+
+  .warning {
+    background: var(--bgaccent);
+    position: relative;
+  }
+
+  .warningcomment {
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    pointer-events: none;
+  }
+</style>
+{% endblock %}

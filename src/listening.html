@@ -1,0 +1,68 @@
+---
+title: Listening To
+layout: base.njk
+eleventyNavigation:
+    parent: Home
+    key: Listening To
+---
+{% css %}
+    .currentsong, .oldsongs {
+        padding: 0.5em;
+        border: solid 1px var(--textaccent);
+        border-radius: 10px;
+        margin: 5px;
+    }
+    .oldsongs {/*max-height: 425px;*/ overflow-y: scroll;}
+    .currentsong h2 {border-bottom: none;}
+    .half { flex: 1 1 calc(50% - 10px); }
+    .third { flex: 1 1 calc(33% - 10px); }
+    .twothird { flex: 1 1 calc(66% - 10px); }
+    .skiplink {text-align: center;}
+    .skiplink a {position: absolute; top: -115px; left: -225px;}
+    .skiplink a:focus {position: unset;}
+    @media screen and (min-width: 1025px) {
+        .oldsongs h2, .oldsongs p {border-bottom: none; text-align: center;}
+        .oldsongs p {margin-top: 0;}
+    }
+    @media screen and (max-width: 1024px) {
+        .oldsongs {
+            padding: revert;
+            border: revert;
+            border-radius: revert;
+            margin: revert;
+            max-height: revert;
+            overflow-y: revert;
+        }
+    }
+{% endcss %}
+
+<div class="flexcontainer">
+    <section class="third currentsong" style="text-align: center;">
+        <h2>Song of the Now</h2>
+        {% for song in songsofthenow | reverse %}
+        {% if loop.index0 < 1 %}
+            <img style="width:225px; height:auto;" src="{{ song.image }}" alt="">
+            <p><a class="youtube" href="{{ song.link }}"><span style="font-weight: bold;">{{ song.songname | safe }}</span> - {{ song.artist | safe }}</a></p>
+            {% if song.comment %}
+            <p style="font-size: 0.9em; color: var(--textaccent)">{{ song.comment | safe }}</p>
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+    </section>
+    <section class="twothird oldsongs">
+        <h2>Songs of the Then</h2>
+        <p>Previous "Songs of the Now"</p>
+        <p class="skiplink"><a href="#listbottom">Skip to List Bottom</a></p>
+        <ul>
+        {% for song in songsofthenow | reverse %}
+        {% if loop.index0 > 0 %}
+            <li>
+                <time datetime="{{ song.date }}">{{ song.date | niceDateShort2D }}</time>: <a class="youtube" href="{{ song.link }}"><span style="font-weight: bold;">{{ song.songname | safe }}</span> - {{ song.artist | safe }}</a>
+            </li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+        <div id="listbottom"></div>
+    </section>
+</div>
+<p class="speciallink"><a href="/">Back to Index</a></p>

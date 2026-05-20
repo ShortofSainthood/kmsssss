@@ -1,0 +1,116 @@
+---
+title: Changelog
+layout: base.njk
+eleventyNavigation:
+  key: Changelog
+  parent: Website Meta
+---
+<style>
+    .changelog li {padding-bottom: 1rem; border-bottom: var(--text) solid 1px;}
+    .changelog li+li {padding-top: 1rem;}
+    .changelog li ul li {padding: unset; border-bottom: none;}
+    .changelog li:last-of-type {border-bottom: none; padding-bottom: 0;}
+    .changelog {padding-left: 1em;}
+    .changelog time {color: var(--textaccent); font-weight: bold;}
+    .tabwrap section {display:block;}
+    .tabwrap section:has(~ section:target), .tabwrap section:target ~ section {display:none;}
+</style>
+
+<p style="text-align:center; font-weight: bold;">Filter by Year:</p>
+
+<p class="speciallink">
+    <a href="#">View All</a>
+{% for item in changelog | reverse %}
+    <a href="#{{ item.year }}">{{ item.year }}</a>
+{% endfor %}
+</p>
+
+<div class="tabwrap">
+
+    {% set posts = [
+      {
+        date: {
+          year: 2019
+        },
+        title: 'Post 1'
+      },
+      {
+        date: {
+          year: 2018
+        },
+        title: 'Post 2'
+      },
+      {
+        date: {
+          year: 2019
+        },
+        title: 'Post 3'
+      }
+    ]
+%}
+
+{% for year, posts in posts | groupby("date.year") %}
+    :{{ year }}:
+    {% for post in posts %}
+        {{ post.title }}
+    {% endfor %}
+{% endfor %}
+
+{% set dates = ["2024-09-23", "2019-08-09", "2025-06-14"] %}
+
+<ul>
+    {% for date in dates | sort %}
+    {% if date.startsWith("202") %}
+    <li>{{ date }} CURRENT</li>
+    {% else %}
+    <li>{{ date }} OLD</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+<!--
+<ul>
+    {% for item in changelogtwo | reverse %}
+    <li>{{ item.date }} - 
+        {% if item.updates.length >= 2 %}
+        <ul>
+            {% for update in item.updates %}
+            <li>{{ update | safe }}
+                {% if item.updates.update.subupdate %}
+                <ul><li>even more</li></ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        {{ item.updates }}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+-->
+
+<ul>
+{% set a = 0 %}
+{% for item in changelogtwo | reverse %}
+    <li>{{ item.date }} - {{item.updates[a].update | safe}}</li>
+{% set a = a + 1 %}
+{% endfor %}
+</ul>
+
+{% for date, item in changelogtwo | groupby("year") %}
+    <h2>{{ year }}</h2>
+    <ul>
+    {% for updates in item %}
+        <li>{{updates}}</li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+
+</div>
+
+
+
+<p class="speciallink">
+    <a href="/">Back to Index</a>
+</p>

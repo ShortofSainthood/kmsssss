@@ -1,0 +1,30 @@
+[
+	{
+        "title": "Video #1",
+        "date": "2024-09-24",
+        "thumbnail": "https://placehold.co/300x200/",
+        "link": {
+            "youtube": "https://www.youtube.com/watch?v=k31BK9KSR9k"
+        }
+	},
+    {
+        "title": "Video #2",
+        "date": "2024-09-29",
+        "thumbnail": "https://placehold.co/300x200/",
+        "warning": "flashing lights",
+        "link": {
+            "youtube": "https://www.youtube.com/watch?v=tnVAEAo7nvA",
+            "peertube": "https://www.youtube.com/watch?v=tnVAEAo7nvA"
+        }  
+    },
+	{
+        "title": "Video #3",
+        "date": "2024-10-31",
+        "thumbnail": "https://placehold.co/300x200/",
+        "warning": "Spoilers for season 6 of Better Call Saul",
+        "link": {
+            "peertube": "https://www.youtube.com/watch?v=879ysA4h9r4"
+        }
+	}
+]
+  

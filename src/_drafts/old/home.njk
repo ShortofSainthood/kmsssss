@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <title>Sainthood.xyz</title>
+    {% if date %}<meta name="search_date" content="{{ date }}">{% endif %}
+    {% if lastUpdated %}<meta name="revised" content="{{ lastUpdated }}">{% endif %}
+    {% if desc %}<meta name="description" content="{{ desc }}">{% endif %}
+    <meta name="author" content="Saint">
+    <meta name="license" {% if GPL %}content="GPLv3"{% else %}content="CC BY-NC-SA 4.0"{% endif %}>
+    <meta name='og:title' content='{{ title }}'>
+    <meta name='og:image' content='{% if metaimage %}{{ metaimage }}{% else %}/assets/images/sitepreview.png{% endif %}'>
+    <meta name='og:site_name' content='Sainthood.xyz'>
+    {% if desc %}<meta name='og:description' content='{{ desc }}'>{% endif %}
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+    <div class="container"{% if TOC %} style="width: 1100px;"{% endif %}>
+        {% include "header.html" %}
+        <div class="primary">
+            {% if TOC %}
+            <aside class="toc bigscreen">
+                <h2>{% lucide "table-of-contents", {"stroke-width": "3", "size": "32"} %} Contents</h2>
+                {{ content | toc | safe }}
+            </aside>
+            {% endif %}
+            <main id="content">
+                <h1>Hello and Welcome!</h1>
+                {% if TOC %}
+                <details class="smallscreen" style="width: 100%;">
+                    <summary>Table of Contents</summary>
+                    {{ content | toc | safe }}
+                </details>
+                {% endif %}
+                {{ content | safe }}
+            </main>
+        </div>
+        <footer>
+            <p>
+                <a href="https://decolonizepalestine.com/"><img alt="stand with Palestine" src="/assets/images/buttons/standwith.png"></a>
+                <a href="https://geocities.restorativland.org/CapitolHill/1131/"><img alt="no nazis, no fascism, no racism!" src="/assets/images/buttons/nofash.png"></a>
+                <a><img alt="This site is certified 100% cookie free!" src="/assets/images/buttons/nocookie.gif"></a>
+                <a><img alt="CSS is awesome." src="/assets/images/buttons/css.png"></a>
+                <a href="https://fediverse.info/"><img alt="Join the Fediverse!!!" src="/assets/images/buttons/join-fediverse.gif"></a>
+                <a href="https://www.w3schools.com/html/default.asp"><img alt="Hey you! Learn HTML now!" src="/assets/images/buttons/html.gif"></a>
+                <a><img alt="made with my own two paws" src="/assets/images/buttons/twopaws.png"></a>
+                <a><img alt="Pride now!" src="/assets/images/buttons/pride.gif"></a>
+            </p>
+        <p>
+            Unless stated otherwise, www.sainthood.xyz is licensed under <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+        </p>
+        <nav aria-label="footer links">
+            <ul>
+                <li><a href="/meta/info">Site Info</a></li>
+                <li><a href="/meta/sitemap">Sitemap</a></li>
+                <li><a href="/rss.xml">RSS Feed {% lucide "rss", { "size": "16" } %}</a></li>
+            </ul>
+            <p><a href="#top">Back to Top</a></p>
+        </nav>
+    </footer>
+    </div>
+</body>
+</html>

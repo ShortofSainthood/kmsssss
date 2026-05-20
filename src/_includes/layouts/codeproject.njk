@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+<style>
+    .previewimgs {display: flex; gap: 0.5em; justify-content: center;}
+    .preview, .previewimgs img {max-height: 250px; width: auto;}
+    .date {margin-top: 0;}
+    .downloadlink {font-weight: bold; margin: 1.5em 0 1em 0;display: flex;flex-wrap: wrap;justify-content: center;}
+    .downloadlink .lucideicon {vertical-align: -0.25em;}
+    #preview + #download::before {content: ""; margin: 0 0.1em;}
+    @media screen and (max-width: 1024px) {.previewimgs {display: block; text-align: center;} .downloadlink {line-height: 3; margin: 0.5em 0;}}
+</style>
+<!--{% if date %}
+<p class="date">
+    {% lucide "calendar", { "stroke": "var(--textaccent)", "size": "20", "stroke-width": "2", "style": "vertical-align: -0.1em;" } %} Added <time datetime="{{ date.toString() }}">{{ dateExact.toString() | niceDateShort}}</time>
+    {% if lastUpdated %} <span style="color: var(--textaccent);" aria-hidden="true">•</span> Last updated <time datetime="{{ lastUpdated }}">{{ lastUpdatedExact.toString() | niceDateShort}}</time>{% endif %}
+</p>
+{% endif %}-->
+<div class="previewimgs">
+{% if thumbnails %}
+{% for thumbnail in thumbnails %}
+    <img src="{{ thumbnail }}" alt="">
+{% endfor %}
+{% endif %}
+</div>
+<div class="speciallink downloadlink">
+    {% if livepreview %}
+    <span id="preview">
+        <a href="demo/">Live Preview {% lucide "eye", { "size": "20", "stroke-width": "2" } %}</a>
+    </span>
+    {% endif %}
+    {% if download %}
+    <span id="download">
+        <a href="{{ download }}" download>Download {{ downloadType }} {% lucide "download", { "size": "20", "stroke-width": "2" } %}</a>
+    </span>
+    {% endif %}
+</div>
+{{ content | safe }}
+<p class="speciallink">
+    <a href="/code/projects/">Back to Code Projects Index</a>
+</p>

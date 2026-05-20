@@ -1,0 +1,50 @@
+:root {
+    --bg: #fff;
+    --bgaccent: #e5e3f6;
+    --text: rgb(23, 17, 51);
+    --textaccent: #310971;
+    --link: #234FB5 /*#2978bd*/;
+    --linkvisited: #AA28CE;
+    --linkhover: #70b2ec; /* figure this out*/
+
+    --focusoutline: /*blue*/ #384879 solid 0.25rem;
+
+    --containerborder: #5b3879 solid 5px;
+
+    --accent: #553879;
+
+    --codebg: #211c2817;
+    --hr: var(--purple);
+
+    --bg-img: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fphoto-beautiful-clouded-purple-sky-background_660885-127.jpg&f=1&nofb=1&ipt=860e5ca54d080c74937dff21e4c4c408e9ecc3260a1884def6f7ece73e245196&ipo=images");
+    --bg-size: cover;
+
+    --focuslight: var(--bgaccent);
+    --focusdark: var(--accent);
+
+    --articlefont: "Nunito Sans", "Nunito", Arial, Helvetica, sans-serif;
+    --bodyfont: "Nunito Sans", "Nunito", Arial, Helvetica, sans-serif;
+    /*--bodyfont: "Nunito", Arial, Helvetica, sans-serif;*/
+    --headingfont: "Nunito Black", "Nunito", Arial, Helvetica, sans-serif;
+
+    --red: #ff76e3;
+    --orange: #ff8f8f;
+    --yellow: #f7bc50;
+    --green: #a6dd43;
+    --blue: #70b2ec;
+    --purple: #ba7ce8;
+    --black: #123;
+    --white: #fff;
+
+    --emoji: "☀️";
+    --emojispace: "☀️ ";
+    --symbol: "\f005";
+    --symbolspace: "\f005\0a0";
+}
+
+
+pre, .snippetpreview {
+    border: #1c1c2842 1px solid !important; /* move to bottom of stylesheet */
+  }
+
+@layer vendor-prism {@media (forced-colors: none), (forced-colors: active) {:root {--prism-a11y-border-radius: 0.3em;--prism-a11y-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;--prism-a11y-line-height: 1.5;--prism-a11y-code-block-margin: 0.5em 0;--prism-a11y-code-block-padding: 1em;--prism-a11y-code-inline-padding: 0.1em;--prism-a11y-width-border: 1px;--prism-a11y-width-tab: 2;}}@media (forced-colors: none), (forced-colors: active) {:root {--prism-a11y-color-background: hsla(0, 0%, 100%, 1);--prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);--prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);--prism-a11y-color-text-blue: hsla(195, 100%, 30%, 1);--prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);--prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);--prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);--prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);--prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);--prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);--prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);}}@media (forced-colors: none), (forced-colors: active) {:where( code[class*="language-"], pre[class*="language-"] ) {color: var(--prism-a11y-color-text-no-token);background: var(--prism-a11y-color-background);font-family: var(--prism-a11y-font-family);text-align: start;white-space: pre;word-spacing: normal;word-break: normal;word-wrap: normal;line-height: var(--prism-a11y-line-height);-moz-tab-size: var(--prism-a11y-width-tab);-o-tab-size: var(--prism-a11y-width-tab);tab-size: var(--prism-a11y-width-tab);-webkit-hyphens: none;-moz-hyphens: none;-ms-hyphens: none;hyphens: none;}pre[class*="language-"] {padding: var(--prism-a11y-code-block-padding);margin: var(--prism-a11y-code-block-margin);overflow: auto;border-radius: var(--prism-a11y-border-radius);}:where( :not(pre) > code[class*="language-"], pre[class*="language-"] ) {background: var(--prism-a11y-color-background);}:not(pre) > code[class*="language-"] {padding: var(--prism-a11y-code-inline-padding);border-radius: var(--prism-a11y-border-radius);white-space: normal;}:where( .token.comment, .token.prolog, .token.doctype, .token.cdata ) {color: var(--prism-a11y-color-text-comment);}.token.punctuation {color: var(--prism-a11y-color-text-gray);}:where( .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted ) {color: var(--prism-a11y-color-text-red);}:where( .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable, .token.keyword ) {color: var(--prism-a11y-color-text-blue);}:where( .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted ) {color: var(--prism-a11y-color-text-green);}:where( .token.atrule, .token.attr-value, .token.function, .token.regex, .token.important ) {color: var(--prism-a11y-color-text-yellow);}:where( .token.boolean, .token.number, .token.keyword ) {color: var(--prism-a11y-color-text-purple);}:where( .token.important, .token.bold ) {font-weight: bold;}.token.italic {font-style: italic;}.token.entity {cursor: help;}.line-highlight {background: var(--prism-a11y-plugin-color-background);border-top: var(--prism-a11y-width-border) solid var(--prism-a11y-plugin-color-border);border-bottom: var(--prism-a11y-width-border) solid var(--prism-a11y-plugin-color-border);}.line-numbers .line-numbers-rows {border-right: var(--prism-a11y-width-border) solid var(--prism-a11y-color-text-no-token);}.line-numbers-rows > span:before {color: var(--prism-a11y-color-text-comment);}}@media (forced-colors: active) {:root {--prism-a11y-color-background: Canvas;--prism-a11y-color-text-no-token: CanvasText;--prism-a11y-color-text-comment: GrayText;--prism-a11y-color-text-blue: LinkText;--prism-a11y-color-text-gray: LinkText;--prism-a11y-color-text-green: CanvasText;--prism-a11y-color-text-purple: CanvasText;--prism-a11y-color-text-red: CanvasText;--prism-a11y-color-text-yellow: GrayText;--prism-a11y-plugin-color-border: LinkText;--prism-a11y-plugin-color-background: Canvas;}:where( .token.boolean, .token.number, .token.keyword ) {font-weight: bold;}}}

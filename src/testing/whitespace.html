@@ -1,0 +1,17 @@
+---
+title: Whitespace Test
+layout: base.njk
+eleventyNavigation:
+  parent: Home
+  key: Whitespace Test
+hideBreadcrumbs: true
+---
+
+{% for i in [1,2,3,4,5] -%}
+  {{ i }}
+{%- endfor %}
+
+
+{% for i in [1,2,3,4,5] %}
+  {{ i }}
+{% endfor %}

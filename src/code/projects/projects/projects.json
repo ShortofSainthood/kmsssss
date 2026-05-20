@@ -1,0 +1,15 @@
+{
+    "layout": "codeproject.njk",
+    "tags": ["projects", "feed"],
+    "permalink": "/code/projects/{{ title | slugify }}/",
+    "GPL": "true",
+    "showLastUpdated": "true",
+    "eleventyComputed": {
+        "dateExact": "{{ date }}T15:14:14.578Z",
+        "lastUpdatedExact": "{{ lastUpdated }}T15:14:14.578Z",
+        "eleventyNavigation": {
+            "parent": "Projects",
+            "key": "{{ title }}"
+        }
+    }
+}

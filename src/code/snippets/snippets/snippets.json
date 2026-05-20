@@ -1,0 +1,12 @@
+{
+    "layout": "snippet.njk",
+    "tags": ["snippets", "feed"],
+    "permalink": "/code/snippets/{{ title | slugify }}.html",
+    "GPL": "true",
+    "eleventyComputed": {
+        "eleventyNavigation": {
+            "parent": "Snippets",
+            "key": "{{ title }}"
+        }
+    }
+}

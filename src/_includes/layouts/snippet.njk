@@ -1,0 +1,21 @@
+---
+layout: base.njk
+---
+{{ content | safe }}
+<nav aria-label="snippet navigation">
+    {% set previousSnippet = collections.snippets | getPreviousCollectionItem(page) %}
+    {% set nextSnippet = collections.snippets | getNextCollectionItem(page) %}
+    <div class="nextprev">
+        <div class="prev">
+        {% if previousSnippet %}
+            <a href="{{ previousSnippet.url }}">{% lucide "move-left", { "size": "16", "stroke-width": "3" } %} Previous Snippet<br>{{ previousSnippet.data.title }}</a>
+        {% endif %}
+        </div>
+        <div class="next">
+        {% if nextSnippet %}
+            <a href="{{ nextSnippet.url }}">Next Snippet {% lucide "move-right", { "size": "16", "stroke-width": "3" } %}<br>{{ nextSnippet.data.title }}</a>
+        {% endif %}
+        </div>
+    </div>
+    <div class="speciallink"><a href="/code/snippets/">Back to Code Snippets Index</a></div>
+</nav>

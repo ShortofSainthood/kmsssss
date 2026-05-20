@@ -1,0 +1,47 @@
+---
+title: Graphics
+layout: base.njk
+eleventyNavigation:
+  key: Graphics
+  parent: Art
+---
+
+<script src="/assets/freezeframe.js"></script>
+
+<button id='play-gif' type='button'>Play GIFs</button>
+<button id='stop-gif' type='button'>Stop GIFs</button>
+
+<div class="freezeframe">
+
+<h2>PictureOfaHotDog.Com</h2>
+
+<img alt="PictureOfHotDog.Com (static)" src="/assets/images/graphics/buttons/pictureofhotdogdotcom-static.gif">
+<img alt="PictureOfHotDog.Com (animated)" src="/assets/images/graphics/buttons/pictureofhotdogdotcom.gif">
+
+<p>
+  Intended to link to <a href="https://www.pictureofhotdog.com/">PictureOfHotDog.com</a> blha blah blah Drew Gooden
+</p>
+
+<p>
+  Disclaimer I do not support wix or squarespace or whatever shitty lsjdklsfj he was promoting, I just think it was a funny bit.
+</p>
+
+<h2>I Love/Hate My Puter</h2>
+
+<img alt="I love my puter (static)" src="/assets/images/graphics/buttons/ilovemyputer-static.gif">
+<img alt="I love my puter (animated)" src="/assets/images/graphics/buttons/ilovemyputer.gif">
+
+<!--<img alt="" src="">-->
+
+See also: my deltarune graphics
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const e = new Freezeframe({ trigger: false, responsive: false });
+    document.getElementById("play-gif").addEventListener("click", function(){ e.start() });
+    document.getElementById("stop-gif").addEventListener("click", function(){ e.stop() });
+  });
+</script>
+

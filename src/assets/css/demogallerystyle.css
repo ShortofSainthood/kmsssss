@@ -1,0 +1,134 @@
+:root {
+    --text: #000000;
+    --link: #3D377F;
+    --background: #FFF3CA;
+    --box: #ECD584;
+    --button: #6B65A4;
+    --button-text: #FFFFFF;
+    --button-hover: #B0ADD2;
+  }
+  
+  * { margin:0; padding:0; }
+  
+  body {
+    font-family: sans-serif;
+    background: var(--background);
+    color: var(--text);
+  }
+  
+  button, #image-list-ol li {
+    cursor: pointer;
+  }
+  
+  header {
+    text-align: center;
+    font-size:2.5em;
+    font-weight:bold;
+  }
+  
+  header ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  header ul li {
+    display: inline-block;
+  }
+  
+  a {
+    color: var(--link);
+  }
+  
+  img {
+      max-width: 100%;
+      height: auto;
+      width: auto\9; /* ie8 */
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background: var(--button);
+  }
+  
+  main {
+    max-width: 700px; /* adjust depending on image size */
+    margin: auto;
+    background: var(--box);
+    padding: 15px;
+  }
+  
+  h2 {
+    margin-top: 5px;
+  }
+  
+  .image {
+    text-align: center;
+  }
+  
+  .gallery {
+      columns:3;
+  }
+  
+  .galleryitem {
+      margin:5px;
+      text-align:center;
+  }
+  
+  .controls {
+    width: 100%;
+    margin-top: 16px;
+    text-align:center;
+  }
+  
+  .button {
+    background: var(--button);
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--button-text);
+    text-decoration:none;
+    margin:.2em;
+    display:inline-block;
+  }
+  
+  .button:hover {
+    background: var(--button-hover);
+  }
+  
+  .pagination {
+    text-align:center;
+    margin:.25em;
+  }
+  
+  .pagination ul {
+    list-style:none;  
+    margin:0;
+  }
+  
+  .pagination li {
+    display:inline-block;
+  }
+  
+  .pagination li a {
+    display:inline-block;
+    padding:5px;
+    margin:0.1em;
+    background:var(--button);
+    color: var(--button-text);
+    border-radius:2px;
+    text-decoration:none;
+  }
+  
+  .pagination li.active {
+    background:none;
+    /*padding:5px;*/
+    margin:0.1em;
+    display:inline-block;
+  }
+  
+  @media screen and (max-width:600px) {
+      .gallery {
+          columns:1;
+      }
+  }  

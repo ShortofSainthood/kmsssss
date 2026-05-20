@@ -1,0 +1,13 @@
+{
+    "layout": "blogpost.njk",
+    "tags": ["posts", "feed"],
+    "permalink": "/blog/posts/{{ title | slugify }}.html",
+    "eleventyComputed": {
+        "dateExact": "{{ date }}T15:14:14.578Z",
+        "lastUpdatedExact": "{{ lastUpdated }}T15:14:14.578Z",
+        "eleventyNavigation": {
+            "parent": "Blog",
+            "key": "{{ title }}"
+        }
+    }
+}

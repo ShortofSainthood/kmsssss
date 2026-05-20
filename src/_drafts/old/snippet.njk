@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.html" %}
+<body>
+    <div id="top"></div>
+    <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+    <div class="container"{% if TOC and TOCsidebar %} style="width: 1100px;"{% endif %}>
+        {% include "header.html" %}
+        <div class="primary">
+            {% if TOC and TOCsidebar %}
+            <aside class="toc bigscreen">
+                <h2>{% lucide "table-of-contents", {"stroke-width": "3", "size": "32"} %} Contents</h2>
+                {{ content | toc | safe }}
+            </aside>
+            {% endif %}
+            <main id="content">
+                <h1>{{ title }}</h1>
+                {% if showDesc %}{{ desc }}{% endif %}
+                {% if TOC %}
+                <details {% if TOCsidebar %}class="smallscreen"{% endif %} style="width: 100%;">
+                    <summary>Table of Contents</summary>
+                    {{ content | toc | safe }}
+                </details>
+                {% endif %}
+                {{ content | safe }}
+                <nav aria-label="snippet navigation">
+                    {% set previousSnippet = collections.snippets | getPreviousCollectionItem(page) %}
+                    {% set nextSnippet = collections.snippets | getNextCollectionItem(page) %}
+                    <div class="nextprev">
+                        <div class="prev">
+                        {% if previousSnippet %}
+                            <a href="{{ previousSnippet.url }}">{% lucide "move-left", { "size": "16", "stroke-width": "3" } %} Previous Snippet<br>{{ previousSnippet.data.title }}</a>
+                        {% endif %}
+                        </div>
+                        <div class="next">
+                        {% if nextSnippet %}
+                            <a href="{{ nextSnippet.url }}">Next Snippet {% lucide "move-right", { "size": "16", "stroke-width": "3" } %}<br>{{ nextSnippet.data.title }}</a>
+                        {% endif %}
+                        </div>
+                    </div>
+                    <div class="speciallink"><a href="/code/snippets/">Back to Code Snippets Index</a></div>
+                </nav>
+            </main>
+        </div>
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+---
+title: Videos
+desc: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium praesentium harum ratione non nulla totam sed doloribus!.
+layout: base.njk
+---
+<style>
+
+@media screen and (min-width: 1025px) {
+    h2 {
+        margin-right: 0.5em;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .thumbnail, .videowarning, .videolinks {
+        text-align: center;
+    }
+}
+</style>
+
+<p>{{ desc }}</p>
+
+{% for video in videos %}
+<div class="flexcontainer" style="border: white 1px solid; padding: 1em; margin: 1em 0;">
+    <div class="twothird">
+        <h2>{{ video.title }}</h2>
+        <p><time datetime="{{ video.date }}">{{ video.date | niceDateShort }}</time></p>
+        <p class="thumbnail"><img class="smallscreen" src="{{ video.thumbnail }}" alt=""></p>
+        {% if video.warning %}<p class="videowarning"><strong>Warning:</strong> {{ video.warning }}</p>{% endif %}
+        <p class="videolinks">
+        {% if video.link.youtube and not video.link.peertube %}
+            <a aria-label="Watch {{ video.title }} on Youtube" href="{{ video.link.youtube }}">Exclusively available on YouTube</a>
+        {% elseif video.link.peertube and not video.link.youtube %}
+            <a aria-label="Watch {{ video.title }} on Peertube" href="{{ video.link.peertube }}">Exclusively available on PeerTube</a>
+        {% else %}
+            <a aria-label="Watch {{ video.title }} on Youtube" href="{{ video.link.youtube }}">YouTube</a> | <a aria-label="Watch {{ video.title }} on Peertube" href="{{ video.link.peertube }}">PeerTube</a>
+        {% endif %}
+        </p>
+    </div>
+    <div class="third">
+        <img class="bigscreen" src="{{ video.thumbnail }}" alt="">
+    </div>
+</div>
+{% endfor %}

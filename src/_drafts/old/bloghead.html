@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <title>{{ title }} | Sainthood.xyz</title>
+    {% if date %}<meta name="search_date" content="{{ date }}">{% endif %}
+    {% if lastUpdated %}<meta name="revised" content="{{ lastUpdated }}">{% endif %}
+    {% if desc %}<meta name="description" content="{{ desc }}">{% endif %}
+    <meta name="author" content="Saint">
+    <meta name="license" {% if GPL %}content="GPLv3"{% else %}content="CC BY-NC-SA 4.0"{% endif %}>
+    <meta name='og:title' content='{{ title }}'>
+    <meta name='og:image' content='{% if metaimage %}{{ metaimage }}{% else %}/assets/images/sitepreview.png{% endif %}'>
+    <meta name='og:site_name' content='Sainthood.xyz'>
+    {% if desc %}<meta name='og:description' content='{{ desc }}'>{% endif %}
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/blog.css" rel="stylesheet" type="text/css">
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>

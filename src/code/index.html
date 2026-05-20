@@ -1,0 +1,28 @@
+---
+title: Code Stuff
+layout: base.njk
+desc: Stuff I've made with my (very limited) coding knowledge.
+eleventyNavigation:
+  key: Code
+  parent: Home
+GPL: true
+---
+{% css %}
+    .third {margin: 5px; flex: 1 1 calc(33% - 10px);}
+    h2 {border-bottom: none; margin-top: 0; margin-bottom: 0;}
+{% endcss %}
+<p>{{ desc }}</p>
+<div class="flexcontainer">
+    <section class="half">
+        <h2><a href="projects/">Projects</a></h2>
+        <p>Larger coding projects that you can download and use yourself.</p>
+    </section>
+    <!--<section class="third">
+        <h2><a href="layouts/">Layouts</a></h2>
+        <p>Page layouts/templates I've made that you can use for your own site.</p>
+    </section>-->
+    <section class="half">
+        <h2><a href="snippets/">Snippets</a></h2>
+        <p>Tips, tricks, and tiny bits of code that you can incorporate into your bigger coding projects.</p>
+    </section>
+</div>

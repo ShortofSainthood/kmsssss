@@ -1,0 +1,60 @@
+---
+title: "Art Gallery"
+layout: gallery-index.njk
+desc: "Lorem Ipsum blah blah blah"
+eleventyNavigation:
+  key: Gallery
+  parent: Art
+pagination:
+  data: artGallery
+  size: 12
+  reverse: true
+  alias: previewimage
+permalink: "{% if pagination.pageNumber == 0 %}/art/gallery/index.html{% endif %}{% if pagination.pageNumber > 0 %}/art/gallery/{{ pagination.pageNumber + 1 }}.html{% endif %}"
+---
+
+<h1>Gallery</h1>
+<p>Click on an image to see its description. Shorter descriptions are in the alt text.</p>
+<!--
+<nav class="pagination">
+  <ul>
+    {% if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}">&lt; Prev</a></li>{% endif %}
+    {%- for pageEntry in pagination.pages %}
+      {% if page.url == pagination.hrefs[ loop.index0 ] %}
+        <li class="active">{{ loop.index }}</li>{% else %}<li><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+      {% endif %}
+    {%- endfor %}
+    {% if pagination.href.next %}<li><a href="{{ pagination.href.next }}">Next &gt;</a></li>{% endif %}
+  </ul>
+</nav>
+-->
+
+<div class="gallery">
+  {% set i = 0 %}
+  {% for previewimage in pagination.items %}
+  <div class="galleryimg {% if previewimage.warning %}warning{% endif %}" id="{% if previewimage.title %}{{ previewimage.title | slugify}}{% else %}{{ i + 1 }}{% endif %}">
+    {% if previewimage.warning %}
+      <a {% if previewimage.warning %}class="warninglink"{% endif %} href="/art/gallery/images/{% if previewimage.title %}{{ previewimage.title | slugify}}{% else %}{{ i + 1 }}{% endif %}.html">
+        <img style="visibility: hidden;" src="/assets/images/art/{{ previewimage.img }}" alt="sensitive content">
+      </a>
+      <div class="warningcomment">
+        {% lucide "triangle-alert", { "size": "32", "stroke-width": "2", "stroke": "var(--yellow)" } %}
+        
+        
+        
+        <p aria-hidden="true" style="margin: 0;">Sensitive Content</p>
+      </div>
+
+      {% else %}
+      <a href="/art/gallery/images/{% if previewimage.title %}{{ previewimage.title | slugify}}{% else %}{{ i + 1 }}{% endif %}.html"><img style="{% if previewimage.pixelated %}image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;{% endif %}" src="/assets/images/art/{{ previewimage.img }}" alt="{{ previewimage.alt }}"></a>
+    {% endif %}
+  </div>
+  {% set i = i + 1 %}
+  {% endfor %}
+</div>
+
+<!--
+<nav class="pagination" aria-label="pagination">
+    {% include "pagination.html" %}
+</nav>
+-->

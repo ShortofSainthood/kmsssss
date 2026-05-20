@@ -1,0 +1,34 @@
+---
+title: Layouts
+layout: base.njk
+eleventyNavigation:
+  key: Layouts
+  parent: Code
+GPL: true
+TOC: true
+---
+{% css %}
+.thumbnail {
+  text-align: center;
+}
+.thumbnail img {
+  max-height: 300px;
+}
+{% endcss %}
+
+{% for layout in layouts %}
+<section>
+  <h2 id="{{ layout.title | slugify }}">{{ layout.title }}</h2>
+  <!--<p>{{ layout.date.toString() | niceDate }}</p>-->
+  <div class="thumbnail">
+    <img class="thumbnail" src="{{ layout.thumbnail }}" alt="">
+  </div>
+  <p class="speciallink">
+    <a href="#">Demo</a> <a href="#">Download</a>
+  </p>
+  <p><strong>Skill level:</strong> {{ layout.skill | safe }}.</p>
+  <p>{{ layout.desc | safe }}</p>
+</section>
+{% endfor %}
+
+<p class="speciallink"><a href="/code/">Back to Code Index</a></p>

@@ -1,0 +1,195 @@
+---
+title: My homepage
+layout: base.njk
+keywords: personal website, stupid, bullshit, gay
+eleventyNavigation:
+  key: Home
+hideBreadcrumbs: true
+---
+<style>
+.flexcontainer > div {
+    padding: 10px;
+    border: dashed 2px gray;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/*.bonus div {
+    max-height: 400px;
+    overflow-y: scroll;
+}*/
+
+/*
+h3 {
+    color: black;
+    text-shadow: none;
+}
+*/
+
+h2 {
+    margin-top: 0.25em;
+}
+
+ul.changelog li ul {
+  display: none;
+}
+
+#updates time {
+    color: var(--textaccent);
+    font-weight: bold;
+}
+
+#blog h3, #art h3 {
+  font-size: 1.5em;
+  border: none;
+}
+
+.postmetadata {
+  font-size: 0.95em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.half { flex: 1 1 calc(50% - 10px); }
+.third { flex: 1 1 calc(33% - 10px); position: relative;}
+.twothird { flex: 1 1 calc(66% - 10px); }
+
+/*
+.endlink {
+    text-align: right;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0.5em;
+}*/
+
+#styleswitcher {
+    width: 200px;
+}
+
+@media screen and (max-width: 699px) {
+    #styleswitcher {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .endlink {
+        position: unset;
+    }
+}
+
+/* margin-bottom: 1.5rem; */
+</style>
+
+<!--
+<div class="box callout">
+    <i class="fa-solid fa-warning fa-xl callouticon"></i>
+    <p><strong>This website may include mature topics, viewers discretion is advised!</strong></p>
+    <p>read <a href="#">link</a> for more info</p>
+</div>
+-->
+
+<div class="flexcontainer">
+    <div class="full">
+        <h2>{% lucide "star", { "size": "32", "stroke-width": "2" } %} Lorem Ipsum</h2>
+        <p>What is this place? Where are you? Who am I? Honestly, your guess is as good as mine. Anyway, here are some links for you to click if you want:</p>
+        <p>Thank you for visiting my website out of the literal billions of other sites online. Feel free to look around, and make sure to sign the guest book when you're done! I hope you enjoy your time here :)</p>
+        {% include "styleswitcher.html" %}
+        {% lucide "heart" %}
+        {% lucide "heart", { "stroke": "var(--red)", "stroke-width": "3" } %}
+        {% lucide "heart", { "size": "32" } %}
+    </div>
+    <!--
+    <div class="third">
+        <h2><i class="fa-fw fa-solid fa-slash-forward"></i> Slash Pages</h2>
+        <p>Wait, <a class="external" href="https://slashpages.net/">what's a slash page?</a></p>
+        <ul class="symbolbullets">
+            <li><a href="/ai">/AI</a> - How I (don't) use AI.</li>
+            <li><a href="/colophon">/colophon</a> - Site design notes.</li>
+            <li><a href="/now">/now</a> - Stuff I'm doing now.</li>
+            <li><a href="/uses">/uses</a> - Stuff I regularly use.</li>
+            <li><a href="/wips">/WIPs</a> - Works-In-Progress.</li>
+        </ul>
+    </div>
+    -->
+    <div id="updates" class="half">
+        <h2>{% lucide "megaphone", { "size": "32", "stroke-width": "2" } %} Latest Site Update</h2>
+        {% include "latestupdate.html" %}
+        <!--<p class="endlink"><a href="/changelog">View full site changelog <i class="fa-solid fa-arrow-right"></i></a></p>-->
+        <p class="readmorelink" style="text-align: center;">
+            <a class="fakealtbtn" href="/meta/changelog">View Full Changelog</a>
+        </p>
+    </div>
+    <div id="blog" class="half">
+        <h2>{% lucide "newspaper", { "size": "32", "stroke-width": "2" } %} Latest Post</h2>
+        {% for post in collections.posts | reverse %}
+        {% if loop.index0 < 1 %}
+            <h3><a href="{{post.url}}">{{ post.data.title }}</a></h3>
+            <p class="postmetadata">
+                <i class="fa-fw fa-regular fa-calendar-lines-pen"></i>{% lucide "calendar", { "size": "20", "stroke-width": "2", "style": "vertical-align: -0.1em;" } %} <time datetime="{{ post.data.date }}">{{ post.data.date.toString() | niceDate }}</time>
+                {% if post.data.lastupdated %}
+                    <span aria-hidden="true">&bull;</span> Last updated <time datetime="{{ post.data.lastupdated }}">{{ post.data.lastupdated.toString() | niceDate }}</time>
+                {% endif %}
+            </p>
+            {{ post.data.desc | safe }}
+            <!--<p class="endlink"><a aria-label="Read more about {{ post.data.title }}" href="{{post.url}}">Read the full post on my blog <i class="fa-solid fa-arrow-right"></i></a></p>-->
+            <p class="readmorelink" style="text-align: center;">
+                <a class="fakealtbtn" aria-label="Read more about {{ post.data.title }}" href="{{post.url}}">Read More</a>
+            </p>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+    <!--
+    <div id="art" class="half" tabindex="0">
+        <h2><i class="fa-fw fa-solid fa-palette"></i> Latest Art</h2>
+        {% for image in artGallery | reverse %}
+        {% if loop.index0 < 1 %}
+            <div style="border: none; text-align: center;">
+                <h3>{{ image.title }}</h3>
+                <img style="margin-bottom: 10px;" width="100%" src="{{ image.img }}" alt="{{ image.alt }}">
+            </div>
+        {% endif %}
+        {% endfor %}
+        <p class="endlink"><a href="/changelog">View full site changelog <i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+    -->
+
+    <div class="full">
+        <h2 id="contact">{% lucide "contact-round", { "size": "32", "stroke-width": "2" } %} Contact Me</h2>
+        <ul class="fa-ul">
+            <li><i class="fa-li fa-fw fa-solid fa-envelope"></i><b>Email:</b> contact [at] sainthood [dot] xyz</li>
+            <li><i class="fa-li fa-fw fa-brands fa-mastodon"></i><b>Mastodon:</b> <a class="external" href="https://indieweb.social/@sainthood">sainthood@indieweb.social</a></li>
+        </ul>
+
+        <p>
+            Full disclosure: I do have a discord account but aklfjskldjfsdf. Rarely check it. sklasdjf really don't like instant messagers and consider it a "late resort" alksjfslkdjfs. Please asdlkjflskdjfsf.
+        </p>
+
+        <div class="box callout">
+            <i class="fa-solid fa-warning fa-xl callouticon"></i>
+            <p><strong>blah blah push notifications</strong></p>
+        </div>
+
+    </div>
+
+    <!--
+    <div class="half" tabindex="0">
+        <h2><i class="fa-solid fa-music"></i> Audio of the Now!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magni similique enim soluta voluptates nostrum adipisci quos dolorum exercitationem! Natus repellat nihil atque dignissimos, ea quam quaerat nobis voluptas commodi.</p>
+    </div>
+    <div class="half" tabindex="0">
+        <h2>Media of the Now!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum perferendis totam ipsa illo quod excepturi officia aliquam nobis doloremque? Debitis voluptatibus aliquid earum dolor nobis voluptates ipsum minima in?</p>
+    </div>
+    -->
+    <!--
+    <div class="full">
+        <h2><i class="fa-fw fa-solid fa-star"></i> Affiliates</h2>
+        <p>Webrings, (web)cliques, fanlistings, directories, and other stuff that me and my site are a part of!</p>
+        <p>WIP</p>
+    </div>
+    -->
+</div>

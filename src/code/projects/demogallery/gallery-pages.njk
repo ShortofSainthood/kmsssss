@@ -1,0 +1,32 @@
+---
+layout: demo-gallery-page.njk
+pagination:
+  data: demoGallery
+  size: 1
+  reverse: true
+  alias: image
+permalink: "/code/projects/accessible-eleventy-gallery/demo/images/{{ pagination.pageNumber + 1 }}.html"
+---
+<!-- Whatever you have your pagination size set to in index.njk is what you need to set the gallerySize variable below to.
+Sorry, it's the only way I could get the "Back to gallery" link to work the why it does in the original -->
+{% set gallerySize = 3 %}
+
+<h1>
+  {% if image.title %}{{ image.title }}{% endif %}
+  {% if not image.title %}Gallery image{% endif %}
+</h1>
+<div class="image">
+  <p><img src="{{ image.img }}" alt=""/></p>
+  <p>Image description: {{ image.desc | safe }} End ID.</p>
+  {% if image.comment %}<p>Comment: {{ image.comment | safe }}</p>{% endif %}
+</div>
+
+<nav class="controls">
+  <p>{% if pagination.href.previous %}<a class="button" href="{{ pagination.href.previous }}">Previous</a>{% endif %}
+  {% if pagination.href.next %}<a class="button" href="{{ pagination.href.next }}">Next</a>{% endif %}<br/>
+  {% if ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") == 1 %}
+    <a class="button" href="../index.html#{{ pagination.pageNumber + 1 }}">Back to gallery</a>
+  {% else %}
+    <a class="button" href="../{{ ((pagination.pageNumber + 1)/gallerySize) | round(0, "ceil") }}.html#{{ pagination.pageNumber + 1 }}">Back to gallery</a>
+  {% endif %}</p>
+</nav>

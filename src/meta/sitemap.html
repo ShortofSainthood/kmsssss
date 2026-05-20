@@ -1,0 +1,31 @@
+---
+title: Sitemap
+layout: base.njk
+eleventyNavigation:
+  key: Sitemap
+  parent: Website Meta
+---
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a>
+        <ul>
+            <li><a href="/blog/archive">Post archive</a></li>
+        </ul>
+    </li>
+    <li><a href="/code/">Code</a>
+        <ul>
+            <li><a href="/code/projects/">Projects</a>
+                {{ collections.all | eleventyNavigation("Projects") | eleventyNavigationToHtml | safe }}
+            </li>
+            <li><a href="/code/snippets/">Code Snippets</a></li>
+        </ul>
+    </li>
+    <li><a href="/links/">Link Directory</a>
+        {{ collections.all | eleventyNavigation("Link Directory") | eleventyNavigationToHtml | safe }}
+    </li>
+    <li>Website Meta
+        {{ collections.all | eleventyNavigation("Website Meta") | eleventyNavigationToHtml | safe }}
+    </li>
+    <li><a href="/listening">Listening to</a></li>
+    <li><a href="/rss.xml">RSS Feed</a></li>
+</ul>

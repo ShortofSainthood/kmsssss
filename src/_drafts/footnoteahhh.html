@@ -1,0 +1,17 @@
+---
+title: "Accessible footnotes with CSS (TEST!!!!)"
+date: "2025-06-23"
+categories: ["personal","tech"]
+desc: "Talking about my awful habit of hoarding links."
+readmore: true
+---
+<p>Maintaining <a href="#footnotes" aria-describedby="footnote-label" id="footnotes-ref">footnotes</a> manually can be a pain. By using <a href="#css" aria-describedby="footnote-label" id="css-ref">CSS</a> <a href="#css-counters" aria-describedby="footnote-label" id="css-counters-ref">counters</a> to add the numbered references in the text and an ordered list to display the actual footnotes in the footer, it becomes extremely easy.</p>
+
+<h2 class="visually-hidden" id="footnote-label">Footnotes</h2>
+<ol class="footnotes">
+    <li id="footnotes">Footnotes are notes placed at the bottom of a page. They cite references or comment on a designated part of the text above it. <a href="#footnotes-ref" aria-label="Back to content">↩</a></li>
+    
+    <li id="css">Cascading Style Sheets <a href="#css-ref" aria-label="Back to content">↩</a></li>
+
+    <li id="css-counters">CSS counters are, in essence, variables maintained by CSS whose values may be incremented by CSS rules to track how many times they're used. <a href="#css-counters-ref" aria-label="Back to content">↩</a></li>
+</ol>

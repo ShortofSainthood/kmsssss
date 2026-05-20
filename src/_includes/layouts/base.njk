@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon }}">
+    {% block headtitle %}<title>{{ title }} | {{ site.name }}</title>{% endblock %}
+    {% if date %}<meta name="search_date" content="{{ date }}">{% endif %}
+    {% if lastUpdated %}<meta name="revised" content="{{ lastUpdated }}">{% endif %}
+    {% if desc %}<meta name="description" content="{{ desc }}">{% endif %}
+    <meta name="author" content="{{ site.authorName }}">
+    <meta name="license" {% if GPL %}content="GPLv3"{% else %}content="CC BY-NC-SA 4.0"{% endif %}>
+    <meta name='og:title' content='{{ title }}'>
+    <meta name='og:image' content='{% if metaimage %}{{ metaimage }}{% else %}/assets/images/sitepreview.png{% endif %}'>
+    <meta name='og:site_name' content='{{ site.name }}'>
+    {% if desc %}<meta name='og:description' content='{{ desc }}'>{% endif %}
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    {% block extrahead %}{%- endblock %}
+    <style>{% getBundle "css" %}</style>
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="{% block blogcontainer %}container{% endblock %}"{% if TOC and TOCsidebar %} style="width: 1100px;"{% endif %}>
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% if eleventyNavigation and not hideBreadcrumbs %}
+        {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+            {%- for entry in navPages %}
+                {% if loop.last %}
+                <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                    <a aria-current="page" href="{{ entry.url }}">{{ entry.title | safe }}</a>
+                </li>
+                {% else %}
+                <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                    <a href="{{ entry.url }}">{{ entry.title | safe }}</a>
+                </li>
+                {%- endif %}
+            {%- endfor %}
+            </ol>
+        </nav>
+        {% endif %}
+        <div class="primary">
+            {% if TOC and TOCsidebar %}
+            <nav class="toc bigscreen" aria-label="Table of Contents">
+                <h2>{% lucide "table-of-contents", {"stroke-width": "3", "size": "32"} %} Contents</h2>
+                {{ content | toc | safe }}
+            </nav>
+            {% endif %}
+            <main id="content">
+                {% block basetitle %}<h1>{{ title }}</h1>{% endblock %}
+                {% if showDesc %}<p>{{ desc | safe }}</p>{% endif %}
+                {% block baseTOC %}
+                {% if TOC %}
+                <details {% if TOCsidebar %}class="smallscreen"{% endif %} style="width: 100%;">
+                    <summary>Table of Contents</summary>
+                    {{ content | toc | safe }}
+                </details>
+                {% endif %}
+                {% endblock %}
+                {{ content | safe }}
+            </main>
+            {% block blogaside %}{% endblock %}
+        </div>
+        <footer>
+            {% block footerbuttons %}{% endblock %}
+            {% if lastUpdated and showLastUpdated %}
+            <p>
+                {% if date and lastUpdated %}
+                Page added <time date="{{ date }}">{{ date | niceDate }}</time> and last updated <time date="{{ lastUpdated }}">{{ lastUpdated | niceDate }}</time>.
+                {% endif %}
+                {% if not date and lastUpdated %}Page last updated <time date="{{ lastUpdated }}">{{ lastUpdated | niceDate }}</time>.{% endif %}
+            </p>
+            {% endif %}
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed {% lucide "rss", { "size": "16" } %}</a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

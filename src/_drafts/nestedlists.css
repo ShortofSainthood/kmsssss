@@ -1,0 +1,17 @@
+<style>
+    :is(ul, ol) details {
+        background: revert;
+        padding: revert;
+        border-radius: 8px;
+        margin: revert;
+    }
+    :is(ul, ol) summary {
+        font-weight: revert;
+        color: revert;
+    }
+    :is(ul, ol) details[open] summary {
+        border-bottom: none;
+        padding-bottom: revert;
+        margin-bottom: revert;
+    }
+</style>

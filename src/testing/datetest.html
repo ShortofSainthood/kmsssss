@@ -1,0 +1,49 @@
+---
+title: Buttons
+layout: base.njk
+eleventyNavigation:
+  parent: Home
+  key: Buttons
+hideBreadcrumbs: true
+---
+
+<div class="flexcontainer">
+  <div class="half">
+    <ul>
+    {% for date in datetest %}
+        <li><time datetime="{{ date.date }}">{{ date.date.toString() | niceDate }}</time></li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="half">
+    <ul>
+    {% for date in datetest %}
+        <li><time datetime="{{ date.date }}">{{ date.date.toString() | niceDateShort }}</time></li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+<div class="flexcontainer">
+  <div class="half">
+    <ul>
+    {% for date in datetest %}
+      {% if (date.date.length == 4) or (date.date.length == 7) %}
+          <li><time datetime="{{ date.date }}">{{ date.date.toString() | niceDate }}</time><br><span style="font-size: 0.9em; color: var(--textaccent);">(exact date unknown)</span></li>
+      {% elseif (date.date.length == 5) %}
+          <li><time datetime="{{ date.date }}">{{ date.date.toString() | niceDate }}</time><br><span style="font-size: 0.9em; color: var(--textaccent);">(exact year unknown)</span></li>
+      {% else %}
+          <li><time datetime="{{ date.date }}">{{ date.date.toString() | niceDate }}</time></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  <!--<div class="half">
+    <ul>
+    {% for date in datetest %}
+        <li><time datetime="{{ date.date }}">{{ date.date.toString() | niceDateShort }}</time></li>
+    {% endfor %}
+    </ul>
+  </div>-->
+</div>

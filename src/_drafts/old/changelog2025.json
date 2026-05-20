@@ -1,0 +1,66 @@
+[
+    {
+      "date": "2025-03-04",
+      "dateExact": "2025-03-04T15:14:14.578Z",
+      "updates": [
+            "Started building my site with <a href=\"https://www.11ty.dev/\">Eleventy</a>!<ul><li>Which means I finally have a proper blogging engine with tags!</li></ul>",
+            "Completely redid the CSS!<ul><li>Changed from <a href=\"https://lissomware.github.io/css/\">Lissom.css</a> to a hand-coded layout.</li><li>Changed the default webfont to <a href=\"https://gwfh.mranftl.com/fonts/nunito-sans\">Nunito Sans</a>.</li><li>Changed the icons from <a href=\"https://fontawesome.com/\">Font Awesome</a> to <a href=\"https://lucide.dev/\">Lucide</a>.</li></ul>",
+            "Reorganized and reworded some things in my <a href=\"/blog/posts/accessible-zonelets\">accessible zonelets tutorial</a> and some of my <a href=\"/code/snippets\">code snippets</a>.",
+            "Added a new code snippet: <a href=\"/code/snippets/rendering-pixel-art\">Rendering Pixel Art</a>.",
+            "Reworked the file structure.",
+            "Added <a href=\"/meta/info\">site info</a> and <a href=\"/meta/sitemap\">sitemap</a> pages.",
+            "Added legal licensing info to my sites footer and other relevant pages.",
+            "Put my uses and WIP pages in storage while I rework them.",
+            "Added a theme toggle to my blog."
+        ]
+    },
+    {
+      "date": "2025-03-05",
+      "dateExact": "2025-03-05T15:14:14.578Z",
+      "updates": [
+            "Optimized CSS for <em>really</em> small screens.",
+            "Fixed some stuff in the meta tags.",
+            "Fixed the focus outline. <ul><li>Before, it only looked good on Firefox and looked awful on any other browser. Now it should look decent no matter what browser you're using.</li></ul>"
+        ]
+    },
+    {
+      "date": "2025-03-26",
+      "dateExact": "2025-03-26T15:14:14.578Z",
+      "updates": [
+            "Added a \"# of posts\" counter to blog tag pages.",
+            "Fixed/organized page templates.",
+            "Added \"filter by year\" tabs to the changelog page."
+        ]
+    },
+    {
+      "date": "2025-04-03",
+      "dateExact": "2025-04-03T15:14:14.578Z",
+      "updates": [
+            "Changed the default theme to dark mode.",
+            "Made some changes to how the table of contents sidebar works on large screens.<ul><li>Changed it from being a <code>&lt;nav&gt;</code> inside of an <code>&lt;aside&gt;</code>, to the whole sidebar being a <code>&lt;nav&gt;</code> and removing the <code>&lt;aside&gt;</code> tag completely. Hopefully, this should improve accessibility.</li><li>The sidebar will now allow scrolling if the list of links gets too long.</li></ul>"
+        ]
+    },
+    {
+      "date": "2025-04-18",
+      "dateExact": "2025-04-18T15:14:14.578Z",
+      "updates": [
+            "Finally added my <a href=\"/links/\">link directory</a> back! Now reorganized and with a ton of new links!",
+            "Specified that I'm using the WCAG on my site info page",
+            "Changed <code>&lt;code&gt;</code> from 1.125em to 1em",
+            "Removed custom screen reader voiceover from <code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code> tags<ul><li>(Shout out to <a href=\"https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html\">this blog post</a> for making me realize I had to fix that.)</li></ul>",
+            "Hovering over abbreviations will now change your cursor to the \"help\" cursor."
+        ]
+    },
+    {
+      "date": "2025-05-31",
+      "dateExact": "2025-05-31T15:14:14.578Z",
+      "updates": [
+            "Reorganized some of my link directory and moved <a href=\"/links/fun\">fun links</a> to it's own page.",
+            "Added a new code snippet: <a href=\"/code/snippets/css-tabs-with-default-open-tab\">CSS Tabs with Default Open Tab</a>.",
+            "Decided to make my <a href=\"/meta/styleguide\">style guide</a> public.",
+            "Updated Eleventy from v3.0.0 to v3.1.0.",
+            "CSS tweaks.<ul><li>Changed body text from 1.125em to 1em when viewed on very small screens.</li><li>Added a border to callout boxes.</li><li>Added <code>color-mix()</code> to multiple elements and set up fallback styling in case your browser doesn't support it.</li></ul>",
+            "Accessibility tweaks.<ul><li>All SVGs will now have <code>aria-hidden=\"true\"</code> by default.</li><li>Changed the <code>aria-label</code> for \"read more\" links to better match text on screen.</li><li>Moved the \"skip to content\" link to the header landmark region.</li><li>Changed the blog sidebar from being one big <code>&lt;aside&gt;</code> to a <code>&lt;div&gt;</code> with multiple <code>&lt;aside&gt;</code>s in it.</li></ul>"
+        ]
+    }
+]

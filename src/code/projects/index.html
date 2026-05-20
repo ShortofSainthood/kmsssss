@@ -1,0 +1,38 @@
+---
+title: Projects
+layout: base.njk
+desc: Larger coding projects that you can download and use yourself.
+eleventyNavigation:
+  key: Projects
+  parent: Code
+GPL: true
+---
+{% css %}
+    section {border-top: var(--text) 1px solid; padding: 1em 0;}
+    section:first-of-type {margin-top: 1em;}
+    .thumbnail {display: block; padding: 0 0.5em;}
+    h2 {border-bottom: none; margin-top: 0; margin-bottom: 0;}
+    h2+p {margin-top: 0;}
+    @media screen and (max-width: 1024px) {.thumbnail {display: none;}}
+{% endcss %}
+
+<p>{{ desc }}</p>
+{% for project in collections.projects %}
+<section class="flexcontainer">
+    <div class="threequarter">
+        <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+        <p>{{ project.data.desc }}</p>
+    </div>
+    {% if project.data.thumbnails %}
+    <div class="quarter">
+        {% for thumbnail in project.data.thumbnails %}
+        {% if loop.index0 < 1 %}
+        <img class="thumbnail" src="{{ thumbnail }}" alt="">
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>
+{% endfor %}
+
+<p class="speciallink"><a href="/code/">Back to Code Index</a></p>

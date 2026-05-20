@@ -1,0 +1,10 @@
+---
+title: Website Meta
+layout: base.njk
+desc: "Pages related to the site itself."
+showDesc: true
+eleventyNavigation:
+  key: Website Meta
+  parent: Home
+---
+{{ collections.all | eleventyNavigation("Website Meta") | eleventyNavigationToHtml | safe }}

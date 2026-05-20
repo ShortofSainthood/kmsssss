@@ -1,0 +1,21 @@
+---
+layout: base.njk
+---
+<style>
+    .authorsnote {
+        background: var(--bgaccent);
+        border-radius: 8px;   
+        margin: 1em auto;
+        padding: 1px;
+    }
+    .authorsnote p {text-align: center;}
+    .authorsnote h2 {margin: 0.25em 0.35em auto 0.35em;}
+</style>
+{{ content | safe }}
+{% if authorsnote %}
+<aside class="authorsnote">
+    <h2>Author's Note</h2>
+    <p>{{ authorsnote | safe }}</p>
+</aside>
+{% endif %}
+<p class="speciallink"><a href="/art/writing/">Back to Writing Index</a></p>

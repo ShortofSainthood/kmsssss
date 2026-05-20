@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="/assets/css/deltarune.css" rel="stylesheet" type="text/css" media="all">
+    <!--Font Awesome-->
+    <link rel="preload" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css"></noscript>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+    <div class="container">
+        <header>
+            <img src="https://colorfulwonders.neocities.org/images/deltarune/ezgif.com-crop.gif">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Fan Art</a></li>
+                    <li><a href="#">Fan Theories</a></li>
+
+                    <li><a href="#">Music</a></li>
+
+                    <li><a href="#"><!--Back to -->Main Site</a></li>
+
+
+                </ul>
+            </nav>
+        </header>
+        <main id="content">
+            <h1>{{ title }}</h1>
+            {{ content | safe }}
+        </main>
+
+
+        <footer>
+            <p>Hand-coded by Name @ UserName. 2023-2023.</p>
+            <p><a href="#top">Back to Top</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+layout: blog.njk
+desc: Welcome to my blog! It's about as inconsistent as the rest of my site, but I hope you enjoy it anyway.
+pagination:
+  data: collections.categoryList
+  size: 1
+  alias: tag
+permalink: "blog/tagged/{{ tag | slugify }}.html"
+eleventyComputed:
+  title: Posts Tagged "{{ tag }}"
+eleventyNavigation:
+  key: Filter Posts by Tag
+  parent: Blog
+---
+<h1>{{ title }}</h1>
+<p>There {% if collections.categoryList[tag].length == 1 %}is 1 post{% else %}are {{ collections.categoryList[tag].length }} posts{% endif %} tagged "{{ tag }}".</p>
+{%- for post in collections.categoryList[tag] | reverse -%}
+    {% include "post.html" %}
+{% endfor %}
+<p class="speciallink">
+    <a href="/blog/">View all blog posts</a>
+</p>

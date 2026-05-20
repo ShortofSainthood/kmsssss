@@ -1,0 +1,16 @@
+[
+	{
+	  "title": "Basic Box",
+      "date": "2025-06-24",
+      "skill": "beginner",
+	  "desc": "A simple theme that's just a box in the middle of the screen with some very basic styling, nothing more, nothing less. Most of the styling is done in the <code>&lt;:root&gt;</code> and includes comments, so it should be fairly beginner-friendly, while also allowing a fair bit of customization.</p><p>This theme is best suited for small and simple sites, like landing pages and linktree-style sites.",
+      "thumbnail": "/assets/images/thumbnails/basicbox.png"
+	},
+	{
+	  "title": "Panels",
+      "date": "2025-06-25",
+      "skill": "intermediate (notes go here)",
+	  "desc": "Lots of asides",
+      "thumbnail": "/assets/images/thumbnails/eleventy-gallery2.png"
+	}
+]

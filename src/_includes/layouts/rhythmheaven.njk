@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="/assets/rh/favicon.ico">
+    {% block headtitle %}<title>{{ title }} | Saint's Rhythm Heaven Fansite</title>{% endblock %}
+    {% if desc %}<meta name="description" content="{{ desc }}">{% endif %}
+    <meta name="author" content="Saint">
+    <meta name="license" content="CC BY-NC-SA 4.0">
+    <meta name='og:title' content='{{ title }}'>
+    <meta name='og:image' content='{% if metaimage %}{{ metaimage }}{% else %}/assets/images/sitepreview.png{% endif %}'>
+    <!-- CHANGE META IMG!!!! -->
+    <meta name='og:site_name' content="Saint's Rhythm Heaven Fansite">
+    {% if desc %}<meta name='og:description' content='{{ desc }}'>{% endif %}
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/rh/style.css" rel="stylesheet" type="text/css">
+    <script>
+    window.onload = function () {
+        let burger = document.getElementById("burger");
+
+        burger.addEventListener("keydown", (event) => {
+            let key = event.code;
+            if (key == "Escape") {
+                burger.removeAttribute("open");
+            }
+        });
+    };
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+    <details id="burger">
+        <summary id="toggle">Menu</summary>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Favorite Minigames</li>
+                <li><a href="#">My Fan Art</a></li>
+                <li><a href="#">Other's Fan Works</a></li>
+                <li><a href="#">Graphics</a></li>
+                <li><a href="#">Blog Posts</a></li>
+                <li><a href="#">Merch</a></li>
+                <li><a href="#">Miscellaneous</a></li>
+                <li><a href="#">Fanlisting</a></li>
+                <li><a href="#">Outlinks</a></li>
+                <li><a href="#">Back to Main Site</a></li>
+                <li class="skip"><a href="#toggle">Close menu</a></li>
+            </ul>
+        </nav>
+    </details>
+    <div class="container">
+        <header><img src="https://www.nintendo.co.jp/ds/ylzj/img/header_topics.gif" alt="" style="width: 100%"></header>
+        <div class="primary">
+            <nav id="full-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">My Favorite Minigames</a></li>
+                    <li><a href="#">My Fan Art</a></li>
+                    <li><a href="#">Other's Fan Works</a></li>
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Merch</a></li>
+                    <li><a href="#">Miscellaneous</a></li>
+                    <li><a href="#">Fanlisting</a></li>
+                    <li><a href="#">Outlinks</a></li>
+                    <li><a href="#">Back to Main Site</a></li>
+                </ul>
+            </nav>
+            <main id="content">
+                <div class="box heading">
+                    <h1>{{ title }}</h1>
+                    {% if subtitle %}<div id="subtitle">{{ subtitle }}</div>{% endif %}
+                </div>
+                {{ content | safe }}
+            </main>
+        </div>
+        <footer>
+            <p>coded by Name @ SiteName. 20XX-20XX.</p>
+            <p><a href="#top">Back to Top</a></p>
+        </footer>
+    </div>
+</body>
+</html>

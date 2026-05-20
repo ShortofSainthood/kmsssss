@@ -1,0 +1,85 @@
+---
+title: Buttons
+layout: base.njk
+eleventyNavigation:
+  parent: Home
+  key: Buttons
+hideBreadcrumbs: true
+---
+{% css %}
+    /* ORGANIZE THIS */
+    /*.buttons img {position: relative;}
+    .buttons a:hover img, .buttons a:focus img {
+        scale: 120%;
+        transition: 0.2s ease;
+        transition-property: scale;
+        z-index: 2;
+        filter: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .buttons a:hover img, .buttons a:focus img {transition: none!important;}
+    }*/
+
+    .buttons {
+        text-align: center;
+    }
+
+    /* IMAGE FILTERS */
+/* red */ul.buttons li:nth-child(5n-4) :is(img, canvas) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(315deg);}
+/* orange */ul.buttons li:nth-child(5n-3) :is(img, canvas) {filter: brightness(0.8) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(340deg);}
+/* white */ul.buttons li:nth-child(5n-2) :is(img, canvas) {filter: contrast(1.2) sepia(50%) saturate(75%);}
+/* pink */ul.buttons li:nth-child(5n-1) :is(img, canvas) {filter: brightness(0.85) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(300deg);}
+/* magenta */ul.buttons li:nth-child(5n) :is(img, canvas) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(200%) hue-rotate(280deg);}
+
+
+    ul.buttons {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        gap: 0.25em;
+        justify-content: center;
+    }
+
+    ul.buttons a:hover img, ul.buttons a:focus img {
+        scale: 120%;
+        transition: 0.2s ease;
+        transition-property: scale;
+        z-index: 2;
+        filter: none;
+    }
+
+    ul.buttons :not(a) img:hover {
+        filter: none;
+    }
+
+{% endcss %}
+<script src="/assets/freezeframe.js"></script>
+
+<!--<h2>Paragraph</h2>
+<div class="buttons freezeframe">
+{%- for button in buttonWall %}
+{%- if button.img%}
+<a href="{{ button.url }}"><img src="/assets/images/graphics/buttons/{{ button.img }}" alt="{{ button.alt }}"></a>
+{%- endif %}
+{%- endfor %}
+</div>-->
+
+<h2>List</h2>
+<ul class="buttons freezeframe">
+{%- for button in buttonWall %}
+{%- if button.img%}
+<li><a href="{{ button.url }}"><img src="/assets/graphics/buttons/{{ button.img }}" alt="{{ button.alt }}"></a></li>
+{%- endif %}
+{%- endfor %}
+</ul>
+
+<h2>Sites without buttons</h2>
+<ul>
+{%- for button in buttonWall %}
+{%- if not button.img%}
+<li><a href="{{ button.url }}">{{ button.alt }}</a></li>
+{%- endif %}
+{%- endfor %}
+</ul>
+
+<script>new Freezeframe();</script>

@@ -1,0 +1,163 @@
+---
+title: "Link ::before Effects"
+date: "2024-12-28"
+desc: "Some fun little things you can do with links using ::before."
+TOC: true
+showDesc: true
+prolang: "HTML, CSS"
+---
+{% css %}
+    .box ul {
+        list-style: none;
+    }
+    .box .demoone a::before {
+        content: url("/assets/images/heartpixel.gif");
+        margin-right: 0.5em;
+    }
+    .box .demotwo a::before, .box .demothree a::before {
+        content: url("/assets/images/mascot1.gif");
+        margin-right: 0.5em;
+    }
+    .box .demotwo a:hover::before, .box .demotwo a:focus::before, .box .demothree li a:hover::before, .box .demothree li a:focus::before {
+        content: url("/assets/images/mascot1-animated.gif");
+        margin-right: 0.5em;
+    }
+    .box .demothree li:nth-of-type(3n-1) a:before {
+        content: url("/assets/images/mascot2.gif");
+    }
+    .box .demothree li:nth-of-type(3n-1) a:hover::before, .box .demothree li:nth-of-type(3n-1) a:focus::before {
+        content: url("/assets/images/mascot2-animated.gif");
+    }
+    .box .demothree li:nth-of-type(3n) a:before {
+        content: url("/assets/images/mascot3.gif");
+    }
+    .box .demothree li:nth-of-type(3n) a:hover::before, .box .demothree li:nth-of-type(3n) a:focus::before {
+        content: url("/assets/images/mascot3-animated.gif");
+    }
+    .box .demofour a::before {
+        content: url("/assets/images/drheart.png");
+        margin-right: 0.4em;
+        visibility: hidden;
+    }
+    .box .demofour a:hover::before, .box .demofour a:focus::before {
+        visibility: visible;
+    }
+{% endcss %}
+<h2 id="before-link">Sprite before link</h2>
+<div class="box">
+    <ul class="demoone">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+<h3 class="noborder">HTML</h3>
+<p>I'll be using this HTML structure for all of the examples on this page.</p>
+{% highlight "html" %}
+<ul class="className">
+    <li><a href="#">Link #1</a></li>
+    <li><a href="#">Link #2</a></li>
+    <li><a href="#">Link #3</a></li>
+</ul>
+{% endhighlight %}
+
+<h3 class="noborder">CSS</h3>
+{% highlight "css" %}
+ul.className a::before {
+    content: url("heartspin.gif");
+    margin-right: 0.5em; /* Optional, extra spacing so it looks nicer */
+}
+
+ul.className {
+    list-style: none; /* removes list bullets */
+}
+{% endhighlight %}
+<p>A pretty basic, but fun way to customize links. Best suited for links in simple lists or navigation menus, not in the main content.</p>
+
+<h2 id="animate-sprite">Animate Sprite on Hover</h2>
+<h3 id="single-sprite">Single Sprite Type</h3>
+<div class="box">
+    <ul class="demotwo">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+{% highlight "css" %}
+ul.className a::before {
+    content: url("mascot.gif"); /* This is your default/still sprite */
+    margin-right: 0.5em; /* Optional, extra spacing so it looks nicer */
+}
+
+ul.className a:hover::before, ul.className a:focus::before {
+    content: url("mascot-animated.gif"); /* This is your animated sprite */
+}
+
+ul.className {
+    list-style: none; /* removes list bullets */
+}
+{% endhighlight %}
+<p>I really like this one. It gives the impression that we've "paused" and "played" the GIF without any fancy scripting! All you have to do is save your regular animated GIF and a still frame from that GIF separately. Set the still one as your default sprite and the animated one for when the link is hovered over or focused on.</p>
+<p>You can get the first frame of the GIF by using <a class="external" href="https://ezgif.com/split">Ezgif</a>, or any image editor that supports animation. Why save the still image as a GIF? I noticed that saving it as a PNG made the colors a little off. If you want it to seamlessly transition, you'll want the colors to match.</p>
+
+<h3 id="multiple-sprites">Multiple Sprite Types</h3>
+<div class="box">
+    <ul class="demothree">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+{% highlight "css" %}
+ul.className li a::before {
+    content: url("mascot1.gif"); /* First still sprite */
+    margin-right: 0.5em; /* Optional, extra spacing so it looks nicer */
+}
+
+ul.className li a:hover::before, ul.className li a:focus::before {
+    content: url("mascot1-animated.gif"); /* First animated sprite */
+}
+
+ul.className li:nth-of-type(3n-1) a::before {
+    content: url("mascot2.gif"); /* Second still sprite */
+}
+
+ul.className li:nth-of-type(3n-1) a:hover::before, ul.className li:nth-of-type(3n-1) a:focus::before {
+    content: url("mascot2-animated.gif"); /* Second animated sprite */
+}
+
+ul.className li:nth-of-type(3n) a::before {
+    content: url("mascot3.gif"); /* Third still sprite */
+}
+
+ul.className li:nth-of-type(3n) a:hover::before, ul.className li:nth-of-type(3n-1) a:focus::before {
+    content: url("mascot3-animated.gif"); /* Third animated sprite */
+}
+
+ul.className {
+    list-style: none; /* removes list bullets */
+}
+{% endhighlight %}
+<p>Here's a little snippet I made for myself that uses multiple images before the links. I was originally going to use it for a project I'm working on, but I didn't like how it looked with the rest of the layout I designed. Still, I thought it was cute and some people might find it useful, so I'm sharing it with you guys now!</p>
+<p>I used the <code>:nth-of-type</code> pseudo-class to select the second and third links and define them separately from the default link. Note that the second sprite <em>doesn't</em> use <code>:nth-of-type(2n)</code>. That would select every second link. Instead it uses <code>:nth-of-type(3n-1)</code>, which selects the link before every third link. This also creates a repeating pattern, so if I added more links it'd just repeat the pattern of the sprites before them indefinitely.</p>
+
+<h2 id="show-sprite">Show Sprite on Hover</h2>
+<div class="box">
+    <ul class="demofour">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+{% highlight "css" %}
+nav ul a::before {
+    content: url("heart.png");
+    margin-right: 0.4em; /* Optional, extra spacing so it looks nicer */
+    visibility: hidden; /* Hides our sprite without collapsing the space it takes up */
+}
+
+nav ul a:hover::before, nav ul a:focus::before {
+    visibility: visible; /* Shows our sprite */
+}
+{% endhighlight %}
+<p>Take note that the <code>visibility</code> property is different from the <code>display</code> property. <code>display: none;</code> treats the element as if it's been completely removed, removing all the space that element takes up. <code>visibility: hidden;</code> just makes the element invisible. Our sprite still takes up space, it just isn't shown. This is done to avoid the text shifting around, which can be very annoying.</p>

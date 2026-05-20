@@ -1,0 +1,44 @@
+{% extends "layouts/base.njk" %}
+{% block extrahead %}
+<style>
+    .imgproper img {
+    max-height: 90vh;
+    }
+
+    .imgproper {
+    text-align: center;
+    }
+
+    .imgid {
+    /*font-size: 0.9em;*/
+    background: var(--bgaccent);
+    color: var(--text);
+    padding: 0.25em 0.5em;
+    border-radius: 8px;
+    margin: 1em auto;
+    }
+
+    .imgid strong {color: var(--text);}
+
+    .imgid p {
+    margin: 0.5em;
+    }
+
+    /*
+
+    #warningsummary {
+        
+    }
+
+    details {background: var(--bgaccent); padding: 0.5rem; border-radius: 8px; margin: 0.5em;}
+    summary {font-weight: bold; color: var(--textaccent);}
+    summary:hover {cursor: pointer;}
+    details:first-of-type summary::marker,
+    :is(::-webkit-details-marker) {color: var(--text);}
+    #content details[open] summary {border-bottom: solid 1px var(--textaccent); padding-bottom: 10px; margin-bottom: 10px;}
+
+
+    */
+
+</style>
+{% endblock %}

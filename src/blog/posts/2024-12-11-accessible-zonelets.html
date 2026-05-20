@@ -1,0 +1,205 @@
+---
+title: "Making Your Zonelets Blog More Accessible"
+permalink: "/blog/posts/accessible-zonelets.html"
+date: "2024-12-11"
+lastUpdated: "2025-03-15"
+categories: ["accessibility","tech","tips and tricks","tutorial","webdev","Zonelets"]
+desc: "A not so brief tutorial on how to make your Zonelets blog more accessible."
+readmore: true
+TOC: true
+---
+<p><a href="https://zonelets.net/">Zonelets</a> is a free to use, static blogging engine. It's aimed at absolute beginners and especially popular with young people on platforms like <a href="https://neocities.org/">Neocities</a>. Unfortunately, the default Zonelets layout lacks a lot of basic accessibility features. Because so many of its users are newbies, they're either unaware of or unable to fix these issues. This post is me throwing my hat in the ring and trying to fix those issues myself.</p>
+<!-- excerpt -->
+<p>Before I continue, I want to make it very clear that I have nothing but the upmost respect for Zonelets and it's creator, Marina. All of the issues I'll be pointing out in this post are purely technical. I hope this post can be a nice introduction to web accessibility for beginners, using a framework that they're already familiar with as a jumping-off point.</p>
+<p><strong>All of the changes I'm showing can be <a href="/code/projects/accessible-zonelets/">downloaded from my projects page</a> if you'd prefer to start from scratch.</strong> If you had a lot of blog posts before you'd just have to back those up somewhere and then copy-paste the content of your old ones over to the new template. If you'd prefer to update your existing Zonelets files, or just want to know how I did it, keep reading and follow the steps below!</p>
+
+<h2 id="keyterms">Key Terms</h2>
+<p>There are some terms I'm going to be using a lot throughout this post. It's important that you're familiar with them before we start.</p>
+<dl>
+    <dt>Screen Reader</dt>
+    <dd>A screen reader is a type of software frequently used by people who're blind or have low vision. It's main job is to read aloud the text on screen. Most screen readers will also announce when certain elements are interacted with (For example: when a button is pressed), and what section of the page it's currently reading.<br>Further Reading: <a href="https://webaim.org/techniques/screenreader/">"Designing for Screen Reader Compatibility" on WebAIM</a>.</dd>
+    <dt>Keyboard User</dt>
+    <dd>A keyboard user is someone who (solely or primarily) uses a keyboard to navigate a web page instead of a mouse, trackpad, or touch screen. This is typically, but not always, because of motor disabilities. There is also a significant overlap between keyboard users and screen reader users, since people who're totally blind can't see/use a mouse cursor.<br>Further Reading: <a href="https://webaim.org/techniques/keyboard/">"Keyboard Accessibility" on WebAIM</a>.</dd>
+    <dt>Semantic HTML</dt>
+	<dd>When an HTML element or HTML structure is semantic that means it's being used to convey information, not just decoration. For example, using headings to give a title to a section of a page, not just using it because you want large text.<br>Further Reading: <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">"Semantics" on MDN Web Docs</a>.</dd>
+    <dt>Styling</dt>
+	<dd>Styling refers to changing the appearance, but <em>not</em> the content or functionality, of an HTML element using CSS. For example: changing the font, size, or color of text on a page.<br>Further Reading: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics">"CSS styling basics" on MDN Web Docs</a>.</dd>
+</dl>
+
+<h2 id="language">Step 1: Defining the language</h2>
+<h3 class="noborder">Why?</h3>
+<p>Screen readers have the ability to read text aloud in multiple languages. Sometimes there can be ambiguity as to what language a block of text is supposed to be in, and that goes on to effect how the screen reader pronounces it and how the user interprets its meaning. For example, without context, most screen readers can't tell the difference between "pan", the English word for a skillet, and <span lang="es">"pan"</span> the Spanish word for bread. Defining what language the page is using can help with these problems.</p>
+<h3 class="noborder">What You Should Do</h3>
+<p>Change the very first <code>&lt;html&gt;</code> at the top of <em>all</em> your HTML files to <code>&lt;html lang="en"&gt;</code>.</p>
+<p>If your blog isn't in English, you can search through <a href="https://www.w3schools.com/tags/ref_language_codes.asp">this list</a> to find your languages two letter code. Just replace <code>en</code> with whatever your languages code is.</p>
+<h4>Country Codes</h4>
+<p>In some cases, you might want to add a <a href="https://www.w3schools.com/tags/ref_country_codes.asp">country code</a> to the end of your language code. This is usually unnecessary for English, since most dialects of English are mutually intelligible (someone who speaks American English can understand British English and vice versa), but may be necessary for other languages. For example, there's <code>pt-PT</code> for Portuguese Portuguese and <code>pt-BR</code> for Brazilian Portuguese.</p>
+<h4>Defining Multiple Languages</h4>
+<p>The <code>lang</code> tag is a <em>global</em> attribute, which means it can be applied to <em>any</em> HTML element. This can be useful in situations where you use words or phrases in other languages.</p>
+<p>You can set the overall language of your page to English, but then set individual sections, paragraphs, or spans to a different language. For example:</p>
+{% highlight "html" %}
+<p>The national anthem of France is <span lang="fr">La Marseillaise</span>.</p>
+{% endhighlight %}
+
+<h2 id="landmarks">Step 2: Adding Landmark Regions</h2>
+<h3 class="noborder">Why?</h3>
+<p>Landmarks help define what kind of content that part of the page has. There are multiple different landmark elements, each with their own purpose, but here are the ones we'll be going over in this tutorial:</p>
+<dl>
+    <dt>&lt;header&gt;</dt>
+    <dd>The header at the top of your site. Usually includes the sites name, banner, and main links.</dd>
+    <dt>&lt;footer&gt;</dt>
+	<dd>The footer at the bottom of your site. Usually includes legal information, secondary links, and contact info.</dd>
+    <dt>&lt;main&gt;</dt>
+    <dd>The main content of the page. In this case: your blog post.</dd>
+    <dt>&lt;nav&gt;</dt>
+	<dd>Used for navigation menus. Note that unlike the other landmarks mentioned, some sites might have more than one &lt;nav&gt; element.</dd>
+</dl>
+<p>Both screen reader and keyboard users can use landmarks to jump to different sections of a page. It's also just generally considered best practice to use landmarks when designing web pages, for a bunch of reasons besides accessibility that I won't bother going into here. For now, just know that it's a good thing to get into the habit of doing!</p>
+
+<h3 class="noborder">What You Should Do</h3>
+<p>Replace <code>div</code> with the appropriate landmark element.</p>
+<div class="box callout warning">
+    {% lucide "triangle-alert", { "size": "32" } %}
+    <p><strong>Do not change or remove the IDs!</strong> It might seem repetitive, but they effect both the styling of your elements <em>and</em> tell the JavaScript where to place certain text.</p>
+</div>
+<h4>Header, Footer, and Main Regions</h4>
+<p>Change <code>&lt;div id="header"&gt;</code> to <code>&lt;header id="header"&gt;</code>.</p>
+{% highlight "html" %}
+<header id="header">...</header>
+{% endhighlight %}
+<p>Then, change <code>&lt;div id="footer"&gt;</code> to <code>&lt;footer id="footer"&gt;</code>.</p>
+{% highlight "html" %}
+<footer id="footer"></footer>
+{% endhighlight %}
+<p>Lastly, change <code>&lt;div id="content"&gt;</code> to <code>&lt;main id="content"&gt;</code></p>
+{% highlight "html" %}
+<main id="content">    
+    <!--your content here-->
+</main>
+{% endhighlight %}
+<p>Pretty easy, right?</p>
+
+<h4>Navigation Region</h4>
+<p>Navigation is where things get a little more complicated. In Zonelet's post template, it has both a main navigation menu in the header, and a "next and previous post" navigation menu towards the end of every post. We could just replace <code>&lt;div&gt;</code> with <code>&lt;nav&gt;</code> and leave it at that, like we did with the other landmark elements, but that might be confusing for some users.</p>
+<p>Instead, we're going to make each <code>&lt;nav&gt;</code> unique by using <code>aria-label</code>, a special attribute that is read out loud by a screen reader. <code>aria-label</code> is helpful in situations where surrounding text isn't enough to describe an element. We can give our <code>&lt;nav&gt;</code> in the header the <code>aria-label</code> "main navigation" and the <code>&lt;nav&gt;</code> towards the bottom the <code>aria-label</code> "post navigation". Now, people using screen readers will be able to easily tell the two apart!</p>
+
+
+<div class="box callout warning">
+    {% lucide "triangle-alert", { "size": "32" } %}
+    <p><strong>Edit 2025-03-15:</strong> I feel like I should have done a better job explaining how accidentally using ARIA incorrectly can <em>hinder</em> accessibility instead of enhancing it. When using it for your own projects, please remember to do proper research and testing.</p>
+    <p><strong>Remember: <a href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/">No ARIA is better than Bad ARIA</a></strong></p>
+</div>
+
+<p>Editing the post navigation can be done similarly to our other landmark edits. Change <code>&lt;div id="nextprev"&gt;</code> to <code>&lt;nav id="nextprev"&gt;</code> and make sure to include <code>aria-label="post navigation"</code>.</p>
+{% highlight "html" %}<nav id="nextprev" aria-label="post navigation"></nav>{% endhighlight %}
+<p>Unlike the rest of our edits so far, the contents of the header menu is defined in our JavaScript file. Open <code>script.js</code> and look for the variable <code>headerHTML</code> (should be on line 63). It might look intimidating at first, but don't worry! All the stuff we're going to edit is just HTML formatted in a way that's easier for the JavaScript to understand.</p>
+<p>You'll see that the header links are wrapped in an unordered list (<code>&lt;ul&gt;</code>). We're going to wrap a <code>&lt;nav&gt;</code> around that and give it <code>aria-label="main navigation"</code>. Now, every time our header is loaded, it'll load with those elements as well.</p>
+<p>Your JS code will look like this if done correctly:</p>
+{% highlight "html" %}
+let headerHTML = '<nav aria-label="main navigation"><ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
+'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
+'<li><a href="' + relativePath + '/about.html">About</a></li> </ul></nav>';
+{% endhighlight %}
+
+
+<h2 id="headings">Step 3: Fixing Headings</h2>
+<h3 class="noborder">Why?</h3>
+<p>A mistake that nearly every newbie webdev makes at first is using semantic HTML elements, when they should have just used styling. For example, a lot of beginners use the heading elements because they think that all it does is make the text bigger, and just want large text that grabs the reader's attention. In actuality, headings tell your browser that there's a hierarchy of information. <code>&lt;h2&gt;</code> is a subset of <code>&lt;h1&gt;</code>, <code>&lt;h3&gt;</code> is a subset of <code>&lt;h2&gt;</code>, and so on.</p>
+<p>Similarly to landmarks, screen reader and keyboard users can use headings to jump to different sections of a page. Labeling something as a heading when it's actually not can be confusing and annoying to the user.</p>
+
+<h3 class="noborder">What You Should Do</h3>
+<p>Using CSS, we can give a regular paragraph the appearance of a heading, without giving it the semantics of one.</p>
+<p>First, we replace our post dates <code>&lt;h4&gt;</code> tags with <code>&lt;p&gt;</code>.</p>
+{% highlight "html" %}<p id="postDate"></p>{% endhighlight %}
+<p>The post date is now just a normal paragraph, but it still has the <code>postDate</code> ID, which we can customize in our stylesheet.</p>
+<div class="box callout info">
+    {% lucide "info", { "size": "32" } %}
+    <p>Now is a good time to mention that <strong><a href="https://dequeuniversity.com/rules/axe/4.10/heading-order">heading levels should only increase by one</a>!</strong> You should never just skip from <code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code>, like in the original post template.</p>
+</div>
+<p>This next part may be slightly different depending on what theme your using. I'll be using the default Zonelets stylesheet. In your <code>style</code> folder, go to <code>style.css</code> and scroll down to around line 59. You should see a comma separated list of heading elements (<code>&lt;h1&gt;</code>-<code>&lt;h5&gt;</code>). Add <code>#postDate</code> to that list.
+{% highlight "css" %}
+h1, h2, h3, h4, h5, #postDate {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #34436f;
+}
+{% endhighlight %}
+
+
+<p>Now, your post date will be the same font and color as your headings, but there's still a few properties we have to define if we want it to look like it did before.</p>
+<p>Most elements have default styles that render even when not defined in the stylesheet. For example, all <code>h4</code> elements will render with a <code>font-size</code> of <code>1em</code>, unless explicitly defined otherwise. We can use <a href="https://www.w3schools.com/cssref/css_default_values.php">W3Schools list of default CSS values for HTML elements</a> to find and apply relevant ones from <code>h4</code> to <code>#postDate</code>.</p>
+<p>I also set the line height to "normal". Originally the line height for paragraphs was set to 1.6em, which gave our post date a lot of awkward extra spacing. Giving it the value of "normal" resets that number to the browsers default and makes it look more uniform with the other heading elements.</p>
+{% highlight "css" %}
+h1, h2, h3, h4, h5, #postDate {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #34436f;
+}
+
+#postDate {
+    font-size: 1em;
+    margin: 1.33em 0;
+    font-weight: bold;
+    line-height: normal;
+}
+{% endhighlight %}
+
+
+<p>Congratulations! Now your post date looks just like a heading, without any of the semantics!</p>
+
+<h2 id="tweaks">Step 4: Small Tweaks</h2>
+<p>The rest of my edits were super small quick changes that don't need too much explanation.</p>
+
+<h3>Using Relative Units</h3>
+<p>Relative units are more flexible and work better with screen magnifiers and mobile devices. Whenever possible, it's best to use relative units, like <code>em</code> and <code>rem</code>, over absolute units like <code>px</code>. Better yet, you can ditch units all together in some cases! The recommended way to set <code>line-height</code> is to just type a number without defining the unit.</p>
+<p>Here I used a <a href="https://www.w3schools.com/TAGS/ref_pxtoemconversion.asp">pixel to ems converter</a> to help change the <code>font-size</code> unit, and removed the unit from our paragraphs <code>line-hight</code>.</p>
+{% highlight "css" %}
+body {
+    background-color: #436a7b;
+    background-image: url('../images/bg_diamond.png');
+    background-position: top;
+    font-size: 1.125em;
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+{% endhighlight %}
+
+
+<h3>Insuring Decent Color Contrast</h3>
+<p>Make sure that all of your text, including links, are easily distinguishable from the background. You can use <a href="https://webaim.org/resources/contrastchecker/">WebAIMs color contrast checker</a> to help you out.</p>
+<p>The specifics of how you fix this will depend on the specific theme of your blog. For the default Zonelets theme, the body text was fine, but the link text was too light, so I adjusted it to make it darker.</p>
+
+<h3>Adding :focus Effects</h3>
+<p>Keyboard-only users can't hover over links or buttons with a mouse, instead they have to focus on them by pressing <kbd>tab</kbd>. Most stylesheets have it set so that links and buttons change appearance when hovered over. It's usually a good idea to apply whatever effect is set to hovered elements to focused elements as well.</p>
+<p>This can be done by simply adding a comma separated list, copy-pasting the element, and replacing <code>:hover</code> with <code>:focus</code>. Now, whatever styles you define will effect both hovered over <em>and</em> focused on states of that element.</p>
+{% highlight "css" %}
+a:hover, a:focus { 
+    /* whatever you want it to look like when hovered over/focused on */
+}
+{% endhighlight %}
+
+<h3>Adding Skip Links</h3>
+<p>Skip links rarely ever make or break a sites accessibility, but can still make your site slightly more convenient for some people. Most websites have features that appear on every page, like the header and navigation menu. This can be annoying and repetitive for screen reader users and keyboard users. To remedy this, you can add a "Skip to Content" link.</p>
+<p>I was originally going to add my own code that I stitched together for this, but then I found <a href="https://kalechips.net/projects/snippets/skip">Kalechip's code snippet for it</a> and it's a lot cleaner and better explained than mine, so I'll just recommend that you use that.</p>
+<p>Additionally, you can add a visible "back to top" link at the bottom of your blog. This is useful not only for disabled users, but able-bodied users who're reading your blog on their phone or tablet.</p>
+<p>Further Reading: <a href="https://webaim.org/techniques/skipnav/">"Skip Navigation Links" on WebAIM</a></p>
+
+<h3>Using the Figure and Figcaption Elements</h3>
+<p>The default Zonelets framework lets you turn regular paragraphs into image captions by giving it the <code>caption</code> class. This doesn't actually change the semantics of the element, though, just the way it looks. This setup isn't <em>inherently</em> inaccessible, but in some situations it might be ambiguous as to which paragraphs are normal parts of a post and which are directly referring to an image.</p>
+<p>To make it clear that a caption is grouped with an image or set of images, you can use the <code>figure</code> and <code>figcaption</code> tags. You can still apply the <code>caption</code> class to your <code>figcaption</code> so that it's styled differently from the main text. You can also apply classes meant for images (<code>left</code>, <code>right</code>, <code>center</code>, and <code>small</code>) to <code>figure</code> so that it affects both the image and the caption.
+<p>For example:</p>
+{% highlight "html" %}
+<figure class="small right">
+    <img src="dog.png" alt="photograph of a small dog lying in the sun">
+    <figcaption class="caption">Me and my dog had a fun summer!</figcaption>
+</figure>
+{% endhighlight %}
+
+<h2 id="conclusion">In Conclusion</h2>
+<p>For those interested in learning more about web accessibility, I'd highly recommend checking out <a href="https://webaim.org/">WebAIM</a>. They provide a lot of in-depth information and I used them as a resource multiple times while writing this post. <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN Web Docs</a> and <a href="https://www.w3schools.com/accessibility/index.php">W3Schools</a> also have very good overviews on the subject.</p>
+<p>Once you understand the basics, you can start using tools like <a href="https://wave.webaim.org/">WAVE</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">axe DevTools</a>. Automated accessibility tests aren't foolproof, you should always do them in conjunction with manual testing, but they can still help you notice things that you might have glossed over otherwise. I also recently found out about <a href="https://www.a11yproject.com/checklist/">the A11Y Project Checklist</a>, which I think a lot of people might find useful.</p>
+<hr>
+<p>Phew! That took a lot longer to write than I thought it would! I hope this tutorial was easy to understand. Technically, I guess this isn't my first time writing a long tutorial like this, but it is my first time actually finishing and publishing one.</p>
+<p>If you have any questions, or think I got something wrong and want to correct me, feel free to <a href="/#contact">contact me</a>!</p>

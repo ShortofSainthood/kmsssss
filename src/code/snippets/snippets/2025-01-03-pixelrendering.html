@@ -1,0 +1,57 @@
+---
+title: "Rendering Pixel Art"
+date: "2025-01-03"
+desc: "Using the CSS image-rendering property to fix blurry pixel art."
+prolang: "CSS"
+---
+{% css %}
+    img {
+        width: 80%;
+        height: auto;
+    }
+    img.pixelated {
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+    }
+    .half {
+        text-align: center;
+    }
+{% endcss %}
+<p>
+    A super simple one, but one I still see some people struggle with. Modern browsers make pixel art look blurry when scaled up. We can use the CSS <a class="external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering property</a> to fix this.
+</p>
+
+<div class="box flexcontainer">
+    <div class="half">
+        <img src="/assets/images/pikachu.png" alt="">
+        <p>No styling</p>
+    </div>
+    <div class="half">
+        <img class="pixelated" src="/assets/images/pikachu.png" alt=""> 
+        <p>With <code>image-rendering: pixelated;</code></p>
+    </div>
+</div>
+
+<h3 class="noborder">HTML</h3>
+{% highlight "html" %}
+<img class="pixelated" src="image.png">
+{% endhighlight %}
+
+<h3 class="noborder">CSS (Minimum Compatibility)</h3>
+<p>Works on all major and modern browsers</p>
+{% highlight "css" %}
+img.pixelated {
+    image-rendering: pixelated;
+}
+{% endhighlight %}
+
+<h3 class="noborder">CSS (Maximum Compatibility)</h3>
+<p>Also works for older and more obscure browsers</p>
+{% highlight "css" %}
+img.pixelated {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+{% endhighlight %}

@@ -1,0 +1,7 @@
+:root {
+    --fontStack-emoji: Twemoji Mozilla,Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,EmojiOne Color;
+    --fontStack-serif: Georgia,Constantia,Lucida Bright,Lucidabright,Lucida Serif,Lucida,DejaVu Serif,Bitstream Vera Serif,Liberation Serif,serif;
+    --fontStack-sans-serif: system-ui,sans-serif;
+    --fontStack-fantasy: Segoe Print,Bradley Hand,Chilanka,TSCu_Comic,casual,cursive;
+    --fontStack-monospace: ui-monospace,Cascadia Code,Source Code Pro,Monaco,Menlo,Consolas,DejaVu Sans Mono,monospace;
+}

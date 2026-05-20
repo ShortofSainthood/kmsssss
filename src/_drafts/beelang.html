@@ -1,0 +1,702 @@
+---
+title: Color Test
+layout: base.njk
+---
+<style>
+td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+}
+caption {
+    font-weight: bold;
+    color: var(--textaccent);
+}
+.idkbro {
+    color: var(--textaccent);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+u {
+    color: var(--textaccent);
+    text-decoration-thickness: 1px;
+    font-weight: bold;
+}
+.half, .third {
+    text-align: center;
+}
+.testy {
+  /* background: #FF594947; */
+  background: #FF594966;
+  /*if supports:*/
+  background: color-mix(in hsl, var(--delbg) 60%, var(--bg));
+}
+
+.ipa-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<h2>Background</h2>
+            <p>??? is a language "spoken" by member of the ???, commonly referred to as just "bees" in English.</p>
+            <p>The language evolved from ????? (proto-Hymenolang), after the first alkdjfaskljdfsafkldjasdf. Something something evolution. ????? has multiple different dialects, but this page will mostly focus on the "standard" dialect, spoken by western honey bees (scientific name).</p>
+            <p>spoken by "real" bees, not fictional species based on bees.</p>
+            
+            
+<h2>Phonology</h2>
+
+<table>
+  <tr>
+    <th rowspan="2" id="h">Homework</th>
+    <th colspan="3" id="e">Exams</th>
+    <th colspan="3" id="p">Projects</th>
+  </tr>
+  <tr>
+    <th id="e1" headers="e">1</th>
+    <th id="e2" headers="e">2</th>
+    <th id="ef" headers="e">Final</th>
+    <th id="p1" headers="p">1</th>
+    <th id="p2" headers="p">2</th>
+    <th id="pf" headers="p">Final</th>
+  </tr>
+  <tr>
+    <td headers="h">15%</td>
+    <td headers="e e1">15%</td>
+    <td headers="e e2">15%</td>
+    <td headers="e ef">20%</td>
+    <td headers="p p1">10%</td>
+    <td headers="p p2">10%</td>
+    <td headers="p pf">15%</td>
+  </tr>
+</table>
+            
+            <p>Grayed-out letters are allophones or marginal phonemes.</p>
+            
+          <div class="ipa-container">  
+          <table class="ipa zebra">
+           <!--<tr>
+              <th>x</th>
+              <th colspan="2">Labial</th>
+              <th colspan="3">Coronal</th>
+              <th colspan="1">Dorsal</th>
+            </tr>-->
+            <thead>
+            <tr>
+                <td></td>
+                <th id="bl">
+                  <span class="bigscreen">Bilabial</span>
+                  <span class="smallscreen">
+                    <abbr title="Bilabial">BL</abbr>
+                  </span>
+                </th>
+                <th id="ld">
+                  <span class="bigscreen">Labiodental</span>
+                  <span class="smallscreen">
+                    <abbr title="Labiodental">LD</abbr>
+                  </span>
+                </th>
+                <th id="d">
+                  <span class="bigscreen">Dental</span>
+                  <span class="smallscreen">
+                    <abbr title="Dental">D</abbr>
+                  </span>
+                </th>
+                <th id="a">
+                  <span class="bigscreen">Alveolar</span>
+                  <span class="smallscreen">
+                    <abbr title="Alveolar">A</abbr>
+                  </span>
+                </th>
+                <th id="pa">
+                  <span class="bigscreen">Post-Alveolar</span>
+                  <span class="smallscreen">
+                    <abbr title="Post-Alveolar">PA</abbr>
+                  </span>
+                </th>
+                <th id="v">
+                  <span class="bigscreen">Velar</span>
+                  <span class="smallscreen">
+                    <abbr title="Velar">V</abbr>
+                  </span>
+                </th>
+            </tr>
+            </thead>
+            <tr>
+              <th id="n"><b>Nasal</b></th>
+              <td headers="bl n">m</td>
+              <td headers="ld n"></td>
+              <td headers="d n"></td>
+              <td headers="a n">n</td>
+              <td headers="pa n"></td>
+              <td headers="v n">ŋ ⟨ng⟩</td>
+            </tr>
+            <tr>
+              <th id="p"><b>Plosive</b></th>
+              <td headers="bl p">b</td>
+              <td headers="ld p"></td>
+              <td headers="d p"></td>
+              <td headers="a p">d</td>
+              <td headers="pa p"></td>
+              <td headers="v p">g</td>
+            </tr>
+            <tr>
+              <th id="af"><b>Affricate</b></th>
+              <td headers="bl af">(b͡β)</td>
+              <td headers="ld af"></td>
+              <td headers="d af"></td>
+              <td headers="a af">(d͡z)</td>
+              <td headers="pa af">(d̠͡ʒ)</td>
+              <td headers="v af"></td>
+            </tr>
+            <tr>
+              <th id="f"><b>Fricative</b></th>
+              <td headers="bl f">β ⟨vh⟩</td>
+              <td headers="ld f">v</td>
+              <td headers="d f">ð ⟨th⟩</td>
+              <td headers="a f">z</td>
+              <td headers="pa f">ʒ ⟨zh⟩</td>
+              <td headers="v f"></td>
+            </tr>
+            <tr>
+              <th id="ap"><b>Approximant</b></th>
+              <td headers="bl ap"></td>
+              <td headers="ld ap"></td>
+              <td headers="d ap"></td>
+              <td headers="a ap"></td>
+              <td headers="pa ap">r ~ ɹ ⟨r⟩</td>
+              <td headers="v ap"></td>
+            </tr>
+          </table> 
+          </div>
+          <br>
+
+
+          <details>
+            <summary>Pronunciation Guide for Non-Linguists</summary>
+            <ul>
+                <li><span class="idkbro">/m/</span> like in <u>m</u>an</li>
+                <li><span class="idkbro">/n/</span> like in <u>n</u>ew</li>
+                <li><span class="idkbro">/ŋ/</span> like in si<u>ng</u> or i<u>nk</u></li>
+                <li><span class="idkbro">/b/</span> like in <u>b</u>oy</li>
+
+
+                <li><span class="idkbro">/d/</span> like in <u>d</u>og</li>
+                <li><span class="idkbro">/g/</span> like in <u>g</u>irl</li>
+                <li><span class="idkbro">/β/</span> like ???. similar to how we pronounce /v/ in English, but lkadsfj teeth, alkdfjkdsj lips.</li>
+                <li><span class="idkbro">/ð/</span> like ???, but <em>not</em> like ??? . always voiced.</li>
+                <li><span class="idkbro">/z/</span> like in <u>z</u>ebra</li>
+                <li><span class="idkbro">/ʒ/</span> asljdflskjfdjsdf. <em>soft</em> j, like in slkdf or akdfl. <u>zh</u>oo<u>sh</u> or bei<u>g</u>e. tounge never fully reaches the roof of mouth.</li>
+                <li><span class="idkbro">/r/</span> like in <u>r</u>ed. may also be trilled, like in spanish.</li>
+            </ul>
+          </details>
+          
+          <!--WITH MARGINAL PHONEMES-->
+          <!--
+          <div class="ipa-container">
+          <table class="ipa ext zebra">
+            <tr>
+                <td class="emptyheading"></td>
+              <th colspan="2"><span class="bigscreen">Bilabial</span><span class="smallscreen"><div class="tooltip" role="note" tabindex="0">BL<span class="tooltiptext">Bilabial</span></div></span></th>
+              <th colspan="2"><span class="bigscreen">Labiodental</span><span class="smallscreen"><div class="tooltip" role="note" tabindex="0">LD<span class="tooltiptext">Labiodental</span></div></span></th>
+              <th colspan="2"><span class="bigscreen">Dental</span><span class="smallscreen"><div class="tooltip" role="note" tabindex="0">D<span class="tooltiptext">Dental</span></div></span></th>
+              <th colspan="2"><span class="bigscreen">Alveolar</span><span class="smallscreen"><div class="tooltip" role="note" tabindex="0">A<span class="tooltiptext">Alveolar</span></div></span></th>
+              <th colspan="2"><span class="bigscreen">Post-Alveolar</span><span class="smallscreen"><div class="tooltip" role="note" tabindex="0">PA<span class="tooltiptext">Post-Alveolar</span></div></span></th>
+              <th colspan="2"><span class="bigscreen">Velar</span><span class="smallscreen"><div class="tooltip" role="note" tabindex="0">V<span class="tooltiptext">Velar</span></div></span></th>
+              
+              
+            </tr>
+            <tr>
+              <th><b>Nasal</b></th>
+              <td></td>
+              <td>m</td>
+              <td></td>
+              <td class="marginal">(ɱ)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>n</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>ŋ</td>
+            </tr>
+            <tr>
+              <th><b>Plosive</b></th>
+              <td class="marginal">(p)</td>
+              <td>b</td>
+              <td class="very-marginal">((p̪))</td>
+              <td class="marginal">(b̪)</td>
+              <td></td>
+              <td></td>
+              <td class="marginal">(t)</td>
+              <td>d</td>
+              <td></td>
+              <td></td>
+              <td class="marginal">(k)</td>
+              <td>g</td>
+            </tr>
+            <tr>
+              <th><b>Affricate</b></th>
+              <td class="very-marginal">((p͡ɸ))</td>
+              <td class="marginal">(b͡β)</td>
+              <td class="very-marginal">((p̪͡f))</td>
+              <td class="marginal">(b̪͡v)</td>
+              <td class="very-marginal">((t̪͡θ))</td>
+              <td class="very-marginal">((d̪͡ð))</td>
+              <td class="very-marginal">((t͡s))</td>
+              <td class="marginal">(d͡z)</td>
+              <td class="very-marginal">((t̠͡ʃ))</td>
+              <td class="marginal">(d̠͡ʒ)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th><b>Fricative</b></th>
+              <td class="marginal">(ɸ)</td>
+              <td>β</td>
+              <td class="marginal">(f)</td>
+              <td>v</td>
+              <td class="marginal">(θ)</td>
+              <td>ð</td>
+              <td class="marginal">(s)</td>
+              <td>z</td>
+              <td class="marginal">(ʃ)</td>
+              <td>ʒ</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th><b>Approximant</b></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td colspan="2" style="border-right: 1px solid var(--text-color);">r (r ~ ɹ)</td>
+              <td style="border-right: none;"></td>
+              <td style="border-left: none;"></td>
+            </tr>
+          </table> 
+          </div>
+
+        -->
+
+          <h2>Orthography</h2>
+
+          <h3>Digraphs</h3>
+
+          <table class="zebra">
+            <tr>
+                <th><abbr title="International Phonetic Alphabet">IPA</abbr> Symbol</th>
+                <th>Lorem Ipsum</th>
+            </tr>
+            <tr>
+                <td>ŋ</td>
+                <td>ng</td>
+            </tr>
+            <tr>
+                <td>β</td>
+                <td>vh</td>
+            </tr>
+            <tr>
+                <td>ð</td>
+                <td>th</td>
+            </tr>
+            <tr>
+                <td>ʒ</td>
+                <td>zh</td>
+            </tr>
+          </table>
+
+          <p>
+            ⟨th⟩ and ⟨ng⟩ are already regularly used in English, so aklsjdflk. There doesn't seem to be much askdfjlsskldjf /β/.
+          </p>
+
+          <p>
+            ⟨zh⟩ isn't used nearly as often in English, but isn't that uncommon in loanwords and proper nouns. I'm pretty sure every adult I know would be able to understand it. I probably could have used ⟨j⟩, but I worried about aklsdjflaskdfj. Also, ⟨zh⟩ uses ⟨z⟩, so it lksdjflkasdjf like a bee buzzing!
+          </p>
+
+          <p>
+            There doesn't seem to be much askdfjlsskldjf /β/. Most natural languages use it as an allophones of, or in place of /v/ /f/ /b/, so they use those. But, kalsdfdslkj constrsting. I choose to use ⟨vh⟩ because alskdfjskldj. ⟨h⟩ is already accepted to be alkdjflasdjf. Since /β/ is just a fronted/toothless version of /v/, I thought it would be aslkdjfsdfj to aslkdjf modifying ⟨h⟩
+          </p>
+
+
+
+          
+          <p>
+            <span class="ipa-text">v́hn v̂vmd bv́hhrr
+            <br>/ʒn˦ vːmd˥˩ b͡βːrː˦/</span>
+            <br><span class="ipa-gloss">1.sg-nom-worker</span> kill <span class="ipa-gloss">2-sing.obl.worker</span>      
+            <br>"I kill you"
+          </p>
+
+
+
+
+
+          <p>
+            <span class="ipa-text">v̌hhm z̋hhnd źzrn
+            <br>/βːm˩˥ ʒːnd˥ zːɹn˦/</span>
+            <br><span class="ipa-gloss">3.sg-nom-worker</span> see <span class="ipa-gloss">3-sing.obl.queen</span>      
+            <br>"she (the worker) sees her (the queen)"
+          </p>
+
+          <div class="flexcontainer">
+          <p class="half">
+            <span class="ipa-text">z᷈zz
+            <br>/ˈzːː˧˦˧/</span>
+            <br>"sleep" 
+           </p> 
+           
+           <p class="half">
+            <span class="ipa-text">z᷈zzǹz
+            <br>/ˈzːːn˧˦˧.z̩˨/</span>
+            <br>"(habbitually) sleeps" 
+           </p>
+           </div>
+           
+           
+           
+          <div class="flexcontainer">
+            
+            <p class="half">
+              <span class="ipa-text">v̋hr 
+              <br>/βr˥/</span>
+              <br>"scratch"
+            </p>
+            
+            <p class="half">
+              <span class="ipa-text">v̋hrmvh 
+              <br>/βrm.˥β̩˥
+              <br>[βrm.˥ɸ̩˥]</span>
+              <br>"(habbitually) scratches" 
+            </p>
+            
+            </div>
+            
+            <div class="flexcontainer">
+            <p class="half">
+              <span class="ipa-text">n̂gzh 
+              
+              <br>/ŋʒ˥˩/</span>
+              
+              <br>"flow"
+              </p>
+              
+              <p class="half">
+              <span class="ipa-text">n̂gzhn̂gzh
+              
+              <br>/ˈŋʒ˥˩.ŋʒ˥
+              <br>[ˈŋʒ˥˩.ŋʃ˥˩]</span>
+              
+              <br>"(habbitually) flows" 
+              </p>
+          </div>
+          
+          <div class="indented">
+          <h3>Producing Phonemes</h3>
+          <div class="indented"><p>Since bees don't have vocal cords, or really most of the same mouthparts as humans, they're unable to "speak" in the way that most humans can. The vast majority of their sounds are created by buzzing their wings. The phonology above is an attempt to map those buzzes to sounds that most humans can make themselves.</p>
+          
+          <p>Bees produce nasals, fricatives, and approximants buzzing their wings in different patterns and frequencies. Plosives are caused by the sudden stopping and starting of buzzing, and affricates are caused by suddenly stopping and starting again, but at the pattern/frequency of a fricative.</p>
+          
+          <p>something something co-articulation?</p>
+          
+          <p>Bees can also use speed to change the tone of their buzzing or hold the same pattern for an extended period of time to produce geminated consonants.</p></div>
+          
+          
+          <h3>Gemination</h3>
+
+
+          <div class="indented"><p>??? includes regular, long, and hyper-long consonants.</p></div>
+          
+          
+          <h3>Tones</h3>
+          
+          <div class="indented"><p>??? has five tonal levels: high, middle, low, super high, and super low. all of the tones can apply to [???] by themself, but blah blah complex tones: rising, falling, peaking, and dipping. Complex tones are based on relative pitch, not absolute pitch. All that matters is that the following tone is higher/lower than the one before it. For example ??? is usually pronounced as [], but may be pronounced as [], [], or [] in other dialects and idiolets.</p>
+          
+          <p>complex tones (rising, falling, peaking, and dipping) are exclusive to (words with??) long and hyperlong consonants. Peaking and dipping are exclusive to (words with??) hyper-long consonants</p>
+          
+          <div class="flexcontainer">
+            <div class="ipa-container half">
+                <table class="ipa zebra">
+                    <caption>
+                        Thingy #1
+                    </caption>
+                    <thead>
+                    <tr>
+                      <td></td>
+                      <th colspan="3">Tones / Pitches</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <th>Normal</th>
+                      <th>Long</th>
+                      <th>Extra Long</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                      <th>Extra high</th>
+                      <td>z̋</td>
+                      <td>z̋z</td>
+                      <td>z̋zz</td>
+                    </tr>
+                    <tr>
+                      <th>High</th>
+                      <td>ź</td>
+                      <td>źz</td>
+                      <td>źzz</td>
+                    </tr>
+                    <tr>
+                      <th>Mid</th>
+                      <td>z̄</td>
+                      <td>z̄z</td>
+                      <td>z̄zz</td>
+                    </tr>
+                    <tr>
+                      <th>Low</th>
+                      <td>z̀</td>
+                      <td>z̀z</td>
+                      <td>z̀zz</td>
+                    </tr>
+                    <tr>
+                      <th>Extra Low</th>
+                      <td>z̏</td>
+                      <td>z̏z</td>
+                      <td>z̏zz</td>
+                    </tr>
+                    <thead>
+                    <tr>
+                      <td></td>
+                      <th colspan="3">Contours</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <th>Normal</th>
+                      <th>Long</th>
+                      <th>Extra Long</th>
+                    </tr>
+                  </thead>
+                    <tr>
+                      <th>Rising</th>
+                      <td class="testy">ž</td>
+                      <td>žz</td>
+                      <td>žzz</td>
+                    </tr>
+                    <tr>
+                      <th>Falling</th>
+                      <td class="testy">ẑ</td>
+                      <td>ẑz</td>
+                      <td>ẑzz</td>
+                    </tr>
+                    <tr>
+                      <th>Peaking</th>
+                      <td class="testy">z᷈</td>
+                      <td class="testy">z᷈z</td>
+                      <td>z᷈zz / z᷈ </td>
+                    </tr>
+                    <tr>
+                      <th>Dipping</th>
+                      <td class="testy">z᷉</td>
+                      <td class="testy">z᷉z</td>
+                      <td>z᷉zz / z᷉ </td>
+                    </tr>
+                </table>
+
+
+
+                <table class="ipa zebra">
+                  <caption>
+                      Extra Tones Maybe?
+                  </caption>
+                  <tr>
+                    <td class="emptyheading"></td>
+                    <th>Normal</th>
+                    <th>Long</th>
+                    <th>Extra Long</th>
+                  </tr>
+                  <tr>
+                    <th>Mid-rising / High-rising</th>
+                    <td>z᷄</td>
+                    <td>z᷄z</td>
+                    <td>z᷄zz</td>
+                  </tr>
+                  <tr>
+                    <th>High-falling</th>
+                    <td>z᷇</td>
+                    <td>z᷇z</td>
+                    <td>z᷇zz</td>
+                  </tr>
+                  <tr>
+                    <th>Low-rising</th>
+                    <td>z᷅</td>
+                    <td>z᷅z</td>
+                    <td>z᷅zz</td>
+                  </tr>
+                  <tr>
+                    <th>Mid-falling / Low-falling</th>
+                    <td>z᷆</td>
+                    <td>z᷆z</td>
+                    <td>z᷆zz</td>
+                  </tr>
+              </table>
+            </div>
+            <div class="ipa-container half">            
+                <table class="ipa zebra">
+                    <caption>
+                        Thingy #2
+                    </caption>
+                <!--<tr>
+                    <th>x</th>
+                    <th colspan="2">Labial</th>
+                    <th colspan="3">Coronal</th>
+                    <th colspan="1">Dorsal</th>
+                    </tr>-->
+                    <tr>
+                    <td class="emptyheading"></td>
+                    <th>Normal</th>
+                    <th>Long</th>
+                    <th>Extra Long</th>
+                    
+                    </tr>
+                    <tr>
+                    <th>Extra high</th>
+                    <td>zi</td>
+                    <td>zzi</td>
+                    <td>zzzi</td>
+                    </tr>
+                    <tr>
+                    <th>High</th>
+                    <td>ze</td>
+                    <td>zze</td>
+                    <td>zzze</td>
+                    </tr>
+                    <tr>
+                    <th>Mid</th>
+                    <td>zu</td>
+                    <td>zzu</td>
+                    <td>zzzu</td>
+                    </tr>
+                    <tr>
+                    <th>Low</th>
+                    <td>za</td>
+                    <td>zza</td>
+                    <td>zzza</td>
+                    </tr>
+                    <tr>
+                    <th>Extra Low</th>
+                    <td>zo</td>
+                    <td>zzo</td>
+                    <td>zzzo</td>
+                    </tr>
+                    <tr>
+                    <th>Rising</th>
+                    <td class="testy"></td>
+                    <td>zzoe</td>
+                    <td>zzzoe</td>
+                    </tr>
+                    <tr>
+                    <th>Falling</th>
+                    <td class="testy"></td>
+                    <td>zzia</td>
+                    <td>zzzia</td>
+                    </tr>
+                    <tr>
+                    <th>Peaking</th>
+                    <td class="testy"></td>
+                    <td class="testy"></td>
+                    <td>zzzaeo / zaeo</td>
+                    </tr>
+                    <tr>
+                    <th>Dipping</th>
+                    <td class="testy"></td>
+                    <td class="testy"></td>
+                    <td>zzzeai / zeai</td>
+                </table>
+            </div>
+          </div>
+          
+          <p>(see orthography later to see possible lengh and tone combinations)</p>
+          
+          <p>
+            akljdfklsjdf in red are klsajdfksldjf.
+          </p>
+
+          <p>
+            Extra long peaking and extra leaking dipping alksjdflkdjsf can optionally be written with only one alksdjf. Since adfasdf peaking and dipping tones askldfjsldfj there should be no ambiguity.
+          </p>
+
+          <p>Something something digraphs</p>
+          
+          <div class="ipa-container">  
+          <table class="ipa zebra">
+           <!--<tr>
+              <th>x</th>
+              <th colspan="2">Labial</th>
+              <th colspan="3">Coronal</th>
+              <th colspan="1">Dorsal</th>
+            </tr>-->
+            <tr>
+              <th>Normal</th>
+              <th>Long</th>
+              <th>Extra Long</th>
+            </tr>
+            <tr>
+              <td>vh</td>
+              <td>vhh</td>
+              <td>vhhh</td>
+          </table> 
+          </div>
+          
+          <p>(haven't decided if tones for whole word or syllable)</p>
+          
+          <div class="flexcontainer">
+            <p class="third">
+              <span class="ipa-text">*ng'g<br>/ŋg/</span>
+            </p>
+            <p class="third">
+              <span class="ipa-text">*n'ng<br>/nŋ/</span>
+            </p>
+            <p class="third">
+              <span class="ipa-text">*ngg<br>/ŋː/</span>
+            </p>
+          </div>
+          
+                    
+          </div></div>
+
+
+
+
+            <h2>Grammar</h2>
+
+<div class="indented">
+<h3>Word Order</h3>
+
+<div class="indented">
+<p>??? is primarily SVO (Subject-Verb-Object), but sometimes uses other word order for the sake of emphasis or intensity.</p>
+
+
+<p>Take for example the following sentence:</p>
+
+<p>"??? ??? ???"</p>
+
+
+<p>(gloss)</p>
+
+
+<p>"(translation)"</p>
+
+
+<p>This would be considered the standerd way to klsajfklasdjf, however, lets say klasjdafa a specific aspect of the klasjdfa.</p></div>
+
+
+<h3>Cases</h3>
+
+</div>
+
+
+
+<h2>Dialectical Variance</h2>
+            

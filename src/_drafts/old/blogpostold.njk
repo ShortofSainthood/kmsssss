@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "bloghead.html" %}
+<body>
+    <div id="top"></div>
+    <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+    <div class="blogcontainer container">
+        {% include "header.html" %}
+        <div class="primary">
+            <main id="content">
+                <article class="clearfix">
+                    <h1>{{ title }}</h1>
+                    <p class="postmetadata">
+                        {% lucide "calendar", { "size": "20", "stroke-width": "2", "style": "vertical-align: -0.1em;" } %} Posted {{ dateExact.toString() | niceDate }}
+                        {% if lastUpdated %}
+                            <span aria-hidden="true">&bull;</span> Last updated {{ lastUpdatedExact.toString() | niceDate }}
+                        {% endif %}
+                        {% if categories %}
+                            <br>
+                            {% lucide "tags", { "size": "20", "stroke-width": "2" } %} Tagged under:
+                            {% set comma = joiner() %}
+                            {%- for item in categories -%}
+                                {{ comma() }} <a href="/blog/tagged/{{ item | slugify}}.html">#{{ item }}</a>
+                            {%- endfor -%}
+                        {% endif %}
+                    </p>
+                    {% if warning %}
+                    <div class="box callout warning">
+                        {% lucide "triangle-alert", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+                        <p><strong>Warning:</strong> This post contains {{ warning }}.</p>
+                    </div>
+                    {% endif %}
+                    {% if TOC %}
+                    <details>
+                        <summary>Table of Contents</summary>
+                        {{ content | toc | safe }}
+                    </details>
+                    {% endif %}
+                    {{ content | safe }}
+                </article>
+                <nav aria-label="post navigation">
+                    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+                    <div class="nextprev">
+                        <div class="prev">
+                        {% if previousPost %}
+                            <a href="{{ previousPost.url }}">{% lucide "move-left", { "size": "16", "stroke-width": "3" } %} Previous Post<br>{{ previousPost.data.title }}</a>
+                        {% endif %}
+                        </div>
+                        <div class="next">
+                        {% if nextPost %}
+                            <a href="{{ nextPost.url }}">Next Post {% lucide "move-right", { "size": "16", "stroke-width": "3" } %}<br>{{ nextPost.data.title }}</a>
+                        {% endif %}
+                        </div>
+                    </div>
+                    <div class="speciallink"><a href="/blog/">Back to Blog Index</a></div>
+                </nav>
+            </main>
+            {% include "blogaside.html" %}
+        </div>
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>

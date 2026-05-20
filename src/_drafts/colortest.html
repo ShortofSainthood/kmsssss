@@ -1,0 +1,552 @@
+---
+title: Color Test
+layout: base.njk
+---
+<style>
+/*
+.callout.danger .callouticon, .callout.danger strong, .callout.danger li::marker {
+    color: var(--red)
+}
+
+.callout.warning .callouticon, .callout.warning strong, .callout.warning li::marker {
+    color: var(--yellow)
+}
+
+.callout.success .callouticon, .callout.success strong, .callout.success li::marker {
+    color: var(--green)
+}
+
+.callout.info .callouticon, .callout.info strong, .callout.info li::marker {
+    color: var(--blue)
+}
+*/
+</style>
+
+{% include "styleswitcher.html" %}
+
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<div class="flexcontainer">
+    <div class="half" style="background: var(--bg); padding: 10px;">
+        <p style="color: var(--text);">Normal Text</p>
+        <p style="color: var(--textaccent);">Accent Text</p>
+        <p style="color: var(--link); text-decoration: underline; text-decoration-thickness: 2px;">Link Text</p>
+        <p style="color: var(--linkvisited); text-decoration: underline; text-decoration-color: var(--link); text-decoration-thickness: 2px;">Visited Link</p>
+        <p style="background: var(--textaccent); color: var(--bg);">Selected Text</p>
+        <p><code>code</code></p>
+        <p>
+            <span style="color: var(--red);">red</span>
+            <span style="color: var(--orange);">orange</span>
+            <span style="color: var(--yellow);">yellow</span>
+            <span style="color: var(--green);">green</span>
+            <span style="color: var(--blue);">blue</span>
+            <span style="color: var(--purple);">purple</span>
+        </p>
+        <p style="font-weight: bold;">
+            <span style="color: var(--red);">red</span>
+            <span style="color: var(--orange);">orange</span>
+            <span style="color: var(--yellow);">yellow</span>
+            <span style="color: var(--green);">green</span>
+            <span style="color: var(--blue);">blue</span>
+            <span style="color: var(--purple);">purple</span>
+        </p>
+    </div>
+    <div class="half" style="background: var(--bgaccent); padding: 10px;">
+        <p style="color: var(--text);">Normal Text</p>
+        <p style="color: var(--textaccent);">Accent Text</p>
+        <p style="color: var(--link); text-decoration: underline; text-decoration-thickness: 2px;">Link Text</p>
+        <p style="color: var(--linkvisited); text-decoration: underline; text-decoration-color: var(--link); text-decoration-thickness: 2px;">Visited Link</p>
+        <p style="background: var(--textaccent); color: var(--bg);">Selected Text</p>
+        <p><code>code</code></p>
+        <p>
+            <span style="color: var(--red);">red</span>
+            <span style="color: var(--orange);">orange</span>
+            <span style="color: var(--yellow);">yellow</span>
+            <span style="color: var(--green);">green</span>
+            <span style="color: var(--blue);">blue</span>
+            <span style="color: var(--purple);">purple</span>
+        </p>
+        <p style="font-weight: bold;">
+            <span style="color: var(--red);">red</span>
+            <span style="color: var(--orange);">orange</span>
+            <span style="color: var(--yellow);">yellow</span>
+            <span style="color: var(--green);">green</span>
+            <span style="color: var(--blue);">blue</span>
+            <span style="color: var(--purple);">purple</span>
+        </p>
+    </div>
+</div>
+
+<p>Lorem ipsum <em>italic</em> <strong>bold</strong> <strong><em>bold italic</em></strong> <del>strikethrough</del> <a class="external" href="#">link</a> <abbr title="abbreviation">abbr</abbr> <mark>highlight</mark> dolor sit amet consectetur adipisicing elit. Laborum harum nulla voluptates architecto blanditiis consequuntur eveniet dolorum deserunt inventore doloribus officiis ab tenetur veritatis ut cum, omnis cumque similique eaque?</p>
+
+<hr>
+
+<div class="box callout danger">
+    {% lucide "octagon-x", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+    <p><strong>Stop!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam!</p>
+    <div class="flexcontainer">
+        <ul class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ul>
+        <ol class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ol>
+    </div>
+</div>
+
+<div class="box callout warning">
+    {% lucide "triangle-alert", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+    <p><strong>Caution!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam!</p>
+    <div class="flexcontainer">
+        <ul class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ul>
+        <ol class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ol>
+    </div>
+</div>
+
+<div class="box callout success">
+    {% lucide "circle-check", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+    <p><strong>Success!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam!</p>
+    <div class="flexcontainer">
+        <ul class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ul>
+        <ol class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ol>
+    </div>
+</div>
+
+<div class="box callout info">
+    {% lucide "info", { "size": "32", "stroke-width": "2", "class": "callouticon"} %}
+    <p><strong>Just so you know...</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam!</p>
+    <div class="flexcontainer">
+        <ul class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ul>
+        <ol class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ol>
+    </div>
+</div>
+
+<div class="box callout">
+    {% lucide "triangle-alert", { "size": "32"} %}
+    <p><strong>Just so you know...</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam!</p>
+    <div class="flexcontainer">
+        <ul class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ul>
+        <ol class="half">
+            <li>list item #1</li>
+            <li>list item #2</li>
+            <li>list item #3</li>
+        </ol>
+    </div>
+</div>
+
+<h2>Links</h2>
+<p><a href="#">Internal link</a></p>
+<p><a class="external" href="#">External link</a><br><a href="https://lucide.dev/">Another External link</a></p>
+<p><a class="youtube" href="#">Link to a YouTube Video</a><br><a href="https://www.youtube.com/watch?v=J1VP4VHlUr0">Another Link to a YouTube Video</a></p>
+<p><a class="archived" href="#">Link to a Web Archive Page</a><br><a href="https://web.archive.org/web/20230316022324/https://patchworkofshadows.neocities.org/">Another Link to a Web Archive Page</a></p>
+
+
+
+
+<div style="margin: 1em 0;">
+    <a href="#" class="fakebtn">Fake Button #1</a>
+    <a href="#" class="fakealtbtn">Fake Button #2</a>
+</div>
+
+<hr>
+
+<h2>Buttons and Form Controls</h2>
+<button>Button #1</button>
+<button class="altbtn">Button #2</button>
+
+<br>
+<input type="text" value="Input" />
+<br>
+<select>
+    <optgroup label="Group 1">
+        <option>Option 1.1</option>
+    </optgroup>
+    <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option>Option 2.2</option>
+    </optgroup>
+</select>  
+<select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+</select> 
+
+<select class="altselect">
+    <optgroup label="Group 1">
+        <option>Option 1.1</option>
+    </optgroup>
+    <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option>Option 2.2</option>
+    </optgroup>
+</select>  
+<select class="altselect">
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+</select>
+<br>
+<textarea>Textarea</textarea>
+
+<div class="flexcontainer">
+    <div class="half">
+        <fieldset>
+            <legend>Choose your monster's features:</legend>
+        
+            <div>
+                <input type="checkbox" id="scales" name="scales" checked />
+                <label for="scales">Scales</label>
+            </div>
+        
+            <div>
+                <input type="checkbox" id="horns" name="horns" />
+                <label for="horns">Horns</label>
+            </div>
+        </fieldset>
+    </div>
+    <div class="half">
+        <fieldset>
+            <legend>Select a maintenance drone:</legend>
+        
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked />
+                <label for="huey">Huey</label>
+            </div>
+        
+            <div>
+                <input type="radio" id="dewey" name="drone" value="dewey" />
+                <label for="dewey">Dewey</label>
+            </div>
+        
+            <div>
+                <input type="radio" id="louie" name="drone" value="louie" />
+                <label for="louie">Louie</label>
+            </div>
+        </fieldset>
+    </div>
+</div>
+    
+<hr>
+
+<h2>Lists</h2>
+<h3>Normal</h3>
+<div class="flexcontainer">
+    <ul class="third">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ol class="third">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ol>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ol>
+        </li>
+        <li>List Item #4</li>
+    </ol>            
+    <dl class="third">
+        <dt>group 1</dt>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dt>group 2</dt>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dd>term</dd>
+    </dl>
+</div>
+
+<h3>Fancy</h3>
+<div class="flexcontainer">
+    <ul class="fifth emojibullets">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ul class="fifth symbolbullets">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ul class="fifth unicodebullets">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ol class="fifth">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ol>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ol>
+        </li>
+        <li>List Item #4</li>
+    </ol>            
+    <dl class="fifth">
+        <dt>group 1</dt>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dt>group 2</dt>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dd>term</dd>
+    </dl>
+</div>
+
+<h4>Rainbow</h4>
+<div class="flexcontainer">
+    <ul class="fifth emojibullets rainbow">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ul class="fifth symbolbullets rainbow">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ul class="fifth unicodebullets rainbow">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ul>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ul>
+        </li>
+        <li>List Item #4</li>
+    </ul>
+    <ol class="fifth rainbow">
+        <li>List Item #1</li>
+        <li>List Item #2</li>
+        <li>List Item #3
+            <ol>
+                <li>Nested List Item #1</li>
+                <li>Nested List Item #2</li>
+            </ol>
+        </li>
+        <li>List Item #4</li>
+    </ol>            
+    <dl class="fifth rainbow">
+        <dt>group 1</dt>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dt>group 2</dt>
+        <dd>term</dd>
+        <dd>term</dd>
+        <dd>term</dd>
+    </dl>
+</div>
+
+<hr>
+
+<h2>Details and Summary</h2>
+<details>
+    <summary>Summary</summary>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate excepturi magnam atque praesentium, itaque modi dolorem illo aspernatur, beatae quae incidunt omnis ipsa corporis dolorum hic. Quidem, fugit necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quaerat officia possimus, magnam eligendi veritatis laudantium consectetur doloribus dolorem aliquam debitis, ea accusantium perspiciatis commodi adipisci deleniti nisi aspernatur quo.</p>
+</details>
+
+<hr>
+
+<h2>Table</h2>
+<table class="both-odd">
+    <caption>
+        Table Caption
+    </caption>
+    <tbody>
+        <tr>
+        <td class="emptyheading"></td>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<h2>Blockquote</h2>
+<div>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they'll go through anything. You read and you're pierced.</p>
+    </blockquote>
+    <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore libero, non harum praesentium sint consequuntur quidem veritatis obcaecati. Accusantium praesentium libero maxime totam quod, deserunt aut sed placeat illo?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At debitis, eligendi veritatis molestiae amet nostrum, suscipit cumque, itaque dolore voluptate minima? Soluta ipsum maiores eos ab corporis a ipsa laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quasi velit assumenda, delectus dolor eius ducimus reiciendis libero nostrum pariatur. Similique nihil laboriosam labore ad alias soluta dolore autem asperiores.</p>
+</blockquote>
+
+<hr>
+
+<h2>Subscript and Superscript</h2>
+<p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+<p>Almost every developer's favorite molecule is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+"caffeine."</p>
+
+<hr>
+
+<h2>Keyboard Input</h2>
+<p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+<hr>
+
+<h2>Figure and Figcaption</h2>
+
+<h3>Small</h3>
+
+
+    <figure class="small right">
+        <img src="https://placehold.co/600x400/" alt="">
+        <figcaption>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, perspiciatis ducimus.
+            </p>
+        </figcaption>
+    </figure>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+    </p>
+
+    <figure class="small left">
+        <img src="https://placehold.co/600x400/" alt="">
+        <figcaption>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, perspiciatis ducimus.
+            </p>
+        </figcaption>
+    </figure>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+    </p>
+
+<h3>Full-Size</h3>
+<figure class="center">
+    <img src="https://placehold.co/600x400/" alt="">
+    <figcaption>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, perspiciatis ducimus, libero non autem aliquid inventore deserunt debitis similique unde, quaerat totam quis ipsum necessitatibus nihil corporis beatae deleniti accusamus.
+        </p>
+    </figcaption>
+</figure>

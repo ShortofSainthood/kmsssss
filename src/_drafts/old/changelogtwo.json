@@ -1,0 +1,40 @@
+[
+    {
+      "date": "2024-05-15",
+      "year": "2024",
+      "updates": [
+        { "update": "Officially Launched the site!"}
+      ]
+    },
+    {
+      "date": "2024-05-23",
+      "year": "2024",
+      "updates": [
+        { "update": "Changed HTML files to PHP."}
+      ]
+    },
+    {
+      "date": "2024-09-14",
+      "year": "2024",
+      "updates": [
+          { "update": "Switched webhosts from <a class=\"external\"href=\"https://webhostmost.com/\">Webhostmost</a> to <a class=\"external\" href=\"https://leprd.space/\">Leprd</a>!"},
+          { "update": "Updated this changelog to use the <a class=\"external\" href=\"https://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 format</a> (year-month-day) instead of the month/day/year format."},
+          { "update": "Made it so on-site links shouldn't have file extensions on them. \".php\" and \".html\" should not be showing up at the end of URLs anymore."},
+          { "update": "Fiddled around with the CSS a bit to make it more compatible with older browsers."}
+      ]
+    },
+    {
+      "date": "2025-03-05",
+      "year": "2025",
+      "updates": [
+          { "update": "Optimized CSS for <em>really</em> small screens."},
+          { "update": "Fixed some stuff in the meta tags."},
+          { "update": "Fixed the focus outline.",
+              "subupdates:": [
+              "Before, it only looked good on Firefox and looked awful on any other browser. Now it should look decent no matter what browser you're using.",
+              "here's another one"
+              ]
+          }
+        ]
+      }
+  ]

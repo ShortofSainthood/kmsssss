@@ -1,0 +1,121 @@
+---
+title: "Inline Lists and List Item Separators"
+date: "2024-12-27"
+desc: "How to display a list horizontally using HTML and CSS"
+prolang: "HTML, CSS"
+---
+{% css %}
+    .box .inlinelist {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .box .inlinelist li + li::before {content: "|"; margin: auto 0.5em;}
+    .box .fakebreadcrumbs li:first-of-type::before {content: "📁"; margin-right: 0.5em;}
+    .box .fakebreadcrumbs li:last-of-type:before {content: "\203A\00a0📂"; margin-right: 0.5em;}
+    .box .fakebreadcrumbs li + li::before {content: "\203A\00a0📁"; margin-right: 0.5em;}
+{% endcss %}
+<p>Inline/horizontal lists are especially useful for making simple, responsive navigation menus. Typically, list items in HTML are preceded with a bullet, but using CSS, we can change it so that whatever symbol we want only appears <em>in-between</em> list items.</p>
+<h2>Basic Demo</h2>
+<div class="box">
+    <ul class="inlinelist">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+    </ul>
+</div>
+<h3 class="noborder">HTML</h3>
+{% highlight "html" %}
+<ul class="inlinelist">
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+</ul>
+{% endhighlight %}
+<h3 class="noborder">CSS</h3>
+{% highlight "css" %}
+ul.inlinelist {
+    display: flex; /*Treats list items like they're items in a flex div*/
+    flex-wrap: wrap; /*Causes list items to go to the next line if the viewport isn't wide enough*/
+    list-style-type: none; /*Removes bullets*/
+    padding-left: 0; /*Removes default list indentation*/
+    justify-content: center; /*Optional, aligns our list to the center of the div*/
+}
+
+ul.inlinelist li + li::before {
+    content: "|"; /*Decoration that goes in-between list items.*/
+    margin: auto 0.5em; /*Optional, extra spacing so it looks nicer*/
+}
+{% endhighlight %}
+<p>The decoration itself can be almost anything. A unicode character, an emoji, even an image! Just use <code>content: url("file/path/to/image.png");</code>, similarly to how you set up a background image.</p>
+
+<h2>Combining It with Pseudo-Classes</h2>
+<p> If you know what you're doing, you can make a basic list look pretty advanced. Using <a class="external" href="https://www.w3schools.com/cssref/css_ref_pseudo_classes.php">CSS pseudo-classes</a>, we can select different list items and style them specifically.</p>
+<p>Below is a breadcrumbs navigation menu that I styled to look like a computer file manager. If you look into the HTML, you'll see that it's the exact same structure as the other example. Everything is defined in the styling.</p>
+<div class="box">
+    <ul class="inlinelist fakebreadcrumbs">
+        <li>Home</li>
+        <li>Blog</li>
+        <li>Posts</li>
+        <li>Post #1</li>
+    </ul>
+</div>
+
+<h3 class="noborder">HTML</h3>
+{% highlight "html" %}
+<ul class="breadcrumbs">
+    <li>Home</li>
+    <li>Blog</li>
+    <li>Posts</li>
+    <li>Post #1</li>
+</ul>
+{% endhighlight %}
+
+<h3 class="noborder">CSS</h3>
+
+{% highlight "css" %}
+ul.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: center;
+}
+
+ul.breadcrumbs li + li::before {
+    content: "\203A\00a0📁";
+    margin: 0 0.5em;
+}
+
+ul.breadcrumbs li:first-of-type::before {
+    content: "📁";
+    margin-right: 0.5em;
+}
+
+ul.breadcrumbs li:last-of-type:before {
+    content: "\203A\00a0📂";
+}
+{% endhighlight %}
+<p>This ones a bit more complicated, so let's break it down a bit.</p>
+<ul>
+    <li>
+        <p><code>ul.breadcrumbs</code> is our list. The styling is exactly the same as <code>ul.inlinelist</code> from the previous section. It makes sure our list is displayed horizontally instead of vertically.</p>
+    </li>
+    <li>
+        <p><code>li + li::before</code> is one we've already used before. It selects all list items that come immediately after another list item. This is our "default" styling for most of our list items, since all but the first one come right after another.</p>
+        <p>For the <code>content</code> I've used a mixed of <a class="external" href="https://www.w3schools.com/cssref/css_entities.php">CSS entities</a> and regular emojis. <code>"\203A"</code> is the entity code for the separator we're using and <code>"\00a0"</code> is the code for a "no-break space". Sometimes, CSS struggles to render spaces from just typing with your space bar in <code>content</code> correctly, so I'd suggest using CSS entities in situations like these.</p>
+    </li>
+    <li>
+        <p><code>li:first-of-type</code> selects the first list item in the list. Since it's the first element, it doesn't follow another list item and isn't effected by the styling set at the beginning. We have to style it separately. I didn't want it to have the separator symbol, so I only gave it the closed file emoji.</p>
+    </li>
+    <li>
+        <p><code>li:last-of-type</code> selects the last list item in the list. Because it follows another list item, by default it'll inherit the styling we set at the beginning. We can still override that styling if we want to, though. To show that the current page is our "opened file", I put the opened file emoji before it.</p>
+    </li>
+</ul>
+<p>There's a lot more you can do. I encourage you to just tinker around and see what comes out of it!</p>

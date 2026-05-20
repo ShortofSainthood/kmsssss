@@ -1,0 +1,42 @@
+---
+title: Code Snippets
+desc: Tips, tricks, and tiny bits of code that you can incorporate into your bigger coding projects.
+layout: base.njk
+eleventyNavigation:
+  key: Snippets
+  parent: Code
+GPL: true
+---
+
+<p>{{ desc }}</p>
+<ul>
+    {% for snippet in collections.snippets %}
+    <li><a href="{{ snippet.url }}">{{ snippet.data.title }}</a></li>
+    {% endfor %}
+</ul>
+
+
+<!--
+<table>
+    <thead>
+        <tr>
+            <th>Snippet</th>
+            <th>Description</th>
+            <th>Language(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for snippet in collections.snippets %}
+        <tr>
+            <td><a href="{{ snippet.link }}">{{ snippet.data.title | safe }}</a></td>
+            <td>{{ snippet.data.desc | safe }}</td>
+            <td>{{ snippet.data.prolang | safe }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+-->
+
+
+
+<p class="speciallink"><a href="/code/">Back to Code Index</a></p>

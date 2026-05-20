@@ -1,0 +1,253 @@
+{
+  "changes": [
+    {
+      "date": "2024-05-15",
+      "updates": [
+        { "text": "Officially Launched the site!" }
+      ]
+    },
+    {
+      "date": "2024-05-23",
+      "updates": [
+        { "text": "Changed HTML files to PHP." }
+      ]
+    },
+    {
+      "date": "2024-09-14",
+      "updates": [
+        { "text": "Switched webhosts from <a class=\"external\" href=\"https://webhostmost.com/\">Webhostmost</a> to <a class=\"external\" href=\"https://leprd.space/\">Leprd</a>!"
+        },
+        {"text": "Updated this changelog to use the <a class=\"external\" href=\"https://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 format</a> (year-month-day) instead of the month/day/year format."
+        },
+        {"text": "Made it so on-site links shouldn't have file extensions on them. \".php\" and \".html\" should not be showing up at the end of URLs anymore."},
+        {"text": "Fiddled around with the CSS a bit to make it more compatible with older browsers."}
+      ]
+    },
+    {
+      "date": "2024-09-24",
+      "updates": [
+        { "text": "Added a \"song of the now\" section to the front page."}
+      ]
+    },
+    {
+      "date": "2024-09-29",
+      "updates": [
+        {"text": "Added a <a href=\"/playlists\">playlists page</a>."},
+        {"text": "Added a new song-of-the-now and <a href=\"/songsofthethen\">a page to archive old ones</a>."},
+        {"text": "Added a \"back to top\" link to the footer."},
+        {"text": "Put the changelog in a scrolling div so that it doesn't take up half the page anymore."}
+      ]
+    },
+    {
+      "date": "2024-10-08",
+      "updates": [
+        { "text": "Added a <a href=\"http://sainthood.xyz/contact\">contact page</a> with my email and Fediverse info."
+        }
+      ]
+    },
+    {
+      "date": "2024-11-13",
+      "updates": [
+        {"text": "Revamped my whole site!"},
+          {"listItems": [
+            {"text": "Changed the CSS to <a class=\"external\" href=\"https://lissomware.github.io/css/\">Lissom.CSS</a>."},
+            {"text": "Moved my contact info to the homepage."},
+            {"text": "Added a page for <a href=\"/uses\">stuff I use</a>, <a href=\"/wips\">stuff I'm working on</a>, and <a href=\"/credits\">credits</a>."},
+            {"text": "Added an <a href=\"/rss.xml\">RSS feed</a>."},
+            {"text": "Added a <a href=\"/404\">custom 404 page</a>."},
+            {"text": "Temporarily removed my link directory and playlists page while I reorganize them."},
+            {"text": "Switched back from PHP to static HTML."}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-12-11",
+      "updates": [
+        {"text": "Added a <a href=\"/layouts/\">layouts page</a>."},
+        {"text": "Fixed some spelling errors."},
+        {"text": "Made some small tweaks to the CSS."}
+      ]
+    },
+    {
+      "date": "2024-12-28",
+      "updates": [
+        {"text": "Changed my layouts page to a <a href=\"/projects/\">projects page</a>, since that's more reflective of the actual content."},
+        {"text": "Added a new project: <a href=\"/projects/#11ty-gallery\">Accessible Eleventy Gallery</a>."},
+        {"text": "Added a <a href=\"/snippets/\">code snippets page</a> with three snippets.<ul><li><a href=\"/snippets/imagedividers\">Image Dividers</a></li> <li><a href=\"/snippets/inlinelists\">Inline Lists with Item Separators</a></li> <li><a href=\"/snippets/linkbefore\">Link <code>::before</code> Effects</a></li></ul>"},
+        {"text": "Made more tweaks to the CSS<ul><li>Fixed the external link symbol being underlined (that had been annoying me for a while, lol)</li> <li>Added extra spacing and border styling to my <a href=\"/changelog\">changelog</a> and <a href=\"/projects/\">projects</a> pages to make them easier to read.</li></ul>"}
+      ]
+    },
+    {
+      "date": "2025-03-04",
+      "updates": [
+        {"text": "Started building my site with <a href=\"https://www.11ty.dev/\">Eleventy</a>!<ul><li>Which means I finally have a proper blogging engine with tags!</li></ul>"},
+        {"text": "Completely redid the CSS!<ul><li>Changed from <a href=\"https://lissomware.github.io/css/\">Lissom.css</a> to a hand-coded layout.</li><li>Changed the default webfont to <a href=\"https://gwfh.mranftl.com/fonts/nunito-sans\">Nunito Sans</a>.</li><li>Changed the icons from <a href=\"https://fontawesome.com/\">Font Awesome</a> to <a href=\"https://lucide.dev/\">Lucide</a>.</li></ul>"},
+        {"text": "Reorganized and reworded some things in my <a href=\"/blog/posts/accessible-zonelets\">accessible zonelets tutorial</a> and some of my <a href=\"/code/snippets\">code snippets</a>."},
+        {"text": "Added a new code snippet: <a href=\"/code/snippets/rendering-pixel-art\">Rendering Pixel Art</a>."},
+        {"text": "Reworked the file structure."},
+        {"text": "Added <a href=\"/meta/info\">site info</a> and <a href=\"/meta/sitemap\">sitemap</a> pages."},
+        {"text": "Added legal licensing info to my sites footer and other relevant pages."},
+        {"text": "Put my uses and WIP pages in storage while I rework them."},
+        {"text": "Added a theme toggle to my blog."}
+      ]
+    },
+    {
+      "date": "2025-03-05",
+      "updates": [
+        {"text": "Optimized CSS for <em>really</em> small screens."},
+        {"text": "Fixed some stuff in the meta tags."},
+        {"text": "Fixed the focus outline. <ul><li>Before, it only looked good on Firefox and looked awful on any other browser. Now it should look decent no matter what browser you're using.</li></ul>"}
+      ]
+    },
+    {
+      "date": "2025-03-26",
+      "updates": [
+        {"text": "Added a \"# of posts\" counter to blog tag pages."},
+        {"text": "Fixed/organized page templates."},
+        {"text": "Added \"filter by year\" tabs to the changelog page."}
+      ]
+    },
+    {
+      "date": "2025-04-03",
+      "updates": [
+        {"text": "Changed the default theme to dark mode."},
+        {"text": "Made some changes to how the table of contents sidebar works on large screens.<ul><li>Changed it from being a <code>&lt;nav&gt;</code> inside of an <code>&lt;aside&gt;</code>, to the whole sidebar being a <code>&lt;nav&gt;</code> and removing the <code>&lt;aside&gt;</code> tag completely. Hopefully, this should improve accessibility.</li><li>The sidebar will now allow scrolling if the list of links gets too long.</li></ul>"}
+      ]
+    },
+    {
+      "date": "2025-04-18",
+      "updates": [
+        {"text": "Finally added my <a href=\"/links/\">link directory</a> back! Now reorganized and with a ton of new links!"},
+        {"text": "Specified that I'm using the WCAG on my site info page"},
+        {"text": "Changed <code>&lt;code&gt;</code> from 1.125em to 1em"},
+        {"text": "Removed custom screen reader voiceover from <code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code> tags<ul><li>(Shout out to <a href=\"https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html\">this blog post</a> for making me realize I had to fix that.)</li></ul>"},
+        {"text": "Hovering over abbreviations will now change your cursor to the \"help\" cursor."}
+      ]
+    },
+    {
+      "date": "2025-05-31",
+      "updates": [
+        {"text": "Reorganized some of my link directory and moved <a href=\"/links/fun\">fun links</a> to it's own page."},
+        {"text": "Added a new code snippet: <a href=\"/code/snippets/css-tabs-with-default-open-tab\">CSS Tabs with Default Open Tab</a>."},
+        {"text": "Decided to make my <a href=\"/meta/styleguide\">style guide</a> public."},
+        {"text": "Updated Eleventy from v3.0.0 to v3.1.0."},
+        {"text": "CSS tweaks.<ul><li>Changed body text from 1.125em to 1em when viewed on very small screens.</li><li>Added a border to callout boxes.</li><li>Added <code>color-mix()</code> to multiple elements and set up fallback styling in case your browser doesn't support it.</li></ul>"},
+        {"text": "Accessibility tweaks.<ul><li>All SVGs will now have <code>aria-hidden=\"true\"</code> by default.</li><li>Changed the <code>aria-label</code> for \"read more\" links to better match text on screen.</li><li>Moved the \"skip to content\" link to the header landmark region.</li><li>Changed the blog sidebar from being one big <code>&lt;aside&gt;</code> to a <code>&lt;div&gt;</code> with multiple <code>&lt;aside&gt;</code>s in it.</li></ul>"}
+      ]
+    },
+    {
+      "date": "2025-06-23",
+      "updates": [
+        { "text": "Added the \"song of the now\" section back to the homepage and a <a href=\"/listening\">separate page for other songs I've been listening to</a>."},
+        { "text": "Revamped my <a href=\"/meta/changelog\">changelog</a> to have a better backend and use more semantic HTML.",
+          "listItems": [
+            { "text": "(Thank you to <a href=\"https://chriskirknielsen.com/\">Chris</a> for helping me out with that!)" }
+          ]
+        },
+        { "text": "CSS tweaks.",
+          "listItems": [
+            { "text": "Started using <a href=\"https://www.11ty.dev/docs/plugins/bundle/\">bundles</a> for cleaner HTML and inline styling."},
+            { "text": "Fixed \"favorite\" bullets in the link directory not working on Safari." },
+            { "text": "Fixed details/summary rendering weird on Safari." },
+            { "text": "Made <code>&lt;mark&gt;</code> text look better in dark mode." },
+            { "text": "Made <code>&lt;hr&gt;</code>s thinner." },
+            { "text": "Fixed issues with the \"prefers-reduced-motion\" media query." }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-06-30",
+      "updates": [
+        { "text": "Accessibility tweaks",
+          "listItems": [
+            { "text": "Fixed footnote links broken <code>aria-describedby</code> attribute."}
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-07-12",
+      "updates": [
+        { "text": "Added a <a href=\"/links/webmastery#directories\">web directory section</a> to my webmastery links page, which includes my own <a href=\"/links/webmastery/directories\">web directory/webring list</a>." }
+      ]
+    },
+    {
+      "date": "2025-08-23",
+      "updates": [
+        { "text": "Added a new code snippet: <a href=\"/code/snippets/focus-outlines-on-image-links\">Focus Outlines on Image Links</a>." }
+      ]
+    },
+    {
+      "date": "2025-11-03",
+      "updates": [
+        {"text": "Added a bunch of new webrings to my <a href=\"/links/webmastery/directories\">webring list</a>."}
+      ]
+    },
+    {
+      "date": "2025-11-07",
+      "updates": [
+        {"text": "Added <a href=\"https://themovielistings.org/\">The Movielistings Network</a>, <a href=\"https://alterlistings.wordpress.com/\">Alter Listings Network</a>, and <a href=\"https://fansfansfans.net/\">Fans Fans Fans</a> to the <a href=\"/links/webmastery/index#fanlistings\">fanlistings section</a> of my link directory."}
+      ]
+    },
+    {
+      "date": "2025-11-20",
+      "updates": [
+        { "text": "Made some minor updates to my <a href=\"/links/webmastery/directories\">webring list</a>.",
+          "listItems": [
+            { "text": "Added the <a href=\"https://aberwebr.ing/\">aberWebRing</a>, <a href=\"https://webring.hackclub.com/index.html\">Hack Club Webring</a>, and <a href=\"https://ctp-webr.ing/\">Catppuccin Webring</a> to the list." },
+            { "text": "Changed the statuses of the <a href=\"https://goooby.neocities.org/webring_index\">Transmasculine Webring</a>, <a href=\"https://silly-beanz.neocities.org/personaring/home\">PersonaRing</a>, and <a href=\"https://fabstarotcorner.neocities.org/webring/\">GFDKWTFAW Webring</a> from \"hiatus\" to \"active\"." }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-23",
+      "updates": [
+        { "text": "Added the <a href=\"https://arackniss.neocities.org/webring\">Hazbin Webring</a>, <a href=\"https://juneish.neocities.org/ring/beepbox/\">Beepbox Webring</a>, <a href=\"https://controlcoreangel.neocities.org/webrings/carebears/cb\">Care Bears Webring</a>, <a href=\"https://controlcoreangel.neocities.org/webrings/deepseametro/metro\">Deepsea Metro</a>, <a href=\"https://sitesforpalestine.neocities.org/\">Sites for a Free Palestine</a>, <a href=\"https://pixelbill.neocities.org/WebInTheRound/\">Web in the Round</a>, and <a href=\"https://sidecar.neocities.org/\">bulltown.sidecar</a> to my <a href=\"/links/webmastery/directories\">webring list</a>."}
+      ]
+    },
+    {
+      "date": "2025-11-30",
+      "updates": [
+        { "text": "Added the <a href=\"https://polyring.club/\">Polyring</a> and <a href=\"https://ourfavoritevoid.club/\">Our Favorite Void</a> to my <a href=\"/links/webmastery/directories\">webring list</a>."}
+      ]
+    },
+    {
+      "date": "2026-01-23",
+      "updates": [
+        { "text": "Updated <a href=\"/links/webmastery/directories\">my webring list</a>.",
+          "listItems": [
+            { "text": "Added the <a href=\"https://sakk.ie/off-platform/\">Off-Platform Webring</a>, <a href=\"https://github.com/whitep4nth3r/the-claw-webring\">Claw Webring</a>, <a href=\"https://homebrew.cresentri.com/\">Homebrew Webring</a>, <a href=\"https://www.gabriel-export.earth/html-energy-webring/\">HTML Energy Webring</a>, and <a href=\"https://webring.htmlhobbyist.com/\">HTML Hobbyist Webring</a> to the list." },
+            { "text": "Removed a bunch of webrings for having dead links/404 errors." }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-29",
+      "updates": [
+        { "text": "Added the <a href=\"https://wafring.jbc.lol/\">Wafring</a> and <a href=\"https://static.quest/\">Static.Quest</a> to <a href=\"/links/webmastery/directories\">my webring list</a>." }
+      ]
+    },
+    {
+      "date": "2026-02-02",
+      "updates": [
+        { "text": "Added the <a href=\"https://crygorcrisis.neocities.org/retro/onionring/\">WarioRing</a>, <a href=\"https://webring.ghostk.id/online/\">Online Webring</a>, <a href=\"https://webring.fun/\">Webring.Fun</a>, and <a href=\"https://gdt.fireye.coffee/\">Game Devs Together</a> to <a href=\"/links/webmastery/directories.html\">my webring list</a>." }
+      ]
+    },
+    {
+      "date": "2026-02-28",
+      "updates": [
+        { "text": "Added the <a href=\"https://petrapixel.neocities.org/webring\">Code Collective</a> and the <a href=\"https://zatzhing.me/webring\">Enclave Webring</a> to <a href=\"/links/webmastery/directories.html\">my webring list</a>." }
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "updates": [
+        { "text": "Added the <a href=\"https://pfwebring.neocities.org/\">Pillowfort Webring</a> and <a href=\"https://qtbeans.neocities.org/artistsonline\">Artists Online</a> to <a href=\"/links/webmastery/directories.html\">my webring list</a>." }
+      ]
+    }
+  ]
+}

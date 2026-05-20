@@ -1,0 +1,20 @@
+[
+    {
+        "title": "title",
+        "link": "https://url.link/",
+        "theme": "theme",
+        "status": "active"
+    },
+    {
+        "title": "title",
+        "link": "https://url.link/",
+        "theme": "theme",
+        "status": "active"
+    },
+    {
+        "title": "title",
+        "link": "https://url.link/",
+        "theme": "theme",
+        "status": "active"
+    }
+]

@@ -1,0 +1,474 @@
+:root {
+    --margin: 10px;
+    --bg: black;
+    --text: white;
+    --link: #FFD3D3;
+    --linkshadow: #4C0000;
+    --bold: #FFFFC3;
+    --yellow: #FFFF3C;
+    --boldshadow: #4C4C00;
+    --abbr: #ffffff;
+    --gray: #c0c0c0;
+    --abbrshadow: #3f3f3f;
+    --button: #FFC700;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: white;
+        --text: black;
+        --link: #4C0000;
+        --linkshadow: #FFD3D3;
+        --bold: #4C4C00;
+        --yellow: #a9a900;
+        --boldshadow: #FFFFC3;
+        --abbr: #000000;
+        --gray: #595959;
+        --abbrshadow: #c0c0c0;
+        --button: #DD7C00;
+    }
+    .lightonly {display: block !important;}
+    .charactername {filter: invert(100%) hue-rotate(180deg);}
+}
+
+
+.lightonly {display: none;}
+
+@font-face {
+    font-family: 'determination';
+    src: url('/assets/fonts/dtm-mono-webfont.woff');
+}
+@font-face {
+    font-family: '8bitOperatorPlus-Regular';
+    src: url('/assets/fonts/8bitOperatorPlus-Regular.ttf');
+}
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+html, body {height: 100%; width: 100%;}
+body {
+    font-family: "8bitOperatorPlus-Regular", monospace;
+    color: white;
+    background-color: black;
+    line-height: normal;
+}
+.container {
+    width: 1200px;
+    max-width: 90%;
+    height: fit-content;
+    min-height: 100%;
+	display: flex;
+	flex-direction: column;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1;
+    flex-direction: unset;
+    line-height: 1.42857143;
+}
+
+header, footer {
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav ul li {
+    flex: 1 1 calc(25% - 10px);
+    position: relative;
+    margin: 5px;
+}
+
+nav ul li a {
+    font-family: determination;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    border: white 2px solid;
+    background: black;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    filter: none;
+    display: inline-block;
+    width: 100%;
+}
+
+button {
+    font-family: determination;
+    text-transform: uppercase;
+    padding: 5px;
+    color: var(--text);
+    border: var(--text) 2px solid;
+    background: var(--bg);
+}
+button:hover, button:focus {
+    color: var(--button);
+    border: var(--button) 2px solid;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    filter: none;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #FFC700;
+    border: #FFC700 2px solid;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    filter: none;
+}
+
+nav ul li a::before {
+    content: url("https://colorfulwonders.neocities.org/images/deltarune/dr%20hud%20heart%20x2.png");
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+nav ul li a:hover::before, nav ul li a:focus::before {
+    visibility: visible;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    /*gap: var(--margin);*/
+}
+
+.box {
+    border: 20px solid transparent;
+    border-image: url('/assets/images/deltarune_border_black.png') 120 round;
+    margin: var(--margin);
+    color: var(--text);
+    background: var(--bg);
+    flex: 1 1 100%;
+}
+
+.character {
+    border: var(--text) solid 2px;
+    border-image: none;
+    padding: 10px;
+}
+
+.character.kris {border-color: #01FFFF;}
+.character.susie {border-color: #FF00FF;}
+.character.ralsei {border-color: #01FF00;}
+.character.noelle {border-color: #FFFF00;}
+.character.suselle {border-image: linear-gradient(45deg, #FF00FF, #FFFF00) 30;}
+span.kris {color: #01FFFF;}
+span.susie {color: #FF00FF;}
+span.ralsei {color: #01FF00;}
+span.noelle {color: #FFFF00;}
+
+.half {
+    flex: 1 1 calc(50% - (var(--margin)*2));
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: determination; text-transform: uppercase; text-align: center;}
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.25rem;}
+h6 {font-size: 1.1rem;}
+
+b, strong, .spare {
+    color: var(--yellow);
+    font-family: determination;
+    background: linear-gradient(to bottom, var(--bold) 10%, var(--yellow) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px var(--boldshadow));
+}
+
+mark {
+    background-image: linear-gradient(to bottom, #FFFFC3 10%, #FFFF3C 90%);
+    background-color: #FFFF3C;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px var(--boldshadow));
+}
+
+abbr {
+    background-image: linear-gradient(to bottom, var(--abbr) 10%, var(--gray) 90%);
+    color: var(--abbr);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px var(--abbrshadow));
+}
+
+hr {
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: var(--text);
+    margin: 1rem 0;
+}
+
+
+.box a {
+    color: #FF0C0C;
+    background: linear-gradient(to bottom, var(--link) 0%, #FF0C0C 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px var(--linkshadow));
+}
+.box a:hover, .box a:hover {
+    color: var(--link);
+    background: linear-gradient(to bottom, #FF0C0C 0%, var(--link) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px var(--linkshadow));
+}
+
+footer a {
+    color: #FFC700;
+    text-decoration: none;
+}
+footer a:hover, footer a:focus {
+    text-decoration: underline;
+}
+
+.external::after {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f08e";
+    font-weight: 900;
+    font-size: 0.7rem;
+    margin: 0 0.1em 0 0.25em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.youtube::after {
+    font-family: "Font Awesome 6 Brands";
+    content: "\f167";
+    font-weight: 900;
+    font-size: 0.9rem;
+    margin: 0 0.1em 0 0.25em;
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+main ul, main ol {
+    display: block;
+    /*margin-top: 1em;
+    margin-bottom: 1em;*/
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+p, main ul, main ol {
+    margin: 0.5rem 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    margin: 0;
+}
+
+ul {
+    list-style: url("https://colorfulwonders.neocities.org/images/deltarune/dr%20hud%20heart%20x2.png");
+}
+
+ul ul, ul li ul {
+    list-style: initial;
+}
+
+main li {
+    margin-top: 0.25rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.charactername {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+.charactersprite img {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 28px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+.sideimg {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin: auto 30px 15px 30px;
+    text-align: center;
+}
+
+.sideimg img {
+    width: 100%;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+.sideimg figcaption {
+    background: #3f3f3f;
+    padding: 7px;
+}
+
+.box:nth-of-type(even) .sideimg {
+    float: right;
+    margin: auto 30px 15px 30px;
+}
+
+.pixelated img {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+#skiptocontent a {
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    color: var(--text);
+    border-right: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
+    background: var(--bg);
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+
+#skiptocontent a:focus {
+    position:absolute;
+    left:0px;
+    top:0px;
+    outline-color:transparent;	
+    -webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #skiptocontent a {
+        transition-duration: 0.001ms !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .flexcontainer {
+        display: block;
+    }
+
+    .charactersprite {
+        text-align: center;
+    }
+    
+    .charactersprite img {
+        float: none;
+    }
+
+    .sideimg {
+        float: none;
+        width: auto;
+        margin: auto;
+    }
+
+    .sideimg img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    nav ul li {
+        flex: 1 1 calc(33% - 10px);
+        position: relative;
+        margin: 5px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    nav ul li {
+        flex: 1 1 calc(50% - 10px);
+        position: relative;
+        margin: 5px;
+    }
+}
+
+
+
+.honeycomb { display: grid;
+    grid-auto-rows: 28px;
+    gap: 30px 18px;
+    padding: 0 32px 56px 0; }
+.hc-2 { grid-template-columns: repeat(2, 32px); } /*Infinite-length section 2 stamps wide*/
+.hc-3 { grid-template-columns: repeat(3, 32px); } /*Infinite-length section 3 stamps wide*/
+.hc-4 { grid-template-columns: repeat(4, 32px); } /*Infinite-length section 4 stamps wide*/
+.hc-5 { grid-template-columns: repeat(5, 32px); } /*Infinite-length section 5 stamps wide*/
+.hc-6 { grid-template-columns: repeat(6, 32px); } /*Infinite-length section 6 stamps wide*/
+.hc-7 { grid-template-columns: repeat(7, 32px); } /*Infinite-length section 7 stamps wide*/
+.hc-8 { grid-template-columns: repeat(8, 32px); } /*Infinite-length section 8 stamps wide*/
+.hc-9 { grid-template-columns: repeat(9, 32px); } /*Infinite-length section 9 stamps wide*/
+.hc-10 { grid-template-columns: repeat(10, 32px); } /*Infinite-length section 10 stamps wide*/
+.hc-11 { grid-template-columns: repeat(11, 32px); } /*Infinite-length section 11 stamps wide*/
+.hc-12 { grid-template-columns: repeat(12, 32px); } /*Infinite-length section 12 stamps wide*/
+.hc-mini { grid-template-columns: repeat(3, 32px); padding-bottom:28px;} /*Hexagonal group of max 7 stamps*/
+.hc-hive { grid-template-columns: repeat(7, 32px); padding-bottom:28px;} /*Oval-shaped group of max 17 stamps*/
+/*The following concern the interlocking pattern of the grids:*/
+.hc-2 img:nth-of-type(2n+1), .hc-4 img:nth-of-type(2n+1), .hc-6 img:nth-of-type(2n+1), .hc-8 img:nth-of-type(2n+1), .hc-10 img:nth-of-type(2n+1), .hc-12 img:nth-of-type(2n+1) { margin-top: 28px; }
+.hc-3 img:nth-of-type(6n+1), .hc-3 img:nth-of-type(6n+3), .hc-3 img:nth-of-type(6n+4), .hc-3 img:nth-of-type(6n) { margin-top: 28px; }
+.hc-5 img:nth-of-type(10n+1), .hc-5 img:nth-of-type(10n+3), .hc-5 img:nth-of-type(10n+5), .hc-5 img:nth-of-type(10n+6), .hc-5 img:nth-of-type(10n+8), .hc-5 img:nth-of-type(10n) { margin-top: 28px; }
+.hc-7 img:nth-of-type(14n+1), .hc-7 img:nth-of-type(14n+3), .hc-7 img:nth-of-type(14n+5), .hc-7 img:nth-of-type(14n+7), .hc-7 img:nth-of-type(14n+8), .hc-7 img:nth-of-type(14n+10), .hc-7 img:nth-of-type(14n+12), .hc-7 img:nth-of-type(14n) { margin-top: 28px; }
+.hc-9 img:nth-of-type(18n+1), .hc-9 img:nth-of-type(18n+3), .hc-9 img:nth-of-type(18n+5), .hc-9 img:nth-of-type(18n+7), .hc-9 img:nth-of-type(18n+9), .hc-9 img:nth-of-type(18n+10), .hc-9 img:nth-of-type(18n+12), .hc-9 img:nth-of-type(18n+14), .hc-9 img:nth-of-type(18n+16), .hc-9 img:nth-of-type(18n) { margin-top: 28px; }
+.hc-11 img:nth-of-type(22n+1), .hc-11 img:nth-of-type(22n+3), .hc-11 img:nth-of-type(22n+5), .hc-11 img:nth-of-type(22n+7), .hc-11 img:nth-of-type(22n+9), .hc-11 img:nth-of-type(22n+11), .hc-11 img:nth-of-type(22n+12), .hc-11 img:nth-of-type(22n+14), .hc-11 img:nth-of-type(22n+16), .hc-11 img:nth-of-type(22n+18), .hc-11 img:nth-of-type(22n+20), .hc-11 img:nth-of-type(22n) { margin-top: 28px; }
+.hc-mini img:nth-of-type(1), .hc-mini img:nth-of-type(3), .hc-mini img:nth-of-type(4), .hc-mini img:nth-of-type(6) { margin-top: 28px; }
+.hc-mini img:nth-of-type(7) { grid-area: 3/2; }
+.hc-hive img:nth-of-type(1), .hc-hive img:nth-of-type(3), .hc-hive img:nth-of-type(5), .hc-hive img:nth-of-type(7), .hc-hive img:nth-of-type(8), .hc-hive img:nth-of-type(10), .hc-hive img:nth-of-type(12), .hc-hive img:nth-of-type(14) { margin-top: 28px; }
+.hc-hive img:nth-of-type(15) { grid-area: 3/2; }
+.hc-hive img:nth-of-type(16) { grid-area: 3/4; }
+.hc-hive img:nth-of-type(17) { grid-area: 3/6; }
+
+/*
+
+    .charactername {
+        filter: invert(100%) hue-rotate(180deg);
+    }
+
+    .sideimg figcaption {
+        background: #cecece;
+    }
+
+}*/

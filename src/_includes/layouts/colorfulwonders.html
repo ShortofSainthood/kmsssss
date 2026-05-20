@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="automatic.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="sitecontainer">
+        <!--<header>
+            skip to content
+        </header>-->
+        <div class="container">
+            <div id="leftsidebar">
+                <nav id="navigationbox" aria-labelledby="weather">
+                    <h2 id="weather">Places to Go</h2>
+                    <ul>
+                        <li><a href="#">link #1</a></li>
+                        <li><a href="#">link #2</a></li>
+                        <li><a href="#">link #3</a></li>
+                        <li><a href="#">link #4</a></li>
+                        <li><a href="#">link #5</a></li>
+                    </ul>
+                </nav>
+                <nav id="tocbox" aria-labelledby="somethingelse">
+                    <h2 id="somethingelse">Page Contents</h2>
+                    <ul>
+                        <li><a href="#">link #1</a></li>
+                        <li><a href="#">link #2</a></li>
+                        <li><a href="#">link #3</a></li>
+                        <li><a href="#">link #4</a></li>
+                        <li><a href="#">link #5</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="mainbox">
+                <!-- breadcrumbs -->
+                 <!--
+                <nav id="breadcrumbsarea" aria-labelledby="breadcrumbs">
+                    <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+                    <ol>
+                        <li><a href="#">link #1</a></li>
+                        <li><a href="#">link #2</a></li>
+                        <li><a href="#">link #3</a></li>
+                    </ol>
+                </nav>
+                -->
+                <main id="content">
+                    <article>
+                        {% if not hidetitle %}<h1>{{ title }}</h1>{% endif %}
+                        {{ content | safe }}
+                    </article>
+                </main>
+            </div>
+            <div id="rightsidebar">
+                <aside id="optionsbox" aria-labelledby="options">
+                    <h2 id="options">Options</h2>
+                    <ul>
+                        <li><a href="#">link #1</a></li>
+                        <li><a href="#">link #2</a></li>
+                        <li><a href="#">link #3</a></li>
+                        <li><a href="#">link #4</a></li>
+                        <li><a href="#">link #5</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <footer>
+            <!-- footer content -->
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magnam consequatur, excepturi laudantium temporibus, dolorum cumque ea sequi labore, nisi cum necessitatibus adipisci. Tenetur consectetur non quisquam. Pariatur, neque atque!</p>
+        </footer>
+    </div>
+</body>
+</html>

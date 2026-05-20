@@ -1,0 +1,195 @@
+/*
+
+TEST!!!
+
+dark:
+--bg: #1B2431;
+--bgaccent: #2f4360;
+--text: #F3DFBF;
+--textaccent: #F4B08F;
+--link: #E85E67;
+--linkvisited: #C43C62;
+--linkhover: #42E2B8;
+
+light:
+--text: #1B2431;
+--textaccent: #2f4360;
+--bg: #F3DFBF;
+--bgaccent: #F4B08F;
+--link: #10AC83;
+--linkvisited: #156F6F;
+--linkhover: #E85E67;
+
+light again:
+--bg: #FBD1A2;
+--bgaccent: #F8B282;
+--text: #1A2A51;
+--textaccent: #1D4E89;
+--link: #D91531;
+--linkvisited: #913F4B;
+--linkhover: #3B8E75;
+
+dark again:
+--text: #FBD1A2;
+--textaccent: #FBA36F;
+--bg: #1A2A51;
+--bgaccent: #1C477F;
+--link: #6FDFBE;
+--linkvisited: #30B790;
+--linkhover: #FF7387;
+
+--bg: #FFE6A7;
+--bgaccent: #E8C082;
+--text: #432818;
+--textaccent: #8c4919;
+--link: #B01C1C;
+--linkvisited: #7D4B15;
+--linkhover: #432818;
+
+this ones nice:
+--bg: #432818;
+--bgaccent: #6C3E20;
+--text: #FFF5DB;
+--textaccent: #FFE6A7;
+--link: #FF9B9B;
+--linkvisited: #EC706D;
+--linkhover: var(--textaccent);
+
+valentines:
+--bg: #fffdf6;
+--bgaccent: #FDE0E1;
+--text: #952623;
+--textaccent: #d74c49;
+--link: #EE5E9C;
+--linkvisited: var(--link);
+--linkhover: var(--link);
+--codebg: rgba(130, 69, 103, 0.14);
+
+--accent: #b71d19;
+--emoji: "💖 ";
+--symbol: "♥ ";
+
+--red: #f996c9;
+--orange: #ff9f9f;
+--yellow: #ECBF98;
+
+toki:
+--bg: #140F22;
+--bgaccent: #281e42;
+--text: #DDFAFF;
+--textaccent: #90FFEA;
+--link: #C671FF;
+--linkvisited: var(--link);
+--linkhover: var(--link);
+--codebg: #CBF8FF33;
+
+--red: #FF63DF;
+--orange: #FF5949;
+--yellow: #FBFE57;
+--green: #83FA50;
+--blue: #17eaea;
+--purple: #AC7EFF;
+--black: #140F22;
+--white: #DDFAFF;
+
+--prism-a11y-color-background: #281e42;
+--prism-a11y-color-text-no-token: #F4FDFF;
+--prism-a11y-color-text-comment: #AC7EFF;
+--prism-a11y-color-text-blue: #17eaea;
+--prism-a11y-color-text-green: #83FA50;
+--prism-a11y-color-text-gray: #DDFAFF;
+--prism-a11y-color-text-purple: #AC7EFF;
+--prism-a11y-color-text-red: #FF63DF;
+--prism-a11y-color-text-yellow: #FBFE57;
+--prism-a11y-plugin-color-border: hsla(51, 100%, 50%, 0.55);
+--prism-a11y-plugin-color-background: hsla(51, 100%, 50%, 0.1);
+
+meowth:
+:root {
+    --bg: #FFFAF0;
+    --bgaccent: #F5E8D3;
+    --text: #4F2A15;
+    --textaccent: #3E1F0D;
+    --link: #ce714d;
+    --linkvisited: #853000;
+    --linkhover: var(--text);
+    --codebg: #AF775630;
+    --hr: var(--purple);
+
+    --bg-img: url("https://colorfulwonders.neocities.org/images/meowth%20bg.jpg");
+    --bg-size: contain;
+
+    --red: #ff76e3;
+    --orange: #ff8f8f;
+    --yellow: #f7bc50;
+    --green: #a6dd43;
+    --blue: #70b2ec;
+    --purple: #ba7ce8;
+    --black: #111;
+    --white: white;
+}
+*/
+
+/*
+pastel rainbow:
+
+rgb(237, 135, 150)
+rgb(245, 169, 127)
+rgb(238, 212, 159)
+rgb(166, 218, 149)
+rgb(145, 215, 227)
+rgb(138, 173, 244)
+rgb(183, 189, 248)
+
+*/
+
+/*
+
+old blue light theme:
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #fff;
+        --bgaccent: #E3F4F6;
+        --text: #123;
+        --textaccent: #092871;
+        --link: #234FB5;
+        --linkvisited: #AA28CE;
+        --linkhover: #70b2ec;
+
+        --focusoutline: #384879 solid 0.25rem;
+
+        --containerborder: #384879 solid 5px;
+
+        --accent: #384879;
+
+        --codebg: #1c1c2817;
+        --hr: var(--purple);
+
+        --focuslight: var(--bgaccent);
+        --focusdark: var(--accent);
+
+        --bg-img: url("https://colorfulwonders.neocities.org/images/sky_bg.jpg");
+        --bg-size: cover;
+    
+        --red: #ff76e3;
+        --orange: #ff8f8f;
+        --yellow: #f7bc50;
+        --green: #a6dd43;
+        --blue: #70b2ec;
+        --purple: #ba7ce8;
+        --black: #123;
+        --white: #fff;
+
+        --emoji: "☀️";
+        --emojispace: "☀️ ";
+        --symbol: "\f005";
+        --symbolspace: "\f005\0a0";
+
+        --symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>');
+    }
+    
+    pre {
+        border: #1c1c2842 1px solid !important;
+      }
+}*/

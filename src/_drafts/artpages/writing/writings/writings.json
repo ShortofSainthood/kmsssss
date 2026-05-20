@@ -1,0 +1,5 @@
+{
+    "layout": "writing.njk",
+    "tags": ["writings"],
+    "permalink": "/art/writing/{{ title | slugify }}.html"
+}

@@ -1,0 +1,33 @@
+---
+layout: demo-gallery-index.njk
+pagination:
+  data: demoGallery
+  size: 3
+  reverse: true
+  alias: previewimage
+permalink: "{% if pagination.pageNumber == 0 %}/code/projects/accessible-eleventy-gallery/demo/index.html{% endif %}{% if pagination.pageNumber > 0 %}/code/projects/accessible-eleventy-gallery/demo/{{ pagination.pageNumber + 1 }}.html{% endif %}"
+---
+
+<h1>Gallery</h1>
+<p>Click on an image to see its description. Shorter descriptions are in the alt text.</p>
+<nav class="pagination">
+  <ul>
+    {% if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}">&lt; Prev</a></li>{% endif %}
+    {%- for pageEntry in pagination.pages %}
+      {% if page.url == pagination.hrefs[ loop.index0 ] %}
+        <li class="active">{{ loop.index }}</li>{% else %}<li><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+      {% endif %}
+    {%- endfor %}
+    {% if pagination.href.next %}<li><a href="{{ pagination.href.next }}">Next &gt;</a></li>{% endif %}
+  </ul>
+</nav>
+
+<div class="gallery">
+  {% set i = ((pagination.pageNumber*pagination.size) + 1) %}
+  {% for previewimage in pagination.items -%}
+    <div class="galleryitem" id="{{ i }}">
+      <a href="images/{{ i }}.html"><img src="{{ previewimage.img }}" alt="{{ previewimage.alt }}"></a>
+    </div>
+  {% set i = i + 1 %}
+  {%- endfor %}
+</div>

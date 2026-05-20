@@ -1,0 +1,17 @@
+<style>
+    .spin {animation: 2s linear infinite record-spin;}
+    
+    @keyframes record-spin {
+      from {
+        /* pushes the sun down past the viewport */
+        transform: rotate(0deg);
+      }
+      to {
+        /* returns the sun to its default position */
+        transform: rotate(360deg);
+      }
+    }
+    
+    </style>
+
+{% lucide "disc-3", { "size": "20", "stroke-width": "2", "stroke": "var(--textaccent)", "class":"spin" } %}

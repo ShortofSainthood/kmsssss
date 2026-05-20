@@ -1,0 +1,43 @@
+---
+title: Tags
+desc: Welcome to my blog! It's about as inconsistent as the rest of my site, but I hope you enjoy it anyway.
+layout: blog.njk
+eleventyNavigation:
+  key: Post Archive
+  parent: Tags
+---
+{% css %}
+    .tabwrap section.default {display: block;}
+    .tabwrap section, .tabwrap section:has(~ section:target), .tabwrap section:target ~ section {display: none;}
+    .tabwrap section:target {display:block;}
+    .tabwrap section:target ~ section.default {display:none;}
+{% endcss %}
+
+<h1>Blog Tags</h1>
+
+<p class="speciallink" style="margin: 0.75em;">
+    <a href="#alphabetical">Order Tags Alphabetically</a>
+    <a href="#popular">Order Tags by Popularity</a>
+</p>
+<div class="tabwrap">
+    <section id="alphabetical" class="default">
+        <h2 class="visually-hidden">Tags (Ordered by Name)</h2>
+        <ul>
+        {%- for cat, val in collections.categoryList | dictsort -%}
+            {%- if cat !== "posts" -%}
+            <li><a href="/blog/tagged/{{cat | slugify}}.html">{{cat}} ({{val.length}})</a></li>
+            {%- endif -%}
+        {%- endfor -%}
+        </ul>
+    </section>
+    <section id="popular">
+        <h2 class="visually-hidden">Tags (Ordered by Popularity)</h2>
+        <ul>
+            {%- for tagName in collections.tagNames -%}
+            <li><a href="/blog/tagged/{{tagName.tagName | slugify}}.html">{{tagName.tagName}} ({{tagName.tagCount}})</a></li>
+            {%- endfor -%}
+        </ul>
+    </section>
+</div>
+
+<p class="speciallink"><a href="/blog/">Back to Blog Index</a></p>

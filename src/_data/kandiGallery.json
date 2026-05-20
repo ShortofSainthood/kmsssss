@@ -1,0 +1,46 @@
+[
+	{
+	  "img": "/assets/images/art/luna.png",
+	  "title": "Littlest Pet Shop Doodles",
+	  "desc": "Detailed image description.",
+	  "alt": "alt text.",
+	  "metadata": {
+			"date": "2021-07-07",
+            "folders": ["black and white","sleepy"]
+		},
+	  "tags": ["images"]
+	},
+	{
+	  "img": "/assets/images/art/Marcire.png",
+	  "title": "Nyanko Miku",
+	  "desc": "Detailed image description.",
+	  "alt": "alt text.",
+	  "metadata": {
+			"date": "2022-12-11",
+            "folders": ["orange","sleepy"]
+		},
+	  "tags": ["images"]
+	},
+	{
+	  "img": "/assets/images/art/Noodle.png",
+	  "title": "Hatsune Miku",
+	  "desc": "Detailed image description.",
+	  "alt": "alt text.",
+	  "metadata": {
+			"date": "2024-12-10",
+            "folders": ["black and white","dapper"]
+		},
+	  "tags": ["images"]
+	},
+	{
+	  "img": "/assets/images/art/Noodle.png",
+	  "title": "Pokémon Red Nuzlocke Doodles",
+	  "desc": "Detailed image description.",
+	  "alt": "alt text.",
+	  "metadata": {
+			"date": "2024-12-10",
+            "folders": ["black and white","dapper"]
+		},
+	  "tags": ["images"]
+	}
+  ]

@@ -1,0 +1,72 @@
+---
+title: Changelog
+layout: base.njk
+eleventyNavigation:
+  key: Changelog
+  parent: Website Meta
+---
+{% css %}
+    .changelog li {padding-bottom: 1rem; border-bottom: var(--text) solid 1px;}
+    .changelog li+li {padding-top: 1rem;}
+    .changelog li ul li {padding: unset; border-bottom: none;}
+    .changelog li:last-of-type {border-bottom: none; padding-bottom: 0;}
+    .changelog {padding-left: 1em;}
+    .changelog time {color: var(--textaccent); font-weight: bold;}
+    .tabwrap section.default {display: block;}
+    .tabwrap section {display: none;}
+    .tabwrap section:target {display:block;}
+    .tabwrap section:target ~ section.default {display:none;}
+    @supports (border-color: color-mix(in srgb, var(--text) 50%, var(--bg))) {
+        .changelog li { border-color: color-mix(in srgb, var(--text) 50%, var(--bg)); }
+    }
+{% endcss %}
+<div class="box callout warning">
+    {% lucide "triangle-alert", { "size": "32"} %}
+    <p>Keep in mind that the further down you go, the more likely you are to encounter broken links.</p>
+</div>
+<p style="text-align:center; font-weight: bold;">Filter by Year:</p>
+<p class="speciallink">
+    <a href="#2025">2025</a>
+    <a href="#2024">2024</a>
+</p>
+<div class="tabwrap">
+    <section id="2024">
+        <h2>2024</h2>
+        <ul class="changelog">
+        {% for change in changelog2024 | reverse %}
+            {% if change.updates %}
+            <li><time datetime="{{ change.date }}">{{ change.date.toString() | niceDateShort2D }}</time> - 
+                <ul>
+                    {% for update in change.updates %}
+                    <li>{{ update | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% else %}
+            <li><time datetime="{{ change.date }}">{{ change.date.toString() | niceDateShort2D }}</time> - {{ change.update | safe }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </section>
+    <section class="default" id="2025">
+        <h2>2025</h2>
+        <ul class="changelog">
+        {% for change in changelog2025 | reverse %}
+            {% if change.updates %}
+            <li><time datetime="{{ change.date }}">{{ change.date.toString() | niceDateShort2D }}</time> - 
+                <ul>
+                    {% for update in change.updates %}
+                    <li>{{ update | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% else %}
+            <li><time datetime="{{ change.date }}">{{ change.date.toString() | niceDateShort2D }}</time> - {{ change.update | safe }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </section>
+</div>
+<p class="speciallink">
+    <a href="/">Back to Index</a>
+</p>

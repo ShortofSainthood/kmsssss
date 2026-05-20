@@ -1,0 +1,60 @@
+---
+title: "Using Images as Dividers"
+date: "2024-12-26"
+desc: "How to use an image as a divider using semantic HTML and CSS"
+prolang: "CSS"
+---
+{% css %}
+    .rainbowdivider {
+        background-image: url("/assets/images/rainbowdivider.png") !important;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        margin: 0;
+    }
+    .rainbowdivider::after {content: none;}
+    .stardivider {
+        background-image: url("/assets/images/stardivider.png") !important;
+        height: 19px;
+        background-size: contain;
+        background-repeat: repeat-x;
+        border: none;
+        margin: 0;
+    }
+    .stardivider::after {content: none;}
+{% endcss %}
+<p>Most people just use the <code>&lt;img&gt;</code> tag when they want to use an image as a divider, but this method I'm going to show you follows semantic HTML and is easier to edit if you want to change it later. Basically, you just use <code>&lt;hr&gt;</code> and then use CSS to set its background to your image of choice.</p>
+
+<h2>Basic Graphics</h2>
+<div class="box">
+    <hr class="rainbowdivider">
+</div>
+{% highlight "css" %}
+hr {
+    background-image: url("rainbowdivider.png"); /* change to the file path to your image */
+    height: 45px; /*Same height as the original image, change to match your images height*/
+    background-size: contain; /* Makes sure the image doesn't get cut off on smaller screens */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Removes default hr styling */
+}
+{% endhighlight %}
+<p>This is my recommended styling for basic divider graphics. I <em>highly</em> recommend changing the height to match whatever the original height of the image is.</p>
+
+<h2>Repeating Patterns</h2>
+<div class="box">
+    <hr class="stardivider">
+</div>
+{% highlight "css" %}
+hr {
+    background-image: url("stardivider.png"); /* change to the file path to your image */
+    height: 19px; /*Same height as the original image, change to match your images height*/
+    background-size: contain; /* Makes sure the image doesn't get cut off on smaller screens */
+    background-repeat: repeat-x; /* Has the image repeat infinitely on the x-axis */
+    border: none; /* Removes default hr styling */
+}
+{% endhighlight %}
+<p>This is a cool little advantage to using background images over HTML images. If you have a repeating pattern, you can change <code>background-repeat: no-repeat;</code> to <code>background-repeat: repeat-x;</code> and it'll repeat infinitely on the x-axis (left and right, not up and down).</p>
+<p>It's also responsive to screen size. Change your window size or turn your device sideways, you'll see that the graphic adjusts itself without changing the actual width/height or pushing around other elements on the page.</p>

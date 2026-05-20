@@ -1,0 +1,312 @@
+---
+title: Pronoun Test
+layout: base.njk
+eleventyNavigation:
+  parent: Home
+  key: Pronoun Test
+hideBreadcrumbs: true
+---
+<style>
+    #type-desc, #creator-desc, #work-desc {
+        color: var(--textaccent);
+        font-size: 0.9em;
+        margin: 0;
+    }
+    form div {margin: 1em 0;}
+    section h2 {margin-top: 0;}
+    form details {
+        background: revert;
+        padding: revert;
+        margin: 0.5em;
+    }
+    details[open] summary {
+        border: none;
+        margin: 0;
+    }
+    
+.justify {
+	/*padding:0.25rem;*/
+	display:flex;
+	justify-content:space-between!important;
+}
+
+.flexcontainer {
+    gap: 0.5em;
+}
+
+.half {
+    flex: 1 1 calc(50% - 1em);
+}
+
+</style>
+
+<form action="" id="form">
+
+<div class="flexcontainer">
+
+    <div class="half">
+        <fieldset>
+        <legend>The Basics</legend>
+
+    <div>
+        <label for="name">Your Name:</label>
+        <br>
+        <input id="name" type="text">
+    </div>
+
+    <div>
+        <label for="type">Type of person:</label>
+        <p id="type-desc">How would you like to be referred to? (Ex: man, woman, person, etc)</p>
+        <input aria-describedby="type-desc" id="type" type="text">
+    </div>
+
+    <div>
+        <label for="creator">Type of Creator:</label>
+        <p id="creator-desc">What kind of creator are you in regards to your website? (Ex: webmaster/webmistress, developer, blogger, etc)</p>
+        <input aria-describedby="creator-desc" id="creator" type="text">
+    </div>
+
+    <div>
+        <label for="work">Type of Work:</label>
+        <p id="work-desc">What kind of work do you do on your website? (Ex: code, write, design, etc)</p>
+        <input aria-describedby="work-desc" id="work" type="text">
+    </div>
+    </fieldset>
+</div>
+
+
+<div class="half">
+    <fieldset>
+        <legend>Pronouns</legend>
+        <input type="radio" name="userprns" id="he" value="he" checked="checked"> <label for="he">He/Him</label><br>
+        <input type="radio" name="userprns" id="she" value="she"> <label for="she">She/Her</label><br>
+        <input type="radio" name="userprns" id="they" value="they"> <label for="they">They/Them</label><br>
+        <input type="radio" name="userprns" id="it" value="it"> <label for="it">It/Its</label><br>
+        <input type="radio" name="userprns" id="custom" value="custom"> <label for="custom">Use Custom Pronouns</label>
+
+        <details open="">
+            <summary>Custom Pronouns Options</summary>
+
+            <div class="justify"><label for="prnSub">Subject:</label> <input type="text" id="prnSub" name="prnSub"></div>
+            <div class="justify"><label for="prnObj">Object:</label> <input type="text" id="prnObj" name="prnObj"></div>
+            <div class="justify"><label for="prnPosDet">Possessive<wbr> Determiner:</label> <input type="text" id="prnPosDet" name="prnPosDet"></div>
+            <div class="justify"><label for="prnPosPrn">Possessive<wbr> Pronoun:</label> <input type="text" id="prnPosPrn" name="prnPosPrn"></div>
+            <div class="justify"><label for="prnRef">Reflexive:</label> <input type="text" id="prnRef" name="prnRef"></div>
+            <input type="radio" name="prntype" value="single" id="single" checked="checked"> <label for="single">Singular (x is nice, x cares)</label><br>
+            <input type="radio" name="prntype" value="plural" id="plural"> <label for="plural">Plural (x are nice, x care)</label><br>
+        </details>
+    </fieldset>
+
+    <fieldset>
+        <legend>uhhhh</legend>
+    <input type="radio" name="judgement" id="good" value="good" checked="checked"> <label for="good">good</label><br> 
+    <input type="radio" name="judgement" id="neutral" value="neutral"> <label for="neutral">neutral</label><br>
+    <input type="radio" name="judgement" id="bad" value="bad"> <label for="bad">bad</label><br>
+    </fieldset>
+
+<!--
+
+<p>
+    I found this cool new website today! 
+</p>
+
+<p>
+    [name] akldsfjaldfjasdf. [his] website. [he] coded skaljfdskljf all by [himself]! 
+</p>
+
+-->
+<!--
+add "him" somewhere
+
+I just saw a website.
+
+he didn't even code all of it himself!
+
+I just saw the worst website I've ever seen in my life.
+
+-->
+<!--
+<label for="subject">blah</label>
+<input id="subject" type="text">
+
+<label for="object">blah</label>
+<input id="object" type="text">
+
+<label for="reflexive">blah</label>
+<input id="reflexive" type="text">
+-->
+
+<!--
+Subject Pronoun 	he
+Object Pronoun 	him
+Possessive Determiner 	his
+Possessive Pronoun 	himself
+Reflexive Pronoun 	himself
+-->
+<!--
+<input id="plural" type="checkbox"> <label for="plural">blah</label>
+
+<button type="submit">Submit</button>
+
+<hr>
+-->
+</div>
+</div>
+
+<button type="submit">Submit</button>
+
+<section class="box">
+    <h2>Demo</h2>
+    <p id="demo">When blah blah</p>
+</section>
+
+</form>
+
+<script>
+
+    /*var name = input;
+    var type = input;
+    var creator = input;*/
+
+    /*const*/ // var nameInput = document.getElementById('name');
+    
+    /*
+    if (isset($_POST["userprns"])) {
+        $userprns = $_POST['userprns'];
+    } else {
+        $userprns = NULL;
+        echo "please select a pronoun set!";
+    }
+
+    if ($userprns != NULL) {
+        if ($userprns == "he") {
+            $prnSub = "he";
+            $prnObj = "him";
+            $prnPosDet = "his";
+            $prnPosPrn = "his";
+            $prnRef = "himself";
+            $s = "s";
+        } else if ($userprns == "she") {
+            $prnSub = "she";
+            $prnObj = "her";
+            $prnPosDet = "her";
+            $prnPosPrn = "hers";
+            $prnRef = "herself";
+            $s = "s";
+        } else if ($userprns == "they") {
+            $prnSub = "they";
+            $prnObj = "them";
+            $prnPosDet = "their";
+            $prnPosPrn = "theirs";
+            $prnRef = "themself";
+            $s = NULL;
+        } else if ($userprns == "it") {
+            $prnSub = "it";
+            $prnObj = "it";
+            $prnPosDet = "its";
+            $prnPosPrn = "its";
+            $prnRef = "itself";
+            $s = "s";
+        } else if ($userprns == "custom") {
+            $prnSub = $_POST['prnSub'];
+            $prnObj = $_POST['prnObj'];
+            $prnPosDet = $_POST['prnPosDet'];
+            $prnPosPrn = $_POST['prnPosPrn'];
+            $prnRef = $_POST['prnRef'];
+            $s = "s";
+        } else {
+            echo "You must select one answer";
+        }
+        echo '<p class="caseshit">' . $name . ' can clean ' . $prnPosDet . ' house all by '. $prnRef . '!</p>';
+        echo '<p class="caseshit">' . $prnSub . ' love' . $s . ' having a clean house!</p>';
+        echo '<p class="caseshit">' . $prnPosDet . ' favorite food is ' . $food . '.</p>';
+    }
+
+*/
+    // document.getElementById("demo").innerHTML = "<h2>Hello World</h2>" + name.value + text;
+</script>
+
+<script>
+
+    let form = document.getElementById("form");
+
+    form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    let name = document.getElementById("name");
+    let type = document.getElementById("type");
+    let creator = document.getElementById("creator");
+    let work = document.getElementById("work");
+
+    let userprns = document.querySelector('input[name="userprns"]:checked').value;
+    let judgement = document.querySelector('input[name="judgement"]:checked').value;
+
+    
+    
+        if (userprns == "he") {
+            prnSub = "he";
+            prnObj = "him";
+            prnPosDet = "his";
+            prnPosPrn = "his";
+            prnRef = "himself";
+            prntype = "single";
+        } else if (userprns == "she") {
+            prnSub = "she";
+            prnObj = "her";
+            prnPosDet = "her";
+            prnPosPrn = "hers";
+            prnRef = "herself";
+            prntype = "single";
+        } else if (userprns == "they") {
+            prnSub = "they";
+            prnObj = "them";
+            prnPosDet = "their";
+            prnPosPrn = "theirs";
+            prnRef = "themself";
+            prntype = "plural";
+        } else if (userprns == "it") {
+            prnSub = "it";
+            prnObj = "it";
+            prnPosDet = "its";
+            prnPosPrn = "its";
+            prnRef = "itself";
+            prntype = "single";
+        } else if (userprns == "custom") {
+            prnSub = document.querySelector('input[name="prnSub"]').value;
+            prnObj = document.querySelector('input[name="prnObj"]').value;
+            prnPosDet = document.querySelector('input[name="prnPosDet"]').value;
+            prnPosPrn = document.querySelector('input[name="prnPosPrn"]').value;
+            prnRef = document.querySelector('input[name="prnRef"]').value;
+            prntype = document.querySelector('input[name="prntype"]:checked').value;
+        } else {
+            document.getElementById("demo").innerHTML = `You must select one answer`;
+        }
+
+        if (prntype == "plural") {
+            is = "are";
+            s = "";
+        } else {
+            is = "is";
+            s = "s";
+        };
+
+        if (prntype == "plural") {
+            is = "are";
+            s = "";
+        } else {
+            is = "is";
+            s = "s";
+        };
+
+
+        if (judgement == "good" ) {
+            document.getElementById("demo").innerHTML = `Have you seen ${name.value}'s website? It's amazing!`;
+        } else if (judgement == "neutral" ) {
+            document.getElementById("demo").innerHTML = `Have you seen ${name.value}'s website? It's alright I guess.`;
+        } else {
+            document.getElementById("demo").innerHTML = `Have you seen ${name.value}'s website? It may be the worst site I've ever seen in my life. I bet ${prnSub} didn't even ${work.value} it ${prnRef}! And to think ${prnSub} call${s} ${prnRef} a ${creator.value}, what a sick joke! ${prnSub} ${is} the worst ${type.value} I've ever met in my life!<br>${prntype}`;
+        }
+    });
+
+</script>

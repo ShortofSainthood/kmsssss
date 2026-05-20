@@ -1,0 +1,38 @@
+---
+title: Kandi Glossary
+layout: base.njk
+---
+<!--
+<dl>
+    
+
+    {% for word in kandiGlossary %}
+
+    <div class="flexcontainer">
+        <div class="twothird">
+            <dt>{{ word.word }}</dt>
+            <dd>{{ word.definition }}</dd>
+        </div>
+        <div class="third">
+            <img src="https://placehold.co/300x200" alt="{{ word.alt }}">
+        </div>
+    </div>
+    {% endfor %}
+    
+</dl>
+-->
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quod rem quas, laborum dolor corporis repellendus nobis hic laboriosam voluptas blanditiis suscipit incidunt sequi, voluptatem ad, optio veniam maiores est.</p>
+
+{% for word in kandiGlossary %}
+
+<section class="flexcontainer">
+    <div class="twothird">
+        <h2>{{ word.word }}</h2>
+        <p>{{ word.definition }}</p>
+    </div>
+    <div class="third">
+        <img src="https://placehold.co/300x200" alt="{{ word.alt }}">
+    </div>
+</section>
+{% endfor %}

@@ -1,0 +1,63 @@
+---
+title: Changelog
+layout: base.njk
+eleventyNavigation:
+  key: Changelog
+  parent: Website Meta
+---
+{% css %}
+    .changelog li {padding-bottom: 1rem; border-bottom: var(--text) solid 1px;}
+    .changelog li+li {padding-top: 1rem;}
+    .changelog li ul li {padding: unset; border-bottom: none;}
+    .changelog li:last-of-type {border-bottom: none; padding-bottom: 0;}
+    .changelog {padding-left: 0 /*1em*/;}
+    .changelog time {color: var(--textaccent); font-weight: bold;}
+    .tabwrap section {display:block;}
+    .tabwrap section:has(~ section:target), .tabwrap section:target ~ section {display:none;}
+    li:target {background: var(--bgaccent);}
+    li:first-of-type:target {border-radius: 10px 10px 0 0;}
+    li {list-style-position: inside;}
+    @supports (border-color: color-mix(in srgb, var(--text) 40%, var(--bg))) {
+        .changelog li { border-color: color-mix(in srgb, var(--text) 40%, var(--bg)); }
+    }
+{% endcss %}
+<div class="box callout warning">
+    {% lucide "triangle-alert", { "size": "32"} %}
+    <p>Keep in mind that the further back you go, the more likely you are to encounter broken links.</p>
+</div>
+<p style="text-align:center; font-weight: bold;">Filter by Year:</p>
+<p class="speciallink" style="margin: 0.75em;">
+    <a href="#allyears">View All</a>
+{% for year, changes in changelog.changes | computeYears | groupby("year") | dictsort | reverse %}
+    <a href="#{{ year }}">{{ year }}</a>
+{% endfor %}
+</p>
+<div class="tabwrap" id="allyears">
+{% for year, changes in changelog.changes | computeYears | groupby("year") | dictsort | reverse %}
+<section id="{{ year }}">
+	<h2>{{ year }}</h2>
+    <ul class="changelog">        
+    {% for change in changes | sort() | reverse %}
+    <li id="{{ change.date }}">  
+        <time datetime="{{ change.date }}">{{ change.date.toString() | niceDateShort2D }}</time>
+        <ul>
+        {% for update in change.updates %}
+            <li>{{ update.text | safe }}</li>
+            {% if update.listItems %}
+            <ul>
+            {% for listItem in update.listItems %}
+                <li>{{listItem.text | safe }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+    </ul>
+</section>
+{% endfor %}
+</div>
+<p class="speciallink">
+    <a href="/">Back to Index</a>
+</p>

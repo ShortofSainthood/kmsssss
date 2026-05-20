@@ -1,0 +1,15 @@
+---
+title: Postroll
+desc: Welcome to my blog! It's about as inconsistent as the rest of my site, but I hope you enjoy it anyway.
+layout: blog.njk
+eleventyNavigation:
+  key: Postroll
+  parent: Blog
+---
+<h1>{{ title }}</h1>
+<ul>
+{% for post in postroll | sort(true, true, 'pubDate') %}
+  <li><time style="font-weight: bold;" datetime="{{ post.pubDate }}">{{ post.pubDate.toString() | niceDateShort2D }}</time> - <a href="{{ post.link }}">{{ post.title }}</a> by {{ post.author }}</li>
+{% endfor %}
+</ul>
+<p class="speciallink"><a href="/blog/">Back to Blog Index</a></p>

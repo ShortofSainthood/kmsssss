@@ -1,0 +1,9 @@
+<ul>
+    <li>{% if page.url != pagination.href.first %}<a aria-label="first page" href="{{ pagination.href.first }}">{% lucide "chevron-first", { "size": "20", "stroke-width": "3" } %}</a>{% else %}<span class="notlink">{% lucide "chevron-first", { "size": "20", "stroke-width": "3" } %}</span>{% endif %}</li>
+    <li>{% if pagination.href.previous %}<a aria-label="previous page" href="{{ pagination.href.previous }}">{% lucide "chevron-left", { "size": "20", "stroke-width": "3" } %}</a>{% else %}<span class="notlink">{% lucide "chevron-left", { "size": "20", "stroke-width": "3" } %}</span>{% endif %}</li>
+{%- for pageEntry in pagination.pages %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+{%- endfor %}
+    <li>{% if pagination.href.next %}<a aria-label="next page" href="{{ pagination.href.next }}">{% lucide "chevron-right", { "size": "20", "stroke-width": "3" } %}</a>{% else %}<span class="notlink">{% lucide "chevron-right", { "size": "20", "stroke-width": "3" } %}</span>{% endif %}</li>
+    <li>{% if page.url != pagination.href.last %}<a aria-label="last page" href="{{ pagination.href.last }}">{% lucide "chevron-last", { "size": "20", "stroke-width": "3" } %}</a>{% else %}<span class="notlink">{% lucide "chevron-last", { "size": "20", "stroke-width": "3" } %}</span>{% endif %}</li>
+</ul>

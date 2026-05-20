@@ -1,0 +1,32 @@
+---
+title: Rejectattr Test
+layout: base.njk
+eleventyNavigation:
+  parent: Home
+  key: Rejectattr Test
+hideBreadcrumbs: true
+---
+
+
+{% set foods = [
+    {name: "pizza", tasty: true},
+    {name: "vomit", tasty: false},
+    {name: "pasta", tasty: true}]
+
+
+%}
+
+
+{{ foods | rejectattr("tasty") | length }}
+
+<ul>
+    {% for food in foods | rejectattr("tasty") %}
+    <li>{{food.name}}</li>
+    {% endfor %}
+</ul>
+
+<!--<ul>
+    {% for post in collections.posts | rejectattr("data.TOC") | reverse %}
+    <li>{{post.data.title}}</li>
+    {% endfor %}
+</ul>-->

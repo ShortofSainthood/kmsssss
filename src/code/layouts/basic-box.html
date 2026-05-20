@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon }}">
+    <title>Basic Box Theme Demo | {{ site.name }}</title>
+    <meta name="description" content="A simple theme that's just a box in the middle of the screen with some very basic styling, nothing more, nothing less.">
+    <meta name="author" content="{{ site.authorName }}">
+<style>
+    :root {
+        /* FONT STYLING */
+        --font-color: #000000; /* The color of the text */
+
+        /* BOX STYLING */
+        --box-width: 700px; /* The maximum width of your box when viewed on desktop */
+        --box-background: #ffffff; /* The color of the box */
+
+        /* BOX BORDER STYLING */
+        --border-color: #008000; /* The color of the box's border */
+        --border-width: 5px; /* The thickness of the box's border */
+        --border-style: solid; /* How the box's border looks. Set to "none" for no border */
+        /* Border style options: solid, dotted, dashed, double, groove, ridge, inset, outset, none. */
+        --corner-rounding: 15px; /* How round the box's corners are. Set to 0 for straight corners. */
+
+        /* SITE BACKGROUND */
+        --site-background-color: #b3f8d8; /* The background color of your website, BEHIND the box. */
+        --site-background-image: url("https://www.transparenttextures.com/patterns/arabesque.png"); /* OPTIONAL, the background image of your website. Include the URL or file path to the image you want to use like this: "url("link/to/your/image.png")". Set to "none" to remove it. */
+        /* BONUS: You can "stack" background colors and images! If you use a background image with transparency, it'll show that image over whatever color you set as the background. */
+    }
+
+    /* Unless you know what you're doing, DO NOT MESS WITH ANY STYLING BELOW THIS LINE! */
+
+    * {box-sizing: border-box; scrollbar-color: var(--font-color) var(--box-background);}
+
+    *:focus-visible, a:focus-visible img {
+        outline: var(--font-color) solid 0.2rem;
+        border-radius: calc(var(--corner-rounding) / 2);
+        outline-offset: .2rem;
+    }
+
+    a:has(img):focus-visible {outline: 0;}
+
+    a img:hover, a:focus img {
+        position: relative;
+        z-index: 2;
+    }
+
+    ::selection {
+        background: var(--font-color);
+        color: var(--box-background);
+    }
+
+    html, body, .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        background-color: var(--site-background-color);
+        background-image: var(--site-background-image);
+        color: var(--font-color);
+        background-attachment: fixed;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em 0;
+    }
+
+    main {
+        max-width: var(--box-width);
+        padding: 1em;
+        margin: auto;
+        border: var(--border-color) var(--border-width) var(--border-style);
+        background: var(--box-background);
+        border-radius: var(--corner-rounding);
+    }
+
+    h1 {font-size: 2em;}
+    h2 {font-size: 1.6em;}
+    h3 {font-size: 1.35em;}
+    h4 {font-size: 1.2em;}
+    h5 {font-size: 1.1em}
+    h6 {font-size: 1.05em;}
+    h1, h2, h3, h4, h5, h6 {margin: 1rem 0;}
+
+    a {color: var(--font-color);}
+    a:hover, a:focus {color: var(--font-color); text-decoration: none;}
+    
+    abbr[title] {text-decoration: 2px var(--font-color) dotted underline;}
+    abbr[title]:hover {cursor: help;}
+
+    a, abbr, del, ins, s, u {text-decoration-thickness: 2px;}
+
+    p, dl, ol, ul {line-height: 1.6;}
+
+    hr {
+        border: none;
+        border-top: 2px solid var(--font-color);
+        margin: 1em 0;
+    }
+
+    blockquote {
+        border-left: 3px solid var(--font-color);
+        padding: 0.2em 0 0.2em 0.5em;
+    }
+
+    summary:hover {cursor: pointer;}
+
+    button, input, textarea, select {
+        border: 2px solid var(--font-color);
+        background: var(--box-background);
+        font-family: inherit;
+        border-radius: calc(var(--corner-rounding) / 2);
+        font-size: inherit;
+        padding: 0.25em;
+        color: var(--font-color);
+    }
+
+    input, textarea {padding: 0.25em;}
+
+    button:hover, input[type="button"]:hover, button:focus, input[type="button"]:focus {
+        cursor: pointer;
+        background: var(--font-color);
+        color: var(--box-background);
+    }
+
+    input[type="checkbox"], input[type="radio"] {accent-color: var(--font-color);}
+
+    pre {
+        border: 2px solid var(--font-color);
+        padding: 0.5em;
+        overflow: scroll;
+        border-radius: calc(var(--corner-rounding) / 2);
+    }
+
+    figcaption {font-size: 0.9em;}
+
+    legend {padding: 0 0.4em;}
+
+    fieldset {
+        border: 2px solid var(--font-color);
+        border-radius: var(--corner-rounding);
+    }
+
+    table {
+        border: var(--font-color) 2px solid;
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    td, th {
+        border: var(--font-color) 1px solid;
+        padding: 0.4em;
+    }
+
+    .flexcontainer {display:flex; flex-wrap:wrap; margin:auto;}
+    .full { flex: 1 1 100%;}
+    .half { flex: 1 1 50%; }
+    .third { flex: 1 1 33%; }
+    .twothird { flex: 1 1 66%; }
+    .quarter { flex: 1 1 25%; }
+    .threequarter { flex: 1 1 75%; }
+
+    @supports (background: color-mix(in srgb, var(--font-color) 5%, var(--box-background))) {
+        pre, input, textarea {background: color-mix(in srgb, var(--font-color) 5%, var(--box-background));}
+        pre {scrollbar-color: var(--font-color) color-mix(in srgb, var(--font-color) 5%, var(--box-background));}
+    }
+  
+    @media screen and (max-width: 800px) {
+        main {max-width: 95%;}
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <main id="content">
+            <!-- PAGE CONTENT START-->
+            <h1>Basic Box Theme Demo</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+            <!--<p><strong>These are two paragraphs separated by a <code>&lt;hr&gt;</code></strong>. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat deleniti, eaque perspiciatis quas delectus laborum, odit et dolor tempore quos.</p>
+
+            <hr />-->
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta totam, ipsum, natus quo in nisi, doloremque sequi minima cumque suscipit nobis. Nihil sed iure modi quibusdam earum fugit ducimus id.</p>
+
+            <blockquote>
+            "This is a blockquote. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui."
+            </blockquote>
+
+            <p><a href="#"> link</a>, <abbr title="Abbreviation">abbr</abbr>, <code>code</code>, <em>emphasized</em>, <mark>marked</mark>, and <strong>strong</strong> text.</p>
+
+            <button>Button</button>
+
+<pre><code>// This is a code block
+var divs = document.querySelectorAll('div'), i;
+
+for (i = 0; i < divs.length; ++i) {
+    divs[i].style.color = "green";
+}</code></pre>
+
+            <p style="text-align: center;">
+                <a href="/code/layouts/">← Back to Layouts Index</a>
+            </p>
+            <!-- PAGE CONTENT END-->
+        </main>
+    </div>  
+</body>
+</html>
+<!-- Basic box theme by Saint (https://sainthood.xyz/). -->

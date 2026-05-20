@@ -1,0 +1,92 @@
+/* red */.rainbowtest img:nth-of-type(6n-5) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(290deg);}
+/* orange */.rainbowtest img:nth-of-type(6n-4) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(330deg);}
+/* yellow */.rainbowtest img:nth-of-type(6n-3) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(0deg);}
+/* green */.rainbowtest img:nth-of-type(6n-2) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(50deg);}
+/* blue */.rainbowtest img:nth-of-type(6n-1) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(160deg);}
+/* purple */.rainbowtest img:nth-of-type(6n) {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(220deg);}
+
+/*FUCK THIS*/
+/* red */footer a:nth-of-type(6n-5) img {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(290deg);}
+/* orange */footer a:nth-of-type(6n-4) img {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(330deg);}
+/* yellow */footer a:nth-of-type(6n-3) img {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(0deg);}
+/* green */footer a:nth-of-type(6n-2) img {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(50deg);}
+/* blue */footer a:nth-of-type(6n-1) img {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(160deg);}
+/* purple */footer a:nth-of-type(6n) img {filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(220deg);}
+
+
+/*
+.rainbow > li:nth-of-type(6n-5)::marker, .rainbow > li:nth-of-type(6n-5) * li::marker, dl.rainbow dt:nth-of-type(6n-5) {color: var(--red);}
+.rainbow > li:nth-of-type(6n-4)::marker, .rainbow > li:nth-of-type(6n-4) * li::marker, dl.rainbow dt:nth-of-type(6n-4) {color: var(--orange);}
+.rainbow > li:nth-of-type(6n-3)::marker, .rainbow > li:nth-of-type(6n-3) * li::marker, dl.rainbow dt:nth-of-type(6n-3) {color: var(--yellow);}
+.rainbow > li:nth-of-type(6n-2)::marker, .rainbow > li:nth-of-type(6n-2) * li::marker, dl.rainbow dt:nth-of-type(6n-2) {color: var(--green);}
+.rainbow > li:nth-of-type(6n-1)::marker, .rainbow > li:nth-of-type(6n-1) * li::marker, dl.rainbow dt:nth-of-type(6n-1) {color: var(--blue);}
+.rainbow > li:nth-of-type(6n)::marker, .rainbow > li:nth-of-type(6n) * li::marker, dl.rainbow dt:nth-of-type(6n) {color: var(--purple);}
+.rainbow.symbolbullets > li:nth-of-type(6n-5)::before, .rainbow.symbolbullets > li:nth-of-type(6n-5) * li::before {background: var(--red);}
+.rainbow.symbolbullets > li:nth-of-type(6n-4)::before, .rainbow.symbolbullets > li:nth-of-type(6n-4) * li::before {background: var(--orange);}
+.rainbow.symbolbullets > li:nth-of-type(6n-3)::before, .rainbow.symbolbullets > li:nth-of-type(6n-3) * li::before {background: var(--yellow);}
+.rainbow.symbolbullets > li:nth-of-type(6n-2)::before, .rainbow.symbolbullets > li:nth-of-type(6n-2) * li::before {background: var(--green);}
+.rainbow.symbolbullets > li:nth-of-type(6n-1)::before, .rainbow.symbolbullets > li:nth-of-type(6n-1) * li::before {background: var(--blue);}
+.rainbow.symbolbullets > li:nth-of-type(6n)::before, .rainbow.symbolbullets > li:nth-of-type(6n) * li::before {background: var(--purple);}
+*/
+
+/* figure this out */
+footer img {
+    position: relative;
+  }
+  footer a:link:hover img, footer a:link:focus img {
+    scale: 120%;
+    transition: 0.2s ease;
+    transition-property: scale;
+    z-index: 2;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    footer a:hover img, footer a:focus img {
+        transition: none;
+    }
+  }
+  footer a:hover img, footer a:focus img {
+    filter: none;
+  }
+
+
+
+  h1, h2, h3, h4, h5, h6, strong, #title {
+    background: linear-gradient(to right, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+#title {
+    margin: auto!important;
+}
+
+@keyframes rainbowhover {
+    from {filter: hue-rotate(0deg) brightness(1.5);}
+    to {filter: hue-rotate(360deg) brightness(1.5);}
+}
+
+a:hover, a:focus {
+    animation: 2s linear infinite running rainbowhover;
+}
+
+.speciallink a:hover, .speciallink a:focus, a:has(img):hover, a:has(img):focus {
+    animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a:hover, a:focus {
+        animation: none !important;
+    }
+}
+
+
+/* purple filter */
+
+/*
+footer img {
+  filter: brightness(0.75) contrast(1.2) sepia(87%) saturate(250%) hue-rotate(220deg);
+}*/
+
+/*NEW brightness(0.8) contrast(1.2) sepia(87%) saturate(225%) hue-rotate(230deg)*/
