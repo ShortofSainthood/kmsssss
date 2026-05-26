@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Focus Outlines on Image Links | Sainthood.xyz</title>
+    <meta name="search_date" content="2025-08-23">
+    
+    <meta name="description" content="How to make focus outlines work properly with image links.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="Focus Outlines on Image Links">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="How to make focus outlines work properly with image links.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/code/">Code</a>
+                </li>
+                
+                <li>
+                    <a href="/code/snippets/">Snippets</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/snippets/focus-outlines-on-image-links.html">Focus Outlines on Image Links</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Focus Outlines on Image Links</h1>
+                
+                
+                
+                
+                <p><a rel="noreferrer" target="_blank" href="https://webaim.org/techniques/keyboard/#focus">Focus indicators</a> usually work fine when focusing on standard text links, but can sometimes look weird when focusing on links with images. By default, they select the area where the text would show up, not the area of the image. For smaller graphics, this can cause the outline to cover up important parts of the image. For larger ones, it might not be obvious what element is being focused on since the indicator is so small.</p>
+<figure class="center">
+    <div class="flexcontainer">
+        <img class="third" src="/assets/images/outlinebad.png" alt="default focus outline improperly covering up an image">
+        <img class="third" src="/assets/images/outlinebetter.png" alt="default focus outline properly outlining an image">
+        <img class="third" src="/assets/images/outlinebest.png" alt="styled focus outline outlining an image">
+    </div>
+    <figcaption>
+        <p>Various focused links with small images. First is the default behavior without styling, second uses slightly better styling, and third uses optimal styling.</p>
+    </figcaption>
+</figure>
+<h2>Basic Version</h2>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">*:focus-visible, a:focus-visible img</span> <span class="token punctuation">{</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">a:has(img):focus-visible</span> <span class="token punctuation">{</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This snippet removes the outline from the link <em>only</em> if it has an image as a child element and then applies the outline to the image instead. <code>outline: auto;</code> will apply the browsers default outline style to the element. If you don't want to bother styling focus outlines, just use <code>auto</code>.</p>
+<h2>Advanced Version</h2>
+<p>This is a slightly modified version of the CSS I use for my website:</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">*:focus-visible, a:focus-visible img</span> <span class="token punctuation">{</span>
+	<span class="token property">outline</span><span class="token punctuation">:</span> currentColor solid 0.2rem<span class="token punctuation">;</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+	<span class="token property">outline-offset</span><span class="token punctuation">:</span> .2rem<span class="token punctuation">;</span>
+	<span class="token property">z-index</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">a:has(img):focus-visible</span> <span class="token punctuation">{</span>
+	<span class="token property">outline</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This one's a little more complicated, so let's break it down:</p>
+<ul>
+<li><code>outline</code> styling is mostly taken from <span lang="de">medienbaecker's</span> <a rel="noreferrer" target="_blank" href="https://medienbaecker.com/articles/focus-outlines">beautiful focus outlines</a>. You can customize them similarly to how you would a border by defining the color, width, and border style.</li>
+<li><code>border-radius</code> is just for aesthetic purposes.</li>
+<li><code>outline-offset</code> defines how far the outline is from the element it's focusing on. Setting it helps makes sure the outline doesn't cover up the element or hug it too tightly.</li>
+<li><code>z-index</code> and <code>position</code> insure that elements are placed in front of all other elements when focused on. If you're playing around with other <code>position</code> values, make sure you have that defined <em>after</em> the focus styling, so that <code>position: relative;</code> is overwritten.</li>
+</ul>
+<h2>Support for Older Browsers</h2>
+<p>The <code>:has()</code> selector is considered a "newly baseline" CSS feature. This means that some older browsers may not be able to use it. I'm personally not to worried about this because <a rel="noreferrer" target="_blank" href="https://caniuse.com/css-has">over 90% of browsers already support it</a>, but if you <em>really</em> want to optimize your code for older browsers you can use <a rel="noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</a> to detect wither or not their browser supports it.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">*:focus-visible</span> <span class="token punctuation">{</span>
+	<span class="token comment">/* outline styling */</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@supports</span> <span class="token function">selector</span><span class="token punctuation">(</span><span class="token selector-function-argument selector">a:has(img)</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token selector">a:focus-visible img</span> <span class="token punctuation">{</span>
+	    <span class="token comment">/* outline styling */</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">a:has(img):focus-visible</span> <span class="token punctuation">{</span>
+	    <span class="token property">outline</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This way, if someones browser can't outline the whole image, it'll use it's default behavior as a fallback. It's not optimal, but a bad focus indicator is probably still better than no focus indicator.</p>
+
+<nav aria-label="snippet navigation">
+    
+    
+    <div class="nextprev">
+        <div class="prev">
+        
+            <a href="/code/snippets/css-tabs-with-default-open-tab.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg> Previous Snippet<br>CSS Tabs with Default Open Tab</a>
+        
+        </div>
+        <div class="next">
+        
+        </div>
+    </div>
+    <div class="speciallink"><a href="/code/snippets/">Back to Code Snippets Index</a></div>
+</nav>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

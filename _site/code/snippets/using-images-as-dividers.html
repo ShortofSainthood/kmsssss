@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Using Images as Dividers | Sainthood.xyz</title>
+    <meta name="search_date" content="2024-12-26">
+    
+    <meta name="description" content="How to use an image as a divider using semantic HTML and CSS">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="Using Images as Dividers">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="How to use an image as a divider using semantic HTML and CSS">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    <style>.rainbowdivider {
+        background-image: url("/assets/images/rainbowdivider.png") !important;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        margin: 0;
+    }
+    .rainbowdivider::after {content: none;}
+    .stardivider {
+        background-image: url("/assets/images/stardivider.png") !important;
+        height: 19px;
+        background-size: contain;
+        background-repeat: repeat-x;
+        border: none;
+        margin: 0;
+    }
+    .stardivider::after {content: none;}</style>
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/code/">Code</a>
+                </li>
+                
+                <li>
+                    <a href="/code/snippets/">Snippets</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/snippets/using-images-as-dividers.html">Using Images as Dividers</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Using Images as Dividers</h1>
+                
+                
+                
+                
+                
+<p>Most people just use the <code>&lt;img&gt;</code> tag when they want to use an image as a divider, but this method I'm going to show you follows semantic HTML and is easier to edit if you want to change it later. Basically, you just use <code>&lt;hr&gt;</code> and then use CSS to set its background to your image of choice.</p>
+
+<h2>Basic Graphics</h2>
+<div class="box">
+    <hr class="rainbowdivider">
+</div>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">hr</span> <span class="token punctuation">{</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"rainbowdivider.png"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* change to the file path to your image */</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 45px<span class="token punctuation">;</span> <span class="token comment">/*Same height as the original image, change to match your images height*/</span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span> <span class="token comment">/* Makes sure the image doesn't get cut off on smaller screens */</span>
+    <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+    <span class="token property">background-position</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token comment">/* Removes default hr styling */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This is my recommended styling for basic divider graphics. I <em>highly</em> recommend changing the height to match whatever the original height of the image is.</p>
+
+<h2>Repeating Patterns</h2>
+<div class="box">
+    <hr class="stardivider">
+</div>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">hr</span> <span class="token punctuation">{</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"stardivider.png"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* change to the file path to your image */</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 19px<span class="token punctuation">;</span> <span class="token comment">/*Same height as the original image, change to match your images height*/</span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span> <span class="token comment">/* Makes sure the image doesn't get cut off on smaller screens */</span>
+    <span class="token property">background-repeat</span><span class="token punctuation">:</span> repeat-x<span class="token punctuation">;</span> <span class="token comment">/* Has the image repeat infinitely on the x-axis */</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token comment">/* Removes default hr styling */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This is a cool little advantage to using background images over HTML images. If you have a repeating pattern, you can change <code>background-repeat: no-repeat;</code> to <code>background-repeat: repeat-x;</code> and it'll repeat infinitely on the x-axis (left and right, not up and down).</p>
+<p>It's also responsive to screen size. Change your window size or turn your device sideways, you'll see that the graphic adjusts itself without changing the actual width/height or pushing around other elements on the page.</p>
+<nav aria-label="snippet navigation">
+    
+    
+    <div class="nextprev">
+        <div class="prev">
+        
+        </div>
+        <div class="next">
+        
+            <a href="/code/snippets/inline-lists-and-list-item-separators.html">Next Snippet <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg><br>Inline Lists and List Item Separators</a>
+        
+        </div>
+    </div>
+    <div class="speciallink"><a href="/code/snippets/">Back to Code Snippets Index</a></div>
+</nav>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

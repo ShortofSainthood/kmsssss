@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Link ::before Effects | Sainthood.xyz</title>
+    <meta name="search_date" content="2024-12-28">
+    
+    <meta name="description" content="Some fun little things you can do with links using ::before.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="Link ::before Effects">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="Some fun little things you can do with links using ::before.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    <style>.box ul {
+        list-style: none;
+    }
+    .box .demoone a::before {
+        content: url("/assets/images/heartpixel.gif");
+        margin-right: 0.5em;
+    }
+    .box .demotwo a::before, .box .demothree a::before {
+        content: url("/assets/images/mascot1.gif");
+        margin-right: 0.5em;
+    }
+    .box .demotwo a:hover::before, .box .demotwo a:focus::before, .box .demothree li a:hover::before, .box .demothree li a:focus::before {
+        content: url("/assets/images/mascot1-animated.gif");
+        margin-right: 0.5em;
+    }
+    .box .demothree li:nth-of-type(3n-1) a:before {
+        content: url("/assets/images/mascot2.gif");
+    }
+    .box .demothree li:nth-of-type(3n-1) a:hover::before, .box .demothree li:nth-of-type(3n-1) a:focus::before {
+        content: url("/assets/images/mascot2-animated.gif");
+    }
+    .box .demothree li:nth-of-type(3n) a:before {
+        content: url("/assets/images/mascot3.gif");
+    }
+    .box .demothree li:nth-of-type(3n) a:hover::before, .box .demothree li:nth-of-type(3n) a:focus::before {
+        content: url("/assets/images/mascot3-animated.gif");
+    }
+    .box .demofour a::before {
+        content: url("/assets/images/drheart.png");
+        margin-right: 0.4em;
+        visibility: hidden;
+    }
+    .box .demofour a:hover::before, .box .demofour a:focus::before {
+        visibility: visible;
+    }</style>
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/code/">Code</a>
+                </li>
+                
+                <li>
+                    <a href="/code/snippets/">Snippets</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/snippets/link-before-effects.html">Link ::before Effects</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Link ::before Effects</h1>
+                <p>Some fun little things you can do with links using ::before.</p>
+                
+                
+                <details style="width: 100%;">
+                    <summary>Table of Contents</summary>
+                    <div class="toc">
+        <ul><li><a href="#before-link">Sprite before link</a></li><li><a href="#animate-sprite">Animate Sprite on Hover</a><ul><li><a href="#single-sprite">Single Sprite Type</a></li><li><a href="#multiple-sprites">Multiple Sprite Types</a></li></ul></li><li><a href="#show-sprite">Show Sprite on Hover</a></li></ul>
+      </div>
+                </details>
+                
+                
+                
+<h2 id="before-link">Sprite before link</h2>
+<div class="box">
+    <ul class="demoone">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+<h3 class="noborder">HTML</h3>
+<p>I'll be using this HTML structure for all of the examples on this page.</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>className<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Link #1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Link #2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Link #3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+<h3 class="noborder">CSS</h3>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">ul.className a::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"heartspin.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span> <span class="token comment">/* Optional, extra spacing so it looks nicer */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className</span> <span class="token punctuation">{</span>
+    <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token comment">/* removes list bullets */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A pretty basic, but fun way to customize links. Best suited for links in simple lists or navigation menus, not in the main content.</p>
+
+<h2 id="animate-sprite">Animate Sprite on Hover</h2>
+<h3 id="single-sprite">Single Sprite Type</h3>
+<div class="box">
+    <ul class="demotwo">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">ul.className a::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* This is your default/still sprite */</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span> <span class="token comment">/* Optional, extra spacing so it looks nicer */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className a:hover::before, ul.className a:focus::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot-animated.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* This is your animated sprite */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className</span> <span class="token punctuation">{</span>
+    <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token comment">/* removes list bullets */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>I really like this one. It gives the impression that we've "paused" and "played" the GIF without any fancy scripting! All you have to do is save your regular animated GIF and a still frame from that GIF separately. Set the still one as your default sprite and the animated one for when the link is hovered over or focused on.</p>
+<p>You can get the first frame of the GIF by using <a rel="noreferrer" target="_blank" class="external" href="https://ezgif.com/split">Ezgif</a>, or any image editor that supports animation. Why save the still image as a GIF? I noticed that saving it as a PNG made the colors a little off. If you want it to seamlessly transition, you'll want the colors to match.</p>
+
+<h3 id="multiple-sprites">Multiple Sprite Types</h3>
+<div class="box">
+    <ul class="demothree">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">ul.className li a::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot1.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* First still sprite */</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 0.5em<span class="token punctuation">;</span> <span class="token comment">/* Optional, extra spacing so it looks nicer */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className li a:hover::before, ul.className li a:focus::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot1-animated.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* First animated sprite */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className li:nth-of-type(3n-1) a::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot2.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* Second still sprite */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className li:nth-of-type(3n-1) a:hover::before, ul.className li:nth-of-type(3n-1) a:focus::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot2-animated.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* Second animated sprite */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className li:nth-of-type(3n) a::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot3.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* Third still sprite */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className li:nth-of-type(3n) a:hover::before, ul.className li:nth-of-type(3n-1) a:focus::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"mascot3-animated.gif"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span> <span class="token comment">/* Third animated sprite */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul.className</span> <span class="token punctuation">{</span>
+    <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token comment">/* removes list bullets */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Here's a little snippet I made for myself that uses multiple images before the links. I was originally going to use it for a project I'm working on, but I didn't like how it looked with the rest of the layout I designed. Still, I thought it was cute and some people might find it useful, so I'm sharing it with you guys now!</p>
+<p>I used the <code>:nth-of-type</code> pseudo-class to select the second and third links and define them separately from the default link. Note that the second sprite <em>doesn't</em> use <code>:nth-of-type(2n)</code>. That would select every second link. Instead it uses <code>:nth-of-type(3n-1)</code>, which selects the link before every third link. This also creates a repeating pattern, so if I added more links it'd just repeat the pattern of the sprites before them indefinitely.</p>
+
+<h2 id="show-sprite">Show Sprite on Hover</h2>
+<div class="box">
+    <ul class="demofour">
+        <li><a href="#">Link #1</a></li>
+        <li><a href="#">Link #2</a></li>
+        <li><a href="#">Link #3</a></li>
+    </ul>
+</div>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">nav ul a::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"heart.png"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 0.4em<span class="token punctuation">;</span> <span class="token comment">/* Optional, extra spacing so it looks nicer */</span>
+    <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token comment">/* Hides our sprite without collapsing the space it takes up */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">nav ul a:hover::before, nav ul a:focus::before</span> <span class="token punctuation">{</span>
+    <span class="token property">visibility</span><span class="token punctuation">:</span> visible<span class="token punctuation">;</span> <span class="token comment">/* Shows our sprite */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Take note that the <code>visibility</code> property is different from the <code>display</code> property. <code>display: none;</code> treats the element as if it's been completely removed, removing all the space that element takes up. <code>visibility: hidden;</code> just makes the element invisible. Our sprite still takes up space, it just isn't shown. This is done to avoid the text shifting around, which can be very annoying.</p>
+<nav aria-label="snippet navigation">
+    
+    
+    <div class="nextprev">
+        <div class="prev">
+        
+            <a href="/code/snippets/inline-lists-and-list-item-separators.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg> Previous Snippet<br>Inline Lists and List Item Separators</a>
+        
+        </div>
+        <div class="next">
+        
+            <a href="/code/snippets/rendering-pixel-art.html">Next Snippet <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg><br>Rendering Pixel Art</a>
+        
+        </div>
+    </div>
+    <div class="speciallink"><a href="/code/snippets/">Back to Code Snippets Index</a></div>
+</nav>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

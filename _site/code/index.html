@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Code Stuff | Sainthood.xyz</title>
+    
+    
+    <meta name="description" content="Stuff I've made with my (very limited) coding knowledge.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="Code Stuff">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="Stuff I've made with my (very limited) coding knowledge.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    <style>.third {margin: 5px; flex: 1 1 calc(33% - 10px);}
+    h2 {border-bottom: none; margin-top: 0; margin-bottom: 0;}</style>
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/">Code</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Code Stuff</h1>
+                
+                
+                
+                
+                
+<p>Stuff I've made with my (very limited) coding knowledge.</p>
+<div class="flexcontainer">
+    <section class="half">
+        <h2><a href="projects/">Projects</a></h2>
+        <p>Larger coding projects that you can download and use yourself.</p>
+    </section>
+    <!--<section class="third">
+        <h2><a href="layouts/">Layouts</a></h2>
+        <p>Page layouts/templates I've made that you can use for your own site.</p>
+    </section>-->
+    <section class="half">
+        <h2><a href="snippets/">Snippets</a></h2>
+        <p>Tips, tricks, and tiny bits of code that you can incorporate into your bigger coding projects.</p>
+    </section>
+</div>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

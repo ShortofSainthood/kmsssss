@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Making Your Zonelets Blog More Accessible | Sainthood.xyz</title>
+    <meta name="search_date" content="2024-12-11">
+    <meta name="revised" content="2025-03-15">
+    <meta name="description" content="A not so brief tutorial on how to make your Zonelets blog more accessible.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="CC BY-NC-SA 4.0">
+    <meta name="og:title" content="Making Your Zonelets Blog More Accessible">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="A not so brief tutorial on how to make your Zonelets blog more accessible.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/blog.css" rel="stylesheet" type="text/css">
+    
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="blogcontainer container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/blog/posts/accessible-zonelets.html">Making Your Zonelets Blog More Accessible</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                
+                
+                
+                <article class="clearfix">
+    <h1>Making Your Zonelets Blog More Accessible</h1>
+    <div class="postmetadata">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt="" style="vertical-align: -0.1em;"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg> Posted <time datetime="2024-12-11">Dec 11, 2024</time>
+        
+            &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" /></svg> Last Updated <time datetime="2025-03-15">Mar 15, 2025</time>
+        
+        
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19" /><path d="M9.586 5.586A2 2 0 0 0 8.172 5H3a1 1 0 0 0-1 1v5.172a2 2 0 0 0 .586 1.414L8.29 18.29a2.426 2.426 0 0 0 3.42 0l3.58-3.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="6.5" cy="9.5" r=".5" fill="currentColor" /></svg> Tagged:
+        <ul class="blogtags posttags"><li><a href="/blog/tagged/accessibility.html">#accessibility</a></li><li><a href="/blog/tagged/tech.html">#tech</a></li><li><a href="/blog/tagged/tips-and-tricks.html">#tips and tricks</a></li><li><a href="/blog/tagged/tutorial.html">#tutorial</a></li><li><a href="/blog/tagged/webdev.html">#webdev</a></li><li><a href="/blog/tagged/zonelets.html">#Zonelets</a></li></ul>
+        
+    </div>
+    
+    
+
+    
+
+    
+    <details>
+        <summary>Table of Contents</summary>
+        <div class="toc">
+        <ul><li><a href="#keyterms">Key Terms</a></li><li><a href="#language">Step 1: Defining the language</a></li><li><a href="#landmarks">Step 2: Adding Landmark Regions</a></li><li><a href="#headings">Step 3: Fixing Headings</a></li><li><a href="#tweaks">Step 4: Small Tweaks</a></li><li><a href="#conclusion">In Conclusion</a></li></ul>
+      </div>
+    </details>
+    
+    <p><a rel="noreferrer" target="_blank" href="https://zonelets.net/">Zonelets</a> is a free to use, static blogging engine. It's aimed at absolute beginners and especially popular with young people on platforms like <a rel="noreferrer" target="_blank" href="https://neocities.org/">Neocities</a>. Unfortunately, the default Zonelets layout lacks a lot of basic accessibility features. Because so many of its users are newbies, they're either unaware of or unable to fix these issues. This post is me throwing my hat in the ring and trying to fix those issues myself.</p>
+<!-- excerpt -->
+<p>Before I continue, I want to make it very clear that I have nothing but the upmost respect for Zonelets and it's creator, Marina. All of the issues I'll be pointing out in this post are purely technical. I hope this post can be a nice introduction to web accessibility for beginners, using a framework that they're already familiar with as a jumping-off point.</p>
+<p><strong>All of the changes I'm showing can be <a href="/code/projects/accessible-zonelets/">downloaded from my projects page</a> if you'd prefer to start from scratch.</strong> If you had a lot of blog posts before you'd just have to back those up somewhere and then copy-paste the content of your old ones over to the new template. If you'd prefer to update your existing Zonelets files, or just want to know how I did it, keep reading and follow the steps below!</p>
+
+<h2 id="keyterms">Key Terms</h2>
+<p>There are some terms I'm going to be using a lot throughout this post. It's important that you're familiar with them before we start.</p>
+<dl>
+    <dt>Screen Reader</dt>
+    <dd>A screen reader is a type of software frequently used by people who're blind or have low vision. It's main job is to read aloud the text on screen. Most screen readers will also announce when certain elements are interacted with (For example: when a button is pressed), and what section of the page it's currently reading.<br>Further Reading: <a rel="noreferrer" target="_blank" href="https://webaim.org/techniques/screenreader/">"Designing for Screen Reader Compatibility" on WebAIM</a>.</dd>
+    <dt>Keyboard User</dt>
+    <dd>A keyboard user is someone who (solely or primarily) uses a keyboard to navigate a web page instead of a mouse, trackpad, or touch screen. This is typically, but not always, because of motor disabilities. There is also a significant overlap between keyboard users and screen reader users, since people who're totally blind can't see/use a mouse cursor.<br>Further Reading: <a rel="noreferrer" target="_blank" href="https://webaim.org/techniques/keyboard/">"Keyboard Accessibility" on WebAIM</a>.</dd>
+    <dt>Semantic HTML</dt>
+	<dd>When an HTML element or HTML structure is semantic that means it's being used to convey information, not just decoration. For example, using headings to give a title to a section of a page, not just using it because you want large text.<br>Further Reading: <a rel="noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">"Semantics" on MDN Web Docs</a>.</dd>
+    <dt>Styling</dt>
+	<dd>Styling refers to changing the appearance, but <em>not</em> the content or functionality, of an HTML element using CSS. For example: changing the font, size, or color of text on a page.<br>Further Reading: <a rel="noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics">"CSS styling basics" on MDN Web Docs</a>.</dd>
+</dl>
+
+<h2 id="language">Step 1: Defining the language</h2>
+<h3 class="noborder">Why?</h3>
+<p>Screen readers have the ability to read text aloud in multiple languages. Sometimes there can be ambiguity as to what language a block of text is supposed to be in, and that goes on to effect how the screen reader pronounces it and how the user interprets its meaning. For example, without context, most screen readers can't tell the difference between "pan", the English word for a skillet, and <span lang="es">"pan"</span> the Spanish word for bread. Defining what language the page is using can help with these problems.</p>
+<h3 class="noborder">What You Should Do</h3>
+<p>Change the very first <code>&lt;html&gt;</code> at the top of <em>all</em> your HTML files to <code>&lt;html lang="en"&gt;</code>.</p>
+<p>If your blog isn't in English, you can search through <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/tags/ref_language_codes.asp">this list</a> to find your languages two letter code. Just replace <code>en</code> with whatever your languages code is.</p>
+<h4>Country Codes</h4>
+<p>In some cases, you might want to add a <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/tags/ref_country_codes.asp">country code</a> to the end of your language code. This is usually unnecessary for English, since most dialects of English are mutually intelligible (someone who speaks American English can understand British English and vice versa), but may be necessary for other languages. For example, there's <code>pt-PT</code> for Portuguese Portuguese and <code>pt-BR</code> for Brazilian Portuguese.</p>
+<h4>Defining Multiple Languages</h4>
+<p>The <code>lang</code> tag is a <em>global</em> attribute, which means it can be applied to <em>any</em> HTML element. This can be useful in situations where you use words or phrases in other languages.</p>
+<p>You can set the overall language of your page to English, but then set individual sections, paragraphs, or spans to a different language. For example:</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>The national anthem of France is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>La Marseillaise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+<h2 id="landmarks">Step 2: Adding Landmark Regions</h2>
+<h3 class="noborder">Why?</h3>
+<p>Landmarks help define what kind of content that part of the page has. There are multiple different landmark elements, each with their own purpose, but here are the ones we'll be going over in this tutorial:</p>
+<dl>
+    <dt>&lt;header&gt;</dt>
+    <dd>The header at the top of your site. Usually includes the sites name, banner, and main links.</dd>
+    <dt>&lt;footer&gt;</dt>
+	<dd>The footer at the bottom of your site. Usually includes legal information, secondary links, and contact info.</dd>
+    <dt>&lt;main&gt;</dt>
+    <dd>The main content of the page. In this case: your blog post.</dd>
+    <dt>&lt;nav&gt;</dt>
+	<dd>Used for navigation menus. Note that unlike the other landmarks mentioned, some sites might have more than one &lt;nav&gt; element.</dd>
+</dl>
+<p>Both screen reader and keyboard users can use landmarks to jump to different sections of a page. It's also just generally considered best practice to use landmarks when designing web pages, for a bunch of reasons besides accessibility that I won't bother going into here. For now, just know that it's a good thing to get into the habit of doing!</p>
+
+<h3 class="noborder">What You Should Do</h3>
+<p>Replace <code>div</code> with the appropriate landmark element.</p>
+<div class="box callout warning">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>
+    <p><strong>Do not change or remove the IDs!</strong> It might seem repetitive, but they effect both the styling of your elements <em>and</em> tell the JavaScript where to place certain text.</p>
+</div>
+<h4>Header, Footer, and Main Regions</h4>
+<p>Change <code>&lt;div id="header"&gt;</code> to <code>&lt;header id="header"&gt;</code>.</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Then, change <code>&lt;div id="footer"&gt;</code> to <code>&lt;footer id="footer"&gt;</code>.</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Lastly, change <code>&lt;div id="content"&gt;</code> to <code>&lt;main id="content"&gt;</code></p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>    
+    <span class="token comment">&lt;!--your content here--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Pretty easy, right?</p>
+
+<h4>Navigation Region</h4>
+<p>Navigation is where things get a little more complicated. In Zonelet's post template, it has both a main navigation menu in the header, and a "next and previous post" navigation menu towards the end of every post. We could just replace <code>&lt;div&gt;</code> with <code>&lt;nav&gt;</code> and leave it at that, like we did with the other landmark elements, but that might be confusing for some users.</p>
+<p>Instead, we're going to make each <code>&lt;nav&gt;</code> unique by using <code>aria-label</code>, a special attribute that is read out loud by a screen reader. <code>aria-label</code> is helpful in situations where surrounding text isn't enough to describe an element. We can give our <code>&lt;nav&gt;</code> in the header the <code>aria-label</code> "main navigation" and the <code>&lt;nav&gt;</code> towards the bottom the <code>aria-label</code> "post navigation". Now, people using screen readers will be able to easily tell the two apart!</p>
+
+
+<div class="box callout warning">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>
+    <p><strong>Edit 2025-03-15:</strong> I feel like I should have done a better job explaining how accidentally using ARIA incorrectly can <em>hinder</em> accessibility instead of enhancing it. When using it for your own projects, please remember to do proper research and testing.</p>
+    <p><strong>Remember: <a rel="noreferrer" target="_blank" href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/">No ARIA is better than Bad ARIA</a></strong></p>
+</div>
+
+<p>Editing the post navigation can be done similarly to our other landmark edits. Change <code>&lt;div id="nextprev"&gt;</code> to <code>&lt;nav id="nextprev"&gt;</code> and make sure to include <code>aria-label="post navigation"</code>.</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nextprev<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post navigation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Unlike the rest of our edits so far, the contents of the header menu is defined in our JavaScript file. Open <code>script.js</code> and look for the variable <code>headerHTML</code> (should be on line 63). It might look intimidating at first, but don't worry! All the stuff we're going to edit is just HTML formatted in a way that's easier for the JavaScript to understand.</p>
+<p>You'll see that the header links are wrapped in an unordered list (<code>&lt;ul&gt;</code>). We're going to wrap a <code>&lt;nav&gt;</code> around that and give it <code>aria-label="main navigation"</code>. Now, every time our header is loaded, it'll load with those elements as well.</p>
+<p>Your JS code will look like this if done correctly:</p>
+<pre class="language-html" tabindex="0"><code class="language-html">let headerHTML = '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main navigation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span> + relativePath + '/index.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>' + 
+'<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span> + relativePath + '/archive.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Archive<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>' +
+'<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span> + relativePath + '/about.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>About<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>';</code></pre>
+
+
+<h2 id="headings">Step 3: Fixing Headings</h2>
+<h3 class="noborder">Why?</h3>
+<p>A mistake that nearly every newbie webdev makes at first is using semantic HTML elements, when they should have just used styling. For example, a lot of beginners use the heading elements because they think that all it does is make the text bigger, and just want large text that grabs the reader's attention. In actuality, headings tell your browser that there's a hierarchy of information. <code>&lt;h2&gt;</code> is a subset of <code>&lt;h1&gt;</code>, <code>&lt;h3&gt;</code> is a subset of <code>&lt;h2&gt;</code>, and so on.</p>
+<p>Similarly to landmarks, screen reader and keyboard users can use headings to jump to different sections of a page. Labeling something as a heading when it's actually not can be confusing and annoying to the user.</p>
+
+<h3 class="noborder">What You Should Do</h3>
+<p>Using CSS, we can give a regular paragraph the appearance of a heading, without giving it the semantics of one.</p>
+<p>First, we replace our post dates <code>&lt;h4&gt;</code> tags with <code>&lt;p&gt;</code>.</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>postDate<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>The post date is now just a normal paragraph, but it still has the <code>postDate</code> ID, which we can customize in our stylesheet.</p>
+<div class="box callout info">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+    <p>Now is a good time to mention that <strong><a rel="noreferrer" target="_blank" href="https://dequeuniversity.com/rules/axe/4.10/heading-order">heading levels should only increase by one</a>!</strong> You should never just skip from <code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code>, like in the original post template.</p>
+</div>
+<p>This next part may be slightly different depending on what theme your using. I'll be using the default Zonelets stylesheet. In your <code>style</code> folder, go to <code>style.css</code> and scroll down to around line 59. You should see a comma separated list of heading elements (<code>&lt;h1&gt;</code>-<code>&lt;h5&gt;</code>). Add <code>#postDate</code> to that list.
+</p><pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">h1, h2, h3, h4, h5, #postDate</span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> Tahoma<span class="token punctuation">,</span> Geneva<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #34436f<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p>Now, your post date will be the same font and color as your headings, but there's still a few properties we have to define if we want it to look like it did before.</p>
+<p>Most elements have default styles that render even when not defined in the stylesheet. For example, all <code>h4</code> elements will render with a <code>font-size</code> of <code>1em</code>, unless explicitly defined otherwise. We can use <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/cssref/css_default_values.php">W3Schools list of default CSS values for HTML elements</a> to find and apply relevant ones from <code>h4</code> to <code>#postDate</code>.</p>
+<p>I also set the line height to "normal". Originally the line height for paragraphs was set to 1.6em, which gave our post date a lot of awkward extra spacing. Giving it the value of "normal" resets that number to the browsers default and makes it look more uniform with the other heading elements.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">h1, h2, h3, h4, h5, #postDate</span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> Tahoma<span class="token punctuation">,</span> Geneva<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #34436f<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#postDate</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 1.33em 0<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p>Congratulations! Now your post date looks just like a heading, without any of the semantics!</p>
+
+<h2 id="tweaks">Step 4: Small Tweaks</h2>
+<p>The rest of my edits were super small quick changes that don't need too much explanation.</p>
+
+<h3>Using Relative Units</h3>
+<p>Relative units are more flexible and work better with screen magnifiers and mobile devices. Whenever possible, it's best to use relative units, like <code>em</code> and <code>rem</code>, over absolute units like <code>px</code>. Better yet, you can ditch units all together in some cases! The recommended way to set <code>line-height</code> is to just type a number without defining the unit.</p>
+<p>Here I used a <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/TAGS/ref_pxtoemconversion.asp">pixel to ems converter</a> to help change the <code>font-size</code> unit, and removed the unit from our paragraphs <code>line-hight</code>.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #436a7b<span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'../images/bg_diamond.png'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+    <span class="token property">background-position</span><span class="token punctuation">:</span> top<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.125em<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> Georgia<span class="token punctuation">,</span> <span class="token string">"Times New Roman"</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">p</span> <span class="token punctuation">{</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 1.6<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<h3>Insuring Decent Color Contrast</h3>
+<p>Make sure that all of your text, including links, are easily distinguishable from the background. You can use <a rel="noreferrer" target="_blank" href="https://webaim.org/resources/contrastchecker/">WebAIMs color contrast checker</a> to help you out.</p>
+<p>The specifics of how you fix this will depend on the specific theme of your blog. For the default Zonelets theme, the body text was fine, but the link text was too light, so I adjusted it to make it darker.</p>
+
+<h3>Adding :focus Effects</h3>
+<p>Keyboard-only users can't hover over links or buttons with a mouse, instead they have to focus on them by pressing <kbd>tab</kbd>. Most stylesheets have it set so that links and buttons change appearance when hovered over. It's usually a good idea to apply whatever effect is set to hovered elements to focused elements as well.</p>
+<p>This can be done by simply adding a comma separated list, copy-pasting the element, and replacing <code>:hover</code> with <code>:focus</code>. Now, whatever styles you define will effect both hovered over <em>and</em> focused on states of that element.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">a:hover, a:focus</span> <span class="token punctuation">{</span> 
+    <span class="token comment">/* whatever you want it to look like when hovered over/focused on */</span>
+<span class="token punctuation">}</span></code></pre>
+
+<h3>Adding Skip Links</h3>
+<p>Skip links rarely ever make or break a sites accessibility, but can still make your site slightly more convenient for some people. Most websites have features that appear on every page, like the header and navigation menu. This can be annoying and repetitive for screen reader users and keyboard users. To remedy this, you can add a "Skip to Content" link.</p>
+<p>I was originally going to add my own code that I stitched together for this, but then I found <a rel="noreferrer" target="_blank" href="https://kalechips.net/projects/snippets/skip">Kalechip's code snippet for it</a> and it's a lot cleaner and better explained than mine, so I'll just recommend that you use that.</p>
+<p>Additionally, you can add a visible "back to top" link at the bottom of your blog. This is useful not only for disabled users, but able-bodied users who're reading your blog on their phone or tablet.</p>
+<p>Further Reading: <a rel="noreferrer" target="_blank" href="https://webaim.org/techniques/skipnav/">"Skip Navigation Links" on WebAIM</a></p>
+
+<h3>Using the Figure and Figcaption Elements</h3>
+<p>The default Zonelets framework lets you turn regular paragraphs into image captions by giving it the <code>caption</code> class. This doesn't actually change the semantics of the element, though, just the way it looks. This setup isn't <em>inherently</em> inaccessible, but in some situations it might be ambiguous as to which paragraphs are normal parts of a post and which are directly referring to an image.</p>
+<p>To make it clear that a caption is grouped with an image or set of images, you can use the <code>figure</code> and <code>figcaption</code> tags. You can still apply the <code>caption</code> class to your <code>figcaption</code> so that it's styled differently from the main text. You can also apply classes meant for images (<code>left</code>, <code>right</code>, <code>center</code>, and <code>small</code>) to <code>figure</code> so that it affects both the image and the caption.
+</p><p>For example:</p>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>small right<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dog.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>photograph of a small dog lying in the sun<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>caption<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Me and my dog had a fun summer!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+<h2 id="conclusion">In Conclusion</h2>
+<p>For those interested in learning more about web accessibility, I'd highly recommend checking out <a rel="noreferrer" target="_blank" href="https://webaim.org/">WebAIM</a>. They provide a lot of in-depth information and I used them as a resource multiple times while writing this post. <a rel="noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN Web Docs</a> and <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/accessibility/index.php">W3Schools</a> also have very good overviews on the subject.</p>
+<p>Once you understand the basics, you can start using tools like <a rel="noreferrer" target="_blank" href="https://wave.webaim.org/">WAVE</a> or <a rel="noreferrer" target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">axe DevTools</a>. Automated accessibility tests aren't foolproof, you should always do them in conjunction with manual testing, but they can still help you notice things that you might have glossed over otherwise. I also recently found out about <a rel="noreferrer" target="_blank" href="https://www.a11yproject.com/checklist/">the A11Y Project Checklist</a>, which I think a lot of people might find useful.</p>
+<hr>
+<p>Phew! That took a lot longer to write than I thought it would! I hope this tutorial was easy to understand. Technically, I guess this isn't my first time writing a long tutorial like this, but it is my first time actually finishing and publishing one.</p>
+<p>If you have any questions, or think I got something wrong and want to correct me, feel free to <a href="/#contact">contact me</a>!</p>
+</article>
+<aside aria-labelledby="contact" style="border-top: var(--text) 1px solid;">
+    <h2 class="visually-hidden" id="contact">Contact</h2>
+    <p style="font-size: 0.9em; color: var(--textaccent); text-align: center;">
+        This blog doesn't support comments (yet), but you can still reach me via <a rel="noreferrer" target="_blank" href="https://indieweb.social/@sainthood">Mastodon</a> or <a href="mailto:contact@sainthood.xyz">Email</a>.
+    </p>
+</aside>
+<nav aria-labelledby="postnav">
+    <h2 class="visually-hidden" id="postnav">Post Navigation</h2>
+    
+    
+    <div class="nextprev">
+        <div class="prev">
+        
+            <a href="/blog/posts/who-invited-this-guy.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg> Previous Post<br>Who Invited This Guy?</a>
+        
+        </div>
+        <div class="next">
+        
+            <a href="/blog/posts/mini-knitting-showcase.html">Next Post <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg><br>Mini Knitting Showcase</a>
+        
+        </div>
+    </div>
+    <div class="speciallink"><a href="/blog/">Back to Blog Index</a></div>
+</nav>
+            </main>
+            <div id="blogaside">
+    <aside aria-labelledby="about">
+        <h2 id="about" style="margin-top: 0;">About</h2>
+        <p>Welcome to my blog! It's about as inconsistent as the rest of my site, but I hope you enjoy it anyway.</p>
+        <form aria-label="styleswitcher">
+    <label style="font-weight: bold; color: var(--textaccent);" for="styleswitcher">Change Theme:</label><br>
+    <select id="styleswitcher" name="styleswitcher" onchange="changeStyle(this.value)">
+        <option value="automatic">Automatic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</form>
+    </aside>
+    <aside aria-labelledby="latestposts">
+        <h2 id="latestposts">Latest Posts</h2>
+        <ul>
+        
+        
+            <li><a href="/blog/posts/fanlistings-site-depolyment-and-some-personal-updates.html">Fanlistings, Site Depolyment, and Some Personal Updates</a></li>
+        
+        
+        
+            <li><a href="/blog/posts/abq-island-photodump.html">ABQ Island Photodump</a></li>
+        
+        
+        
+            <li><a href="/blog/posts/10-10-songs.html">10/10 Songs</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </ul>
+        <p style="text-align: center;">
+            <a style="font-weight: bold;" href="/blog/archive">View full post archive <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg></a>
+        </p>
+    </aside>
+    <aside aria-labelledby="tags">
+        <h2 id="tags"><!--Popular -->Tags</h2>
+        <ul class="blogtags">
+        
+
+        <li> <a href="/blog/tagged/personal.html">personal (13)</a></li><li> <a href="/blog/tagged/tech.html">tech (7)</a></li><li> <a href="/blog/tagged/gaming.html">gaming (6)</a></li><li> <a href="/blog/tagged/rant.html">rant (6)</a></li><li> <a href="/blog/tagged/internet.html">internet (3)</a></li><li> <a href="/blog/tagged/mental-health.html">mental health (3)</a></li><li> <a href="/blog/tagged/politics.html">politics (3)</a></li><li> <a href="/blog/tagged/links.html">links (3)</a></li><li> <a href="/blog/tagged/monthly-recap.html">monthly recap (3)</a></li><li> <a href="/blog/tagged/site-meta.html">site meta (3)</a></li><li> <a href="/blog/tagged/photodump.html">photodump (3)</a></li><li> <a href="/blog/tagged/site-updates.html">site updates (2)</a></li><li> <a href="/blog/tagged/indieweb.html">indieweb (2)</a></li><li> <a href="/blog/tagged/music.html">music (2)</a></li><li> <a href="/blog/tagged/pawborough.html">PawBorough (2)</a></li><li> <a href="/blog/tagged/blogging.html">blogging (2)</a></li><li> <a href="/blog/tagged/disability.html">disability (2)</a></li><li> <a href="/blog/tagged/health.html">health (2)</a></li><li> <a href="/blog/tagged/autism.html">autism (2)</a></li><li> <a href="/blog/tagged/plants.html">plants (2)</a></li><li> <a href="/blog/tagged/going-places.html">going places (2)</a></li><li> <a href="/blog/tagged/plushies.html">plushies (2)</a></li><li> <a href="/blog/tagged/itemlabel.html">itemLabel (2)</a></li><li> <a href="/blog/tagged/web-development.html">web development (2)</a></li><li> <a href="/blog/tagged/tomodachi-life.html">Tomodachi Life (2)</a></li><li> <a href="/blog/tagged/accessibility.html">accessibility (1)</a></li><li> <a href="/blog/tagged/tips-and-tricks.html">tips and tricks (1)</a></li><li> <a href="/blog/tagged/tutorial.html">tutorial (1)</a></li><li> <a href="/blog/tagged/webdev.html">webdev (1)</a></li><li> <a href="/blog/tagged/zonelets.html">Zonelets (1)</a></li><li> <a href="/blog/tagged/crafting.html">crafting (1)</a></li><li> <a href="/blog/tagged/knitting.html">knitting (1)</a></li><li> <a href="/blog/tagged/rhythm-heaven.html">Rhythm Heaven (1)</a></li><li> <a href="/blog/tagged/deltarune.html">Deltarune (1)</a></li><li> <a href="/blog/tagged/opsec.html">OPSEC (1)</a></li><li> <a href="/blog/tagged/linux.html">Linux (1)</a></li><li> <a href="/blog/tagged/review.html">review (1)</a></li><li> <a href="/blog/tagged/pop-culture.html">pop culture (1)</a></li><li> <a href="/blog/tagged/sabrina-carpenter.html">Sabrina Carpenter (1)</a></li><li> <a href="/blog/tagged/ai.html">AI (1)</a></li><li> <a href="/blog/tagged/ranking.html">ranking (1)</a></li><li> <a href="/blog/tagged/food.html">food (1)</a></li><li> <a href="/blog/tagged/judaism.html">Judaism (1)</a></li><li> <a href="/blog/tagged/silly.html">silly (1)</a></li><li> <a href="/blog/tagged/prompts.html">prompts (1)</a></li><li> <a href="/blog/tagged/tools.html">tools (1)</a></li><li> <a href="/blog/tagged/resources.html">resources (1)</a></li><li> <a href="/blog/tagged/bullet-journaling.html">bullet journaling (1)</a></li><li> <a href="/blog/tagged/charli-xcx.html">Charli xcx (1)</a></li><li> <a href="/blog/tagged/asd.html">ASD (1)</a></li><li> <a href="/blog/tagged/masking.html">masking (1)</a></li><li> <a href="/blog/tagged/stream-of-consciousness.html">stream of consciousness (1)</a></li><li> <a href="/blog/tagged/videos.html">videos (1)</a></li><li> <a href="/blog/tagged/worldbuilding.html">worldbuilding (1)</a></li><li> <a href="/blog/tagged/crochet.html">crochet (1)</a></li><li> <a href="/blog/tagged/random.html">random (1)</a></li><li> <a href="/blog/tagged/collecting.html">collecting (1)</a></li><li> <a href="/blog/tagged/art.html">art (1)</a></li><li> <a href="/blog/tagged/puzzles.html">puzzles (1)</a></li><li> <a href="/blog/tagged/postroll.html">postroll (1)</a></li><li> <a href="/blog/tagged/notes.html">notes (1)</a></li><li> <a href="/blog/tagged/breaking-bad.html">Breaking Bad (1)</a></li><li> <a href="/blog/tagged/better-call-saul.html">Better Call Saul (1)</a></li></ul>
+        <!--<p style="text-align: center;">
+            <a style="font-weight: bold;" href="/blog/archive">View all tags <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg></a>
+        </p>-->
+    </aside>
+</div>
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

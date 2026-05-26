@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Code Snippets | Sainthood.xyz</title>
+    
+    
+    <meta name="description" content="Tips, tricks, and tiny bits of code that you can incorporate into your bigger coding projects.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="Code Snippets">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="Tips, tricks, and tiny bits of code that you can incorporate into your bigger coding projects.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/code/">Code</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/snippets/">Snippets</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Code Snippets</h1>
+                
+                
+                
+                
+                
+<p>Tips, tricks, and tiny bits of code that you can incorporate into your bigger coding projects.</p>
+<ul>
+    
+    <li><a href="/code/snippets/using-images-as-dividers.html">Using Images as Dividers</a></li>
+    
+    <li><a href="/code/snippets/inline-lists-and-list-item-separators.html">Inline Lists and List Item Separators</a></li>
+    
+    <li><a href="/code/snippets/link-before-effects.html">Link ::before Effects</a></li>
+    
+    <li><a href="/code/snippets/rendering-pixel-art.html">Rendering Pixel Art</a></li>
+    
+    <li><a href="/code/snippets/css-tabs-with-default-open-tab.html">CSS Tabs with Default Open Tab</a></li>
+    
+    <li><a href="/code/snippets/focus-outlines-on-image-links.html">Focus Outlines on Image Links</a></li>
+    
+</ul>
+
+
+<!--
+<table>
+    <thead>
+        <tr>
+            <th>Snippet</th>
+            <th>Description</th>
+            <th>Language(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td><a href="">Using Images as Dividers</a></td>
+            <td>How to use an image as a divider using semantic HTML and CSS</td>
+            <td>CSS</td>
+        </tr>
+        
+        <tr>
+            <td><a href="">Inline Lists and List Item Separators</a></td>
+            <td>How to display a list horizontally using HTML and CSS</td>
+            <td>HTML, CSS</td>
+        </tr>
+        
+        <tr>
+            <td><a href="">Link ::before Effects</a></td>
+            <td>Some fun little things you can do with links using ::before.</td>
+            <td>HTML, CSS</td>
+        </tr>
+        
+        <tr>
+            <td><a href="">Rendering Pixel Art</a></td>
+            <td>Using the CSS image-rendering property to fix blurry pixel art.</td>
+            <td>CSS</td>
+        </tr>
+        
+        <tr>
+            <td><a href="">CSS Tabs with Default Open Tab</a></td>
+            <td>No Javascript, CSS-only tabs with a default visible/open tab.</td>
+            <td>HTML, CSS</td>
+        </tr>
+        
+        <tr>
+            <td><a href="">Focus Outlines on Image Links</a></td>
+            <td>How to make focus outlines work properly with image links.</td>
+            <td>CSS</td>
+        </tr>
+        
+    </tbody>
+</table>
+-->
+
+
+
+<p class="speciallink"><a href="/code/">Back to Code Index</a></p>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

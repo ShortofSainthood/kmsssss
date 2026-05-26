@@ -1,5 +1,289 @@
-<h1>Heading</h1>
-<p>Doing some tests lol maybe come back later.</p>
-<p>This sentence is a test</p>
-<p>please god work ahhhhhhhhh :( pleassssse</p>
-<p>this is a change</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Sainthood.xyz</title>
+    
+    
+    
+    <meta name="author" content="Saint">
+    <meta name="license" content="CC BY-NC-SA 4.0">
+    <meta name="og:title" content="Sainthood.xyz">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    <style>.flexcontainer > div {margin: 10px;}
+    ul.changelog li ul {display: none;}
+    #updates time {color: var(--textaccent); font-weight: bold;}
+    #blog h3 {font-size: 1.5em; border: none;}
+    .postmetadata {
+        font-size: 0.95em;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin: 0.5em 0;
+    }
+    .half { flex: 1 1 calc(50% - 20px); }
+
+    .spin {animation: 2s linear infinite record-spin; vertical-align: -3px;}
+    @keyframes record-spin {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .spin {animation-duration:  0s !important;}
+    }</style>
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="primary">
+            
+            <main id="content">
+                
+                
+                
+                
+                
+                
+
+<h1>Hello and Welcome!</h1>
+
+<p>This site is basically just a dumping ground for all of my projects that I feel like making public, with the occasional blog post here and there. Don't expect too much consistency from me.</p>
+
+<p> 
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--textaccent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin" alt=""><circle cx="12" cy="12" r="10" /><path d="M6 12c0-1.7.7-3.2 1.8-4.2" /><circle cx="12" cy="12" r="2" /><path d="M18 12c0 1.7-.7 3.2-1.8 4.2" /></svg> <b>Currently listening to:</b> <a rel="noreferrer" target="_blank" href="https://www.youtube.com/watch?v=QgyW9qjgIf4"><span style="font-weight: bold;">Dancing with your eyes closed</span> - Jane Remover</a>
+
+<br><span style="font-size: 0.9em;">(<a href="/listening">What else have I been listing to?</a>)</span>
+</p>
+
+<div class="flexcontainer">
+    <div id="updates" class="half">
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></svg> Latest Site Update</h2>
+        
+
+    <time datetime="2026-03-06">Mar 06, 2026</time>
+    <ul class="changelog">
+    
+        <li>Added the <a rel="noreferrer" target="_blank" href="https://pfwebring.neocities.org/">Pillowfort Webring</a> and <a rel="noreferrer" target="_blank" href="https://qtbeans.neocities.org/artistsonline">Artists Online</a> to <a href="/links/webmastery/directories.html">my webring list</a>.
+        
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="speciallink"><a href="/meta/changelog">View Full Changelog</a></p>
+    </div>
+    <div id="blog" class="half">
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" /><path d="M18 14h-8" /><path d="M15 18h-5" /><path d="M10 6h8v4h-8V6Z" /></svg> Latest Blog Post</h2>
+        
+
+    <h3><a href="/blog/posts/fanlistings-site-depolyment-and-some-personal-updates.html">Fanlistings, Site Depolyment, and Some Personal Updates</a></h3>
+    <p class="postmetadata">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt="" style="vertical-align: -0.1em;"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg> <time datetime="2026-05-20">May 20, 2026</time>
+        
+    </p>
+    <!--Site Updates
+Fanlisting Stuff
+ignore this
+
+First off, I&#39;ve started my own fanlisting collective and kicked it off by starting a fanlisting for Balatro! I&#39;ll hopefully add dklsfjasldfk eventually.
+I want to give a huge shout out to Leilukin! A while back they gave me some tech help over email, and recently they made the source code for their […]-->
+    Recapping what I did in April 2026
+    <p class="speciallink">
+        <a aria-label="Read more: Fanlistings, Site Depolyment, and Some Personal Updates" href="/blog/posts/fanlistings-site-depolyment-and-some-personal-updates.html">Read More</a>
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="contactbox" class="half">
+        <h2 id="contact"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M16 2v2" /><path d="M17.915 22a6 6 0 0 0-12 0" /><path d="M8 2v2" /><circle cx="12" cy="12" r="4" /><rect x="3" y="4" width="18" height="18" rx="2" /></svg> Contact Me</h2>
+        <ul style="list-style: none;">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--textaccent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg> <b>Email:</b> contact [at] sainthood [dot] xyz</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--textaccent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><circle cx="12" cy="12" r="4" /><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg> <b>Mastodon:</b> <a rel="noreferrer" target="_blank" class="external" href="https://indieweb.social/@sainthood">sainthood@indieweb.social</a></li>
+        </ul>
+        <p>Please keep in mind that <strong>I do not get push notifications for either of these!</strong> I try to check them regularly, but I may take a while to respond to messages, please be patient with me.</p>
+    </div>
+</div>
+            </main>
+            
+        </div>
+        <footer>
+            
+<p class="buttons">
+    <a rel="noreferrer" target="_blank" href="https://decolonizepalestine.com/"><img alt="stand with Palestine" src="/assets/graphics/buttons/standwith.png"></a>
+    <a rel="noreferrer" target="_blank" href="https://geocities.restorativland.org/CapitolHill/1131/"><img alt="no nazis, no fascism, no racism!" src="/assets/graphics/buttons/nofash.png"></a>
+    <a><img alt="This site is certified 100% cookie free!" src="/assets/graphics/buttons/nocookie.gif"></a>
+    <a><img alt="CSS is awesome." src="/assets/graphics/buttons/css.png"></a>
+    <a rel="noreferrer" target="_blank" href="https://fediverse.info/"><img alt="Join the Fediverse!!!" src="/assets/graphics/buttons/join-fediverse.gif"></a>
+    <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/html/default.asp"><img alt="Hey you! Learn HTML now!" src="/assets/graphics/buttons/html.gif"></a>
+    <a><img alt="made with my own two paws" src="/assets/graphics/buttons/twopaws.png"></a>
+    <a><img alt="Pride now!" src="/assets/graphics/buttons/pride.gif"></a>
+    <a rel="noreferrer" target="_blank" href="https://brainmade.org/"><img alt="Brainmade.org" src="/assets/graphics/buttons/brainmade.png"></a>
+    <a rel="noreferrer" target="_blank" href="https://notbyai.fyi/hi/not-by-ai/"><img width="88" height="31" alt="Created by human, not by AI" src="/assets/graphics/buttons/Created-By-Human-Not-By-AI-Badge-white.svg"></a>
+</p>
+
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

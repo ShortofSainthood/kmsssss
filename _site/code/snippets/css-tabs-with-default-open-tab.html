@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>CSS Tabs with Default Open Tab | Sainthood.xyz</title>
+    <meta name="search_date" content="2025-05-15">
+    
+    <meta name="description" content="No Javascript, CSS-only tabs with a default visible/open tab.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="CSS Tabs with Default Open Tab">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="No Javascript, CSS-only tabs with a default visible/open tab.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    <style>.tabwrap section.default {display: block;}
+    .tabwrap section {display: none;}
+    .tabwrap section:target {display:block;}
+    .tabwrap section:target ~ section.default {display:none;}
+    section {text-align: center;}
+    section h3 {margin: 0 0.5em;}</style>
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/code/">Code</a>
+                </li>
+                
+                <li>
+                    <a href="/code/snippets/">Snippets</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/snippets/css-tabs-with-default-open-tab.html">CSS Tabs with Default Open Tab</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>CSS Tabs with Default Open Tab</h1>
+                
+                
+                
+                
+                <p>This is a minor edit of <a rel="noreferrer" target="_blank" href="https://kalechips.net/projects/snippets/tabs">Kalechip’s CSS Tabs</a>. I originally made it for <a href="/meta/changelog">my changelog</a>, because I wanted people to be able to filter through different years, but also I didn’t want to deal with JavaScript or PHP. The original has all tab content hidden by default until you click a tab. This edit lets you set a default tab, which is visible by default.</p>
+<h2>Demo</h2>
+<div class="box">
+    <p class="speciallink" style="padding: 0.25em 0 1em 0;">
+        <a href="#dogs">Dogs</a>
+        <a href="#cats">Cats</a>
+        <a href="#bunnies">Bunnies</a>
+    </p>
+    <div class="tabwrap">
+        <section id="cats">
+            <h3>Cats</h3>
+            <p>I like cats too! 🐱</p>
+        </section>
+        <section id="bunnies">
+            <h3>Bunnies</h3>
+            <p>I also think bunnies are super cute! 🐰</p>
+        </section>
+        <section class="default" id="dogs">
+            <h3>Dogs</h3>
+            <p>I love dogs! 🐶<br>(this is the default tab)</p>
+        </section>
+    </div>
+</div>
+<h2 id="html">HTML</h2>
+<pre class="language-html" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Tab links --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#tab1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab #1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#tab2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab #2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Tab content --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tabwrap<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--Regular tab content here--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>default<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--Default tab content here--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p><mark>You <em><strong>must</strong></em> put your default tab at the <em>bottom</em> of your tabwrap, <em>after</em> all of the other tabs.</mark> The CSS will not work properly otherwise. The order of the other tabs doesn't matter. Change "tab1" and "tab2" to whatever you want your tab's names to be.</p>
+<p>For accessibility, I highly recommend starting each tab content section with a heading (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>).</p>
+<h2 id="css">CSS</h2>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">.tabwrap section.default</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">.tabwrap section</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">.tabwrap section:target</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span>block<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">.tabwrap section:target ~ section.default</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+<nav aria-label="snippet navigation">
+    
+    
+    <div class="nextprev">
+        <div class="prev">
+        
+            <a href="/code/snippets/rendering-pixel-art.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg> Previous Snippet<br>Rendering Pixel Art</a>
+        
+        </div>
+        <div class="next">
+        
+            <a href="/code/snippets/focus-outlines-on-image-links.html">Next Snippet <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg><br>Focus Outlines on Image Links</a>
+        
+        </div>
+    </div>
+    <div class="speciallink"><a href="/code/snippets/">Back to Code Snippets Index</a></div>
+</nav>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

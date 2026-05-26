@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Style Guide | Sainthood.xyz</title>
+    
+    
+    
+    <meta name="author" content="Saint">
+    <meta name="license" content="CC BY-NC-SA 4.0">
+    <meta name="og:title" content="Style Guide">
+    <meta name="og:image" content="/assets/images/sitepreview.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/meta/">Website Meta</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/meta/styleguide.html">Style Guide</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Style Guide</h1>
+                
+                
+                
+                
+                <p>This is the style guide that I use for testing CSS. It's mostly based off of <a rel="noreferrer" target="_blank" href="https://www.bryanbraun.com/poor-mans-styleguide/">The Poor Man's Styleguide</a>, but I made some small edits, so that it better fits my use case. Feel free to take inspiration for your own projects, or just look around if you really are <em>that</em> curious to know what every single (styled) element on my site looks like.</p>
+
+<!--<p> more info colophon blah blah alksdjflsdjfldj</p>-->
+
+<form aria-label="styleswitcher">
+    <label style="font-weight: bold; color: var(--textaccent);" for="styleswitcher">Change Theme:</label><br>
+    <select id="styleswitcher" name="styleswitcher" onchange="changeStyle(this.value)">
+        <option value="automatic">Automatic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</form>
+
+<hr>
+
+<h1 id="headings">Colors</h1>
+
+<div class="flexcontainer">
+    <div class="half" style="background: var(--bg); padding: 10px;">
+        <h2>Default Background</h2>
+        <p style="color: var(--text);">Normal Text</p>
+        <p style="color: var(--textaccent);">Accent Text</p>
+        <p style="color: var(--accent);">Accent</p>
+        <p style="color: var(--link); text-decoration: underline; text-decoration-thickness: 2px;">Link</p>
+        <p style="color: var(--linkvisited); text-decoration: underline; text-decoration-color: var(--link); text-decoration-thickness: 2px;">Visited Link</p>
+        <p><span style="background: var(--textaccent); color: var(--bg);">Selected Text</span></p>
+        <p>
+            <span style="color: var(--red);">red</span>
+            <span style="color: var(--orange);">orange</span>
+            <span style="color: var(--yellow);">yellow</span>
+            <span style="color: var(--green);">green</span>
+            <span style="color: var(--blue);">blue</span>
+            <span style="color: var(--purple);">purple</span>
+        </p>
+    </div>
+    <div class="half" style="background: var(--bgaccent); padding: 10px;">
+        <h2>Accent Background</h2>
+        <p style="color: var(--text);">Normal Text</p>
+        <p style="color: var(--textaccent);">Accent Text</p>
+        <p style="color: var(--accent);">Accent</p>
+        <p style="color: var(--link); text-decoration: underline; text-decoration-thickness: 2px;">Link</p>
+        <p style="color: var(--linkvisited); text-decoration: underline; text-decoration-color: var(--link); text-decoration-thickness: 2px;">Visited Link</p>
+        <p><span style="background: var(--textaccent); color: var(--bg);">Selected Text</span></p>
+        <p>
+            <span style="color: var(--red);">red</span>
+            <span style="color: var(--orange);">orange</span>
+            <span style="color: var(--yellow);">yellow</span>
+            <span style="color: var(--green);">green</span>
+            <span style="color: var(--blue);">blue</span>
+            <span style="color: var(--purple);">purple</span>
+        </p>
+    </div>
+</div>
+
+<p class="speciallink"><a href="#">Fancy Link</a></p>
+
+<h2>Callouts</h2>
+<div class="box callout danger">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callouticon" alt=""><path d="m15 9-6 6" /><path d="M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z" /><path d="m9 9 6 6" /></svg>
+    <p><strong>Stop!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam! <a rel="noreferrer" target="_blank" href="https://example.com">link</a>.</p>
+</div>
+<div class="box callout warning">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callouticon" alt=""><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>
+    <p><strong>Caution!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam! <a rel="noreferrer" target="_blank" href="https://example.com">link</a>.</p>
+</div>
+<div class="box callout success">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callouticon" alt=""><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>
+    <p><strong>Success!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam! <a rel="noreferrer" target="_blank" href="https://example.com">link</a>.</p>
+</div>
+<div class="box callout info">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callouticon" alt=""><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+    <p><strong>Just so you know...</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam! <a rel="noreferrer" target="_blank" href="https://example.com">link</a>.</p>
+</div>
+<div class="box">
+    <p><strong>This is a normal box.</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus est omnis, neque voluptatem suscipit saepe qui earum. Obcaecati soluta ad alias. Ipsum, nostrum inventore iusto impedit alias fuga quisquam! <a rel="noreferrer" target="_blank" href="https://example.com">link</a>.</p>
+</div>
+
+<hr>
+
+<h1 id="headings">Headings</h1>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<hr>
+
+<h1 id="headings-with-text">Headings with Text</h1>
+
+<h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<h2>Heading 2</h2>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<h3>Heading 3</h3>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<h4>Heading 4</h4>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<h5>Heading 5</h5>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+<h6>Heading 6</h6>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+
+<hr>
+
+<h1 id="text-block">Block Elements</h1>
+
+<h2 id="images">Images</h2>
+
+<h3>Button Wall</h3>
+<p class="buttons">
+    <a rel="noreferrer" target="_blank" href="https://decolonizepalestine.com/"><img alt="stand with Palestine" src="/assets/graphics/buttons/standwith.png"></a>
+    <a rel="noreferrer" target="_blank" href="https://geocities.restorativland.org/CapitolHill/1131/"><img alt="no nazis, no fascism, no racism!" src="/assets/graphics/buttons/nofash.png"></a>
+    <a><img alt="This site is certified 100% cookie free!" src="/assets/graphics/buttons/nocookie.gif"></a>
+    <a><img alt="CSS is awesome." src="/assets/graphics/buttons/css.png"></a>
+    <a rel="noreferrer" target="_blank" href="https://fediverse.info/"><img alt="Join the Fediverse!!!" src="/assets/graphics/buttons/join-fediverse.gif"></a>
+    <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/html/default.asp"><img alt="Hey you! Learn HTML now!" src="/assets/graphics/buttons/html.gif"></a>
+    <a><img alt="made with my own two paws" src="/assets/graphics/buttons/twopaws.png"></a>
+    <a><img alt="Pride now!" src="/assets/graphics/buttons/pride.gif"></a>
+    <a rel="noreferrer" target="_blank" href="https://brainmade.org/"><img alt="Brainmade.org" src="/assets/graphics/buttons/brainmade.png"></a>
+    <a rel="noreferrer" target="_blank" href="https://notbyai.fyi/hi/not-by-ai/"><img width="88px" height="31px" alt="Created by human, not by AI" src="/assets/graphics/buttons/Created-By-Human-Not-By-AI-Badge-white.svg"></a>
+</p>
+
+<h2 id="blockquote">Blockquote</h2>
+
+<p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>"Words can be like X-rays, if you use them properly—they'll go through anything. You read and you're pierced."</p>
+</blockquote>
+<p>—Aldous Huxley, <cite>Brave New World</cite></p>
+<p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore libero, non harum praesentium sint consequuntur quidem veritatis obcaecati. Accusantium praesentium libero maxime totam quod, deserunt aut sed placeat illo?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At debitis, eligendi veritatis molestiae amet nostrum, suscipit cumque, itaque dolore voluptate minima? Soluta ipsum maiores eos ab corporis a ipsa laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quasi velit assumenda, delectus dolor eius ducimus reiciendis libero nostrum pariatur. Similique nihil laboriosam labore ad alias soluta dolore autem asperiores."</p>
+</blockquote>
+<p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
+
+<h2>Figure and Figcaption</h2>
+
+<h3>Small</h3>
+<figure class="small right">
+    <img src="https://placehold.co/600x400/" alt="">
+    <figcaption>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, perspiciatis ducimus.
+        </p>
+    </figcaption>
+</figure>
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+</p>
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+</p>
+
+<figure class="small left">
+    <img src="https://placehold.co/600x400/" alt="">
+    <figcaption>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, perspiciatis ducimus.
+        </p>
+    </figcaption>
+</figure>
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+</p>
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam quisquam accusamus dolorum perspiciatis sit accusantium, impedit, saepe esse provident quas aspernatur nesciunt blanditiis aperiam laboriosam odit dolores minus temporibus.
+</p>
+
+<h3>Full-Size</h3>
+<figure class="center">
+    <img src="https://placehold.co/600x400/" alt="">
+    <figcaption>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, perspiciatis ducimus, libero non autem aliquid inventore deserunt debitis similique unde, quaerat totam quis ipsum necessitatibus nihil corporis beatae deleniti accusamus.
+        </p>
+    </figcaption>
+</figure>
+
+<h2 id="details-summary">Details-Summary</h2>
+
+<details>
+  <summary>The summary element example</summary>
+  <p>The details example text. It may be styled differently based on what browser or operating system you are using.</p>
+</details>
+
+<hr>
+
+<h1 id="text-elements"> Text Elements</h1>
+
+<p>The <a href="#">a element</a>, <a rel="noreferrer" href="https://example.com" target="_blank">external a element</a>, and <a href="#" title="Example Title">a element with title</a> examples</p>
+<p>The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples</p>
+<p>The <b>b element</b> example</p>
+<p>The <cite>cite element</cite> example</p>
+<p>The <code>code element</code> example</p>
+<p>The <data value="3967381398">data element</data> example</p>
+<p>The <del>del element</del> example</p>
+<p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+<p>The <em>em element</em> example</p>
+<p>The <i>i element</i> example</p>
+<p>The <ins>ins element</ins> example</p>
+<p>The <kbd>kbd element</kbd> example</p>
+<p>The <mark>mark element</mark> example</p>
+<p>The <q>q element</q> example</p>
+<p>The <q>q element <q>inside</q> a q element</q> example</p>
+<p>The <s>s element</s> example</p>
+<p>The <samp>samp element</samp> example</p>
+<p>The <small>small element</small> example</p>
+<p>The <span>span element</span> example</p>
+<p>The <strong>strong element</strong> example</p>
+<p>The <sub>sub element</sub> example</p>
+<p>The <sup>sup element</sup> example</p>
+<p>The <time datetime="2005-05-15 19:00">time element</time> example</p>
+<p>The <u>u element</u> example</p>
+<p>The <var>var element</var> example</p>
+
+<hr>
+
+<h1 id="monospace">Monospace / Preformatted</h1>
+<p>Code block wrapped in "pre" and "code" tags</p>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token comment">// Loop through Divs using Javascript.</span>
+<span class="token keyword">var</span> divs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> divs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">"green"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<hr>
+
+<h1 id="list-types">List Types</h1>
+<div class="flexcontainer">
+<div class="third"> 
+<h2 id="ordered-list">Ordered List</h2>   
+<ol>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3
+    <ol>
+      <li>List Item 3.1</li>
+      <li>List Item 3.2
+        <ol>
+          <li>List Item 3.2.1</li>
+          <li>List Item 3.2.2</li>
+        </ol>
+      </li>
+      <li>List Item 3.3</li>
+    </ol>
+  </li>
+  <li>List Item 4</li>
+  <li>List Item 5</li>
+</ol>
+</div>
+<div class="third">  
+<h2 id="unordered-list">Unordered List</h2>
+<ul>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3
+    <ul>
+      <li>List Item 3.1</li>
+      <li>List Item 3.2
+        <ul>
+          <li>List Item 3.2.1</li>
+          <li>List Item 3.2.2</li>
+        </ul>
+      </li>
+      <li>List Item 3.3</li>
+    </ul>
+  </li>
+  <li>List Item 4</li>
+  <li>List Item 5</li>
+</ul>
+</div>
+<div class="third">
+<h2 id="definition-list">Definition List</h2>
+<dl>
+  <dt>Definition Term 1</dt>
+  <dd>Definition Description 1</dd>
+  <dt>Definition Term 2</dt>
+  <dd>Definition Description 2</dd>
+  <dt>Definition Term 3</dt>
+  <dd>Definition Description 3</dd>
+  <dt>Definition Term 4</dt>
+  <dd>Definition Description 4</dd>
+  <dt>Definition Term 5</dt>
+  <dd>Definition Description 5</dd>
+</dl>
+</div>
+</div>
+
+<h2>Fun Bullets</h2>
+<div class="flexcontainer">
+    <div class="third">
+        <ul class="emojibullets">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3
+              <ul>
+                <li>List Item 3.1</li>
+                <li>List Item 3.2
+                  <ul>
+                    <li>List Item 3.2.1</li>
+                    <li>List Item 3.2.2</li>
+                  </ul>
+                </li>
+                <li>List Item 3.3</li>
+              </ul>
+            </li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+          </ul>
+    </div>
+    <div class="third">
+        <ul class="symbolbullets">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3
+              <ul>
+                <li>List Item 3.1</li>
+                <li>List Item 3.2
+                  <ul>
+                    <li>List Item 3.2.1</li>
+                    <li>List Item 3.2.2</li>
+                  </ul>
+                </li>
+                <li>List Item 3.3</li>
+              </ul>
+            </li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+          </ul>
+    </div>
+    <div class="third">
+        <ul class="unicodebullets">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3
+              <ul>
+                <li>List Item 3.1</li>
+                <li>List Item 3.2
+                  <ul>
+                    <li>List Item 3.2.1</li>
+                    <li>List Item 3.2.2</li>
+                  </ul>
+                </li>
+                <li>List Item 3.3</li>
+              </ul>
+            </li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+          </ul>
+    </div>
+</div>
+
+<hr>
+
+<h1 id="tables">Tables</h1>
+
+<table>
+  <caption>This is a table caption</caption>
+  <thead>
+    <tr>
+      <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+    </tr>
+    <tr class="even">
+      <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+    </tr>
+    <tr>
+      <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+    </tr>
+    <tr>
+      <td colspan="3">A row with a cell spanning all 3 columns</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Table Footer 1</th><th>Table Footer 2</th><th>Table Footer 3</th>
+    </tr>
+  </tfoot>
+</table>
+
+<div style="overflow: scroll;">
+<table class="both-odd">
+    <caption>
+        Table Caption
+    </caption>
+    <thead>
+        <tr>
+        <td></td>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+        <tr>
+        <th>Heading</th>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<hr>
+
+<h1 id="form-elements">Form Elements</h1>
+
+<p>The Fieldset:</p>
+<fieldset>
+  <legend>Legend</legend>
+
+  <p>The Form:</p>
+
+  <form>
+    <p><label for="text-field">Text Field:</label><br>
+      <input type="text" id="text-field">
+    </p>
+    <p><label for="text-area">Text Area:</label><br>
+      <textarea id="text-area"></textarea>
+    </p>
+    <p><label for="select-element">Select Element:</label><br>
+      <select id="select-element">
+        <optgroup label="Option Group 1">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+        </optgroup>
+        <optgroup label="Option Group 2">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3" disabled>Disabled Option</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>Radio Buttons:</p>
+    <div>
+      <input type="radio" id="radio-1" name="radios" value="1" checked>
+      <label for="radio-1">Radio 1</label>
+    </div>
+    <div>
+      <input type="radio" id="radio-2" name="radios" value="2">
+      <label for="radio-2">Radio 2</label>
+    </div>
+    <div>
+      <input type="radio" id="radio-3" name="radios" value="3">
+      <label for="radio-3">Radio 3</label>
+    </div>
+    <div>
+      <input type="radio" id="radio-4" name="radios" value="4" disabled>
+      <label for="radio-4">Radio Disabled</label>
+    </div>
+
+    <p>Checkboxes:</p>
+    <div>
+      <input type="checkbox" id="checkbox-1" name="checkboxes" value="1" checked>
+      <label for="checkbox-1">Checkbox 1</label>
+    </div>
+    <div>
+      <input type="checkbox" id="checkbox-2" name="checkboxes" value="2">
+      <label for="checkbox-2">Checkbox 2</label>
+    </div>
+    <div>
+      <input type="checkbox" id="checkbox-3" name="checkboxes" value="3">
+      <label for="checkbox-3">Checkbox 3</label>
+    </div>
+    <div>
+      <input type="checkbox" id="checkbox-4" name="checkboxes" value="4" disabled>
+      <label for="checkbox-4">Checkbox Disabled</label>
+    </div>
+
+    <div>
+
+      <input type="checkbox" id="some-checkbox" onclick="this.a=this.indeterminate=!this.a ">
+      <label for="some-checkbox">
+      Indeterminate Checkbox
+      </label>
+
+    </div>
+
+    <p><label for="range">Range:</label><br>
+      <input type="range" id="range" name="points" min="1" max="10">
+    </p>
+
+    <p><label for="progress">Progress:</label><br>
+      <progress id="progress" value="65" max="100"></progress>
+    </p>
+
+    <p><label for="meter">Meter:</label><br>
+      <meter id="meter" min="200" max="500" value="350">350 degrees</meter>
+    </p>
+
+    <p>
+      <button class="button">Button Element</button>
+      <input type="button" value="Input button">
+      <input class="button" type="reset" value="Clear">
+      <input class="button" type="submit" value="Submit">
+    </p>
+  </form>
+
+</fieldset>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

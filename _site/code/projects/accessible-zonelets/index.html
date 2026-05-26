@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <link rel="icon" type="image/x-icon" href="https://sainthood.xyz/assets/images/favicon.ico">
+    <title>Accessible Zonelets | Sainthood.xyz</title>
+    <meta name="search_date" content="2024-12-11">
+    <meta name="revised" content="2025-02-25">
+    <meta name="description" content="The Zonelets blogging framework, edited to better fit web accessibility standards.">
+    <meta name="author" content="Saint">
+    <meta name="license" content="GPLv3">
+    <meta name="og:title" content="Accessible Zonelets">
+    <meta name="og:image" content="/assets/images/thumbnails/accessible-zonelets.png">
+    <meta name="og:site_name" content="Sainthood.xyz">
+    <meta name="og:description" content="The Zonelets blogging framework, edited to better fit web accessibility standards.">
+    <meta name="fediverse:creator" content="@sainthood@indieweb.social">
+    <link href="/assets/css/automatic.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css">
+    
+    
+    <script>
+        function changeStyle(style) {
+            if (style == null)
+                style = localStorage.getItem("style");
+                if (style == null) 
+                    style = "automatic";
+            document.querySelector("link[type='text/css']").setAttribute("href", "/assets/css/" + style + ".css");
+            localStorage.setItem("style", style);
+        }
+        changeStyle();
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="container">
+        <header>
+            <div id="skiptocontent"><a href="#content">Skip to Main Content</a></div>
+            <div id="title">Sainthood.xyz</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="/links/">Links</a></li>
+                    <li><a rel="noreferrer" target="_blank" class="no-arrow" href="https://fan.sainthood.xyz/">Fanlistings</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <nav class="breadcrumbs" aria-labelledby="breadcrumbs">
+            <h2 class="visually-hidden" id="breadcrumbs">Breadcrumbs</h2>
+            <ol class="breadcrumbs">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/code/">Code</a>
+                </li>
+                
+                <li>
+                    <a href="/code/projects/">Projects</a>
+                </li>
+                
+                <li class="my-active-class">
+                    <a aria-current="page" href="/code/projects/accessible-zonelets/">Accessible Zonelets</a>
+                </li>
+                
+            </ol>
+        </nav>
+        
+        <div class="primary">
+            
+            <main id="content">
+                <h1>Accessible Zonelets</h1>
+                
+                
+                
+                
+                <style>
+    .previewimgs {display: flex; gap: 0.5em; justify-content: center;}
+    .preview, .previewimgs img {max-height: 250px; width: auto;}
+    .date {margin-top: 0;}
+    .downloadlink {font-weight: bold; margin: 1.5em 0 1em 0;display: flex;flex-wrap: wrap;justify-content: center;}
+    .downloadlink .lucideicon {vertical-align: -0.25em;}
+    #preview + #download::before {content: ""; margin: 0 0.1em;}
+    @media screen and (max-width: 1024px) {.previewimgs {display: block; text-align: center;} .downloadlink {line-height: 3; margin: 0.5em 0;}}
+</style>
+<!--
+<p class="date">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--textaccent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt="" style="vertical-align: -0.1em;"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg> Added <time datetime="2024-12-11">Invalid Date</time>
+     <span style="color: var(--textaccent);" aria-hidden="true">•</span> Last updated <time datetime="2025-02-25">Invalid Date</time>
+</p>
+-->
+<div class="previewimgs">
+
+
+    <img src="/assets/images/thumbnails/accessible-zonelets.png" alt="">
+
+
+</div>
+<div class="speciallink downloadlink">
+    
+    
+    <span id="download">
+        <a href="/assets/downloads/accessible_zonelets.zip" download="">Download ZIP <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" x2="12" y1="15" y2="3" /></svg></a>
+    </span>
+    
+</div>
+<h2>About</h2>
+<p>Accessible Zonelets is exactly what is sounds like, <a rel="noreferrer" target="_blank" class="external" href="https://zonelets.net/">Zonelets</a>, but accessible! I went into extensive detail on the changes I made and why in my blog post <a href="/blog/posts/accessible-zonelets">"Making Your Zonelets Blog More Accessible"</a>.</p>
+
+<h3>Features</h3>
+<ul>
+    <li>Added ARIA landmarks/page regions.</li>
+    <li>Added ARIA labels to help differentiate between the header and post navigation.</li>
+    <li>Added <code>:focus</code> styling for all elements that had <code>:hover</code> styling.</li>
+    <li>Added "skip to main content" and "back to top" links.</li>
+    <li>Changed links to have better color contrast with the background</li>
+    <li>Changed font size to use em instead of pixels.</li>
+    <li>Changed post dates to be paragraphs instead of headings.</li>
+</ul>
+
+<h2>Styling</h2>
+<p>The ZIP includes both the default zonelets starter pack and the bonus theme pack! I've gone through all of the themes and made sure they include the new accessibility features, while still keeping them as close to the original as possible.</p>
+<p>Any custom stylesheets that work with the original Zonelets should still work for Accessible Zonelets. Just remember to accommodate for the "skip to content" link at the end of the stylesheet.</p>
+
+<h2>Licensing</h2>
+<p>In the spirit of the original Zonelets, <span style="font-weight: bold;">Accessible Zonelets is freely distributed under the <a rel="noreferrer" target="_blank" class="external" href="https://choosealicense.com/licenses/mit/">MIT license</a></span>.</p>
+<p class="speciallink">
+    <a href="/code/projects/">Back to Code Projects Index</a>
+</p>
+            </main>
+            
+        </div>
+        <footer>
+            
+            
+            <p>
+                
+                Page added <time date="2024-12-11">December 11, 2024</time> and last updated <time date="2025-02-25">February 25, 2025</time>.
+                
+                
+            </p>
+            
+            <p>
+                Unless stated otherwise, www.sainthood.xyz is licensed under <a rel="noreferrer" target="_blank" class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </p>
+            <nav aria-label="footer links">
+                <ul>
+                    <li><a href="/meta/info">Site Info</a></li>
+                    <li><a href="/meta/sitemap">Sitemap</a></li>
+                    <li><a href="/rss.xml">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucideicon" alt=""><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></a></li>
+                </ul>
+                <p><a href="#top">Back to Top</a></p>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
