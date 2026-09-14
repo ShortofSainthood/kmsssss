@@ -12,6 +12,7 @@ const pluginTOC = require('eleventy-plugin-toc')
 const blogTools = require("eleventy-plugin-blog-tools");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const embedEverything = require("eleventy-plugin-embed-everything");
 // const { DateTime } = require("luxon");
 
 module.exports = async function (eleventyConfig) {
@@ -334,6 +335,10 @@ eleventyConfig.addPairedShortcode("callout", function(content, level = "", forma
 		let contentHtml = (content || "").trim().length > 0 ? `<div class="elv-callout-c">${content}</div>` : "";
 
 		return `<div class="callout${level ? ` ${level}` : ""}">${labelHtml}${contentHtml}</div>`;
+	});
+
+	eleventyConfig.addPlugin(embedEverything, {
+		add: ['bluesky', 'soundcloud']
 	});
 	
 
