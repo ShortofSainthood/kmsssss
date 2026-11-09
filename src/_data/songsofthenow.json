@@ -244,5 +244,20 @@
       "artist": "Hayley Williams",
       "link": "https://www.youtube.com/watch?v=woAS28GGnAU",
       "image": "https://t2.genius.com/unsafe/516x516/https%3A%2F%2Fimages.genius.com%2Fd565aa6dae397dd095c12e4251988cbd.1000x1000x1.jpg"
+	},
+	{
+	  "date": "2026-10-28",
+	  "songname": "You First",
+      "artist": "Paramore",
+      "link": "https://www.youtube.com/watch?v=cL55NhsiwyQ",
+      "image": "https://t2.genius.com/unsafe/516x516/https%3A%2F%2Fimages.genius.com%2F9fe2044325aebd53e778bbbddd558220.1000x1000x1.png",
+	  "comment": "♫ Never said I wasn't petty / I'll do better when you're better / Let me revel in your defeat ♫"
+	},
+	{
+	  "date": "2026-11-07",
+	  "songname": "DUH",
+      "artist": "Power Snatch",
+      "link": "https://powersnatch.bandcamp.com/album/ep1",
+      "image": "https://t2.genius.com/unsafe/516x516/https%3A%2F%2Fimages.genius.com%2F192739bf48ec4f711def64654cbadb92.1000x1000x1.png"
 	}
 ]
